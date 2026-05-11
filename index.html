@@ -134,56 +134,63 @@
   </div>
 </section>
 
-  <!-- Consultation Form Section -->
-<section id="consultation" class="bg-gray-100 py-16 px-6">
+<!-- Consultation Form Section -->
+<section id="contact" class="bg-gray-100 py-16 px-6">
   <div class="max-w-3xl mx-auto text-center">
+    <h2 class="text-3xl font-bold mb-6">Free Consultation</h2>
     <p class="mb-8 text-gray-700">
-      Tell me what you’re looking for and I’ll find the best deal possible.
+      Tell me what you’re looking for and I’ll reach out personally.
     </p>
 
-    https://formsubmit.co/grateautodeals@gmail.com
+    <form action="https://formsubmit.co/grateautodeals@gmail.com" method="POST" class="space-y-4 text-left">
+      
+      <!-- Disable captcha -->
       <input type="hidden" name="_captcha" value="false">
 
+      <!-- Name -->
       <input
         type="text"
         name="name"
         required
         placeholder="Your Name"
-        class="w-full p-3 rounded border"
-      >
+        class="w-full p-3 rounded border border-gray-300"
+      />
 
+      <!-- Email -->
       <input
         type="email"
         name="email"
         required
         placeholder="Your Email"
-        class="w-full p-3 rounded border"
-      >
+        class="w-full p-3 rounded border border-gray-300"
+      />
 
+      <!-- Phone -->
       <input
         type="tel"
         name="phone"
         placeholder="Phone Number"
-        class="w-full p-3 rounded border"
-      >
+        class="w-full p-3 rounded border border-gray-300"
+      />
 
+      <!-- Message -->
       <textarea
         name="message"
         required
         placeholder="What vehicle are you looking for?"
-        class="w-full p-3 rounded border h-32"
+        class="w-full p-3 rounded border border-gray-300 h-32"
       ></textarea>
 
+      <!-- Submit Button -->
       <button
         type="submit"
-       class="bg-blue-600 hover:bg-blue-700 text-white transition"
+        class="w-full bg-blue-600 hover:bg-blue-700 text-white font-semibold py-4 rounded-2xl transition"
       >
-        Submit Consultation Request
+        Submit Consultation
       </button>
     </form>
   </div>
 </section>
-
 
   <!-- Call to Action -->
   <section id="contact" class="bg-gray-100 py-16 px-6">
