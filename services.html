@@ -3,131 +3,90 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Services & Pricing | Grate Auto Deals</title>
+  <title>Services | Grate Auto Deals</title>
+
+  <!-- Tailwind CSS -->
   <script src="https://cdn.tailwindcss.com"></script>
 </head>
 
 <body class="bg-gray-50 text-gray-900">
 
-<!-- Sticky Navigation -->
+<!-- ================= NAV ================= -->
 <nav class="bg-gray-900 text-white fixed top-0 w-full z-50 shadow-md">
   <div class="max-w-6xl mx-auto px-4 py-4 flex justify-between items-center">
     <div class="font-bold text-lg">Grate Auto Deals</div>
-
-    <!-- Desktop Menu -->
-    <div class="hidden md:flex space-x-6">
+    <div class="space-x-6 hidden md:block">
       <a href="index.html" class="hover:opacity-80">Home</a>
       <a href="services.html" class="font-semibold border-b-2 border-white">Services</a>
-      <a href="index.html#contact" class="hover:opacity-80">Contact</a>
     </div>
-
-    <!-- Mobile Menu Button -->
-    <button id="menuBtn" class="md:hidden text-2xl">☰</button>
-  </div>
-
-  <!-- Mobile Menu -->
-  <div id="mobileMenu" class="hidden md:hidden bg-black px-4 pb-4">
-    <a href="index.html" class="block py-2 border-b border-gray-600">Home</a>
-    <a href="services.html" class="block py-2 border-b border-gray-600">Services</a>
-    <a href="index.html#contact" class="block py-2">Contact</a>
   </div>
 </nav>
 
 <div class="h-20"></div>
 
-<script>
-  const btn = document.getElementById("menuBtn");
-  const menu = document.getElementById("mobileMenu");
-  btn.onclick = () => menu.classList.toggle("hidden");
-</script>
+<!-- ================= HEADER ================= -->
+<section class="py-16 px-6 text-center bg-white">
+  <h1 class="text-4xl font-extrabold mb-4">Services & Pricing</h1>
+  <p class="text-gray-700 max-w-2xl mx-auto">
+    Transparent pricing. Secure payment. No pressure.
+  </p>
+</section>
 
-  <!-- Page Header -->
-  <section class="py-16 px-6 bg-white text-center">
-    <h1 class="text-4xl font-extrabold mb-4">Services & Pricing</h1>
-    <p class="text-gray-700 max-w-2xl mx-auto">
-      Transparent pricing and professional automotive services tailored to your needs.
-    </p>
-  </section>
-
- <!-- Broker Packages -->
+<!-- ================= PACKAGES ================= -->
 <section class="py-16 px-6">
   <div class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-6">
 
-    <!-- Basic -->
-    <div class="bg-white p-6 rounded-2xl shadow-sm">
-      <h2 class="text-xl font-bold mb-2">Basic Deal Search</h2>
-      <p class="text-gray-600 mb-4">
-        For buyers who already know what they want and need help finding the right deal.
+    <!-- BASIC -->
+    <div class="bg-white p-6 rounded-2xl shadow-md">
+      <h2 class="text-xl font-bold mb-3">Basic Deal Search</h2>
+      <p class="text-gray-600 mb-6">
+        For buyers who already know what they want and need help locating a strong deal.
       </p>
-
-      <p class="text-lg font-semibold mb-4">
-        💲 Pricing: Contact for Approval
-      </p>
-
       <ul class="list-disc pl-5 text-gray-700 mb-6">
         <li>Vehicle search</li>
-        <li>Market pricing guidance</li>
+        <li>Market pricing review</li>
         <li>Deal recommendation</li>
       </ul>
-
       <p class="text-sm text-gray-600 mb-4">
-        Payment Method: Zelle (after approval)
+        Pricing discussed before service begins.
       </p>
-
       <a href="tel:13106865259"
-         class="block text-center bg-black text-white py-3 rounded-xl">
-        Call to Get Started
+         class="block w-full text-center border border-gray-300 text-gray-800 py-3 rounded-xl hover:bg-gray-100 transition">
+        Call to Discuss
       </a>
     </div>
 
-    <!-- Full Service -->
-    <div class="bg-white p-6 rounded-2xl shadow-md border-2 border-black">
-      <h2 class="text-xl font-bold mb-2">Full Service Broker</h2>
-      <p class="text-gray-600 mb-4">
-        Complete hands‑off service from sourcing to final deal review.
-      </p>
-
+    <!-- FULL SERVICE -->
+    <div class="bg-white p-6 rounded-2xl border-2 border-blue-600 shadow-lg">
+      <span class="text-blue-600 font-semibold text-sm">Most Popular</span>
+      <h2 class="text-xl font-bold mt-2 mb-3">Full Service Broker</h2>
       <p class="text-2xl font-bold mb-4">$1,500</p>
-
       <ul class="list-disc pl-5 text-gray-700 mb-6">
         <li>Full vehicle sourcing</li>
         <li>Dealer negotiation</li>
-        <li>Trade‑in strategy</li>
-        <li>Contract review</li>
+        <li>Trade‑in guidance</li>
+        <li>Final contract review</li>
       </ul>
 
-      <p class="text-sm text-gray-600 mb-4">
-        Payment Methods: Zelle or Apple Pay / PayPal
-      </p>
-
-      <a href="#payment-options"
-         class="block text-center bg-black text-white py-3 rounded-xl">
+      <a href="#pay-1500"
+         class="block w-full text-center bg-blue-600 hover:bg-blue-700 text-white py-4 rounded-xl transition font-semibold">
         Proceed to Payment
       </a>
     </div>
 
-    <!-- Premium -->
-    <div class="bg-white p-6 rounded-2xl shadow-sm">
-      <h2 class="text-xl font-bold mb-2">Premium Concierge</h2>
-      <p class="text-gray-600 mb-4">
-        For luxury, specialty, or out‑of‑state vehicle purchases.
-      </p>
-
+    <!-- PREMIUM -->
+    <div class="bg-white p-6 rounded-2xl shadow-md">
+      <h2 class="text-xl font-bold mb-3">Premium Concierge</h2>
       <p class="text-2xl font-bold mb-4">$2,000</p>
-
       <ul class="list-disc pl-5 text-gray-700 mb-6">
         <li>Nationwide sourcing</li>
-        <li>Rare & specialty vehicles</li>
+        <li>Luxury & specialty vehicles</li>
         <li>Out‑of‑state coordination</li>
-        <li>Priority service</li>
+        <li>Priority communication</li>
       </ul>
 
-      <p class="text-sm text-gray-600 mb-4">
-        Payment Methods: Zelle or Apple Pay / PayPal
-      </p>
-
-      <a href="#payment-options"
-         class="block text-center bg-black text-white py-3 rounded-xl">
+      <a href="#pay-2000"
+         class="block w-full text-center bg-blue-600 hover:bg-blue-700 text-white py-4 rounded-xl transition font-semibold">
         Proceed to Payment
       </a>
     </div>
@@ -135,89 +94,73 @@
   </div>
 </section>
 
-  <!-- Additional Services -->
-  <section class="bg-white py-16 px-6">
-    <div class="max-w-4xl mx-auto">
-      <h2 class="text-3xl font-bold mb-8 text-center">Additional Automotive Services</h2>
-      <ul class="grid grid-cols-1 md:grid-cols-2 gap-6 text-gray-700">
-        <li class="p-4 rounded-xl border">✅ Powder Coating Wheels</li>
-        <li class="p-4 rounded-xl border">✅ Vehicle Wraps & Color Changes</li>
-        <li class="p-4 rounded-xl border">✅ Window Tint (All Levels)</li>
-        <li class="p-4 rounded-xl border">✅ Mobile Mechanic Services</li>
-        <li class="p-4 rounded-xl border">✅ Pre‑Purchase Inspections</li>
-        <li class="p-4 rounded-xl border">✅ Custom Requests</li>
-      </ul>
-    </div>
-  </section>
-  <p class="text-sm text-gray-600 max-w-3xl mx-auto text-center mb-8">
-  A deposit may be required to begin service. Final payment is due prior to deal completion.
-  Payments are for broker and consulting services only and do not guarantee vehicle availability,
-  approval, or final pricing.
-</p>
-  <!-- Payment Options Section -->
-<section class="bg-gray-100 py-16 px-6">
-  <div class="max-w-4xl mx-auto text-center">
-    <h2 class="text-3xl font-bold mb-6">Payment Options</h2>
-    <p class="mb-10 text-gray-700">
-      Choose the payment method that works best for you.
- 
-<!-- Payment Box -->
-<div class="bg-white p-8 rounded-2xl shadow-md border max-w-md mx-auto mt-10 text-center">
-  
-  <h3 class="text-2xl font-bold mb-4">Pay Securely</h3>
+<!-- ================= PAYMENTS ================= -->
+<section class="bg-gray-100 py-20 px-6">
+  <div class="max-w-4xl mx-auto space-y-16 text-center">
 
-  <p class="text-gray-600 mb-8">
-    Use PayPal, Apple Pay, or a credit/debit card.  
-    If you’d prefer, we can also send you the payment link directly.
-  </p>
+    <!-- ===== $1500 PAYMENT ===== -->
+    <div id="pay-1500" class="bg-white p-8 rounded-2xl shadow-md border">
+      <h3 class="text-2xl font-bold mb-2">$1,500 – Full Service Payment</h3>
+      <p class="text-gray-600 mb-8">
+        Pay with PayPal, Apple Pay, credit/debit card, or Pay Later.
+      </p>
 
-  <!-- Send Link Button -->
-  grateautodeals@gmail.com?subject=Send%20Payment%20Link&body=Hi%2C%20please%20send%20me%20the%20payment%20link%20for%20Grate%20Auto%20Deals."
-     class="block w-full mb-6 px-6 py-4 rounded-xl border border-gray-300 text-gray-800 hover:bg-gray-100 transition">
-    📩 Email Me the Payment Link
-  </a>
+      <div id="paypal-button-1500"></div>
 
-  <!-- PayPal Button Loads Here -->
-  <div id="paypal-button-container" class="mt-6"></div>
-
-  <p class="text-xs text-gray-500 mt-6">
-    Apple Pay appears automatically on iPhone & Safari.
-  </p>
-
-</div>
-``
-
-    
-
-      <!-- Contact -->
-      <div class="bg-white p-6 rounded-2xl shadow-sm">
-        <h3 class="text-xl font-bold mb-2">Questions?</h3>
-        <p class="text-gray-700 mb-6">
-          Need help choosing a service or payment method?
-        </p>
-        <a href="tel:13106865259"
-           class="block bg-black text-white py-3 rounded-xl">
-          📞 Call 310‑686‑5259
-        </a>
-      </div>
-
+      <p class="text-xs text-gray-500 mt-6">
+        Apple Pay appears automatically on supported devices (iPhone + Safari).
+      </p>
     </div>
 
-    <p class="mt-8 text-xs text-gray-500">
-      Payments are for services only and do not guarantee vehicle availability or pricing.
-    </p>
+    <!-- ===== $2000 PAYMENT ===== -->
+    <div id="pay-2000" class="bg-white p-8 rounded-2xl shadow-md border">
+      <h3 class="text-2xl font-bold mb-2">$2,000 – Premium Concierge Payment</h3>
+      <p class="text-gray-600 mb-8">
+        Pay with PayPal, Apple Pay, credit/debit card, or Pay Later.
+      </p>
+
+      <div id="paypal-button-2000"></div>
+
+      <p class="text-xs text-gray-500 mt-6">
+        Apple Pay appears automatically on supported devices (iPhone + Safari).
+      </p>
+    </div>
+
   </div>
 </section>
-  <p class="text-xs text-gray-500 mt-6 text-center max-w-3xl mx-auto">
-  Payments are processed securely. Grate Auto Deals provides vehicle sourcing, negotiation,
-  and consulting services. Payments do not guarantee vehicle availability, financing approval,
-  or price outcomes.
-</p>
 
-  <!-- Footer -->
-  <footer class="bg-black text-white py-8 text-center text-sm">
-    © 2026 Grate Auto Deals · All Rights Reserved
-  </footer>
+<!-- ================= PAYPAL SDK ================= -->
+<script src="https://www.paypal.com/sdk/js?client-id=AWESQ-Q9rVEWOHcFu75iP651SjAs8NuMTNTptIOuYtCePXq4rwE1BSPKzWgfbN_FM3niikyisn37lyWr&currency=USD&enable-funding=venmo,paylater,card"></script>
+
+<script>
+  // $1,500 Button
+  paypal.Buttons({
+    createOrder: function(data, actions) {
+      return actions.order.create({
+        purchase_units: [{ amount: { value: '1500.00' } }]
+      });
+    },
+    onApprove: function(data, actions) {
+      return actions.order.capture().then(function() {
+        window.location.href = "next-steps.html";
+      });
+    }
+  }).render('#paypal-button-1500');
+
+  // $2,000 Button
+  paypal.Buttons({
+    createOrder: function(data, actions) {
+      return actions.order.create({
+        purchase_units: [{ amount: { value: '2000.00' } }]
+      });
+    },
+    onApprove: function(data, actions) {
+      return actions.order.capture().then(function() {
+        window.location.href = "next-steps.html";
+      });
+    }
+  }).render('#paypal-button-2000');
+</script>
 
 </body>
 </html>
