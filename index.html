@@ -2,289 +2,148 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Grate Auto Deals | Auto Broker</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Grate Auto Deals</title>
+
+  <!-- ✅ Tailwind -->
   <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body class="bg-gray-50 text-gray-900">
-  
-<!-- Sticky Navigation -->
-<nav class="bg-gray-900 text-white shadow-md">
+
+<body class="scroll-smooth bg-gray-50 text-gray-900">
+
+<!-- ✅ NAV -->
+<nav class="bg-gray-900 text-white fixed top-0 w-full z-50 shadow-md">
   <div class="max-w-6xl mx-auto px-4 py-4 flex justify-between items-center">
     <div class="font-bold text-lg">Grate Auto Deals</div>
 
-    <!-- Desktop Menu -->
     <div class="hidden md:flex space-x-6">
       <a href="index.html" class="font-semibold border-b-2 border-white">Home</a>
       <a href="services.html" class="hover:opacity-80">Services</a>
-      <a href="#contact" class="hover:opacity-80">Contact</a>
+      <a href="#consultation-form" class="hover:opacity-80">Contact</a>
     </div>
 
-    <!-- Mobile Menu Button -->
     <button id="menuBtn" class="md:hidden text-2xl">☰</button>
   </div>
 
-  <!-- Mobile Menu -->
   <div id="mobileMenu" class="hidden md:hidden bg-black px-4 pb-4">
     <a href="index.html" class="block py-2 border-b border-gray-600">Home</a>
     <a href="services.html" class="block py-2 border-b border-gray-600">Services</a>
-    <a href="#contact" class="block py-2">Contact</a>
+    <a href="#consultation-form" class="block py-2">Contact</a>
   </div>
 </nav>
 
-<!-- Spacer so content isn’t hidden under fixed nav -->
 <div class="h-20"></div>
 
 <script>
-  const btn = document.getElementById("menuBtn");
-  const menu = document.getElementById("mobileMenu");
-  btn.onclick = () => menu.classList.toggle("hidden");
+const btn = document.getElementById("menuBtn");
+const menu = document.getElementById("mobileMenu");
+btn.onclick = () => menu.classList.toggle("hidden");
 </script>
 
-  <!-- Hero Section -->
+<!-- ✅ HERO -->
 <section class="bg-gradient-to-br from-gray-900 via-gray-800 to-black text-white py-20 px-6">
 
-  <div class="max-w-6xl mx-auto grid grid-cols-3 items-center gap-6">
+  <div class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-3 items-center gap-8">
 
-    <!-- LEFT LOGOS -->
-    <div class="hidden md:grid grid-cols-3 gap-5 justify-items-center pr-6">
-      <img src="https://cdn.simpleicons.org/ford/ffffff" class="w-14 opacity-90 hover:scale-110 transition">
-      <img src="https://cdn.simpleicons.org/toyota/ffffff" class="w-14 opacity-90 hover:scale-110 transition">
-      <img src="https://cdn.simpleicons.org/honda/ffffff" class="w-14 opacity-90 hover:scale-110 transition">
-
-      <img src="https://cdn.simpleicons.org/nissan/ffffff" class="w-14 opacity-90 hover:scale-110 transition">
-      <img src="https://cdn.simpleicons.org/chevrolet/ffffff" class="w-14 opacity-90 hover:scale-110 transition">
-      <img src="https://cdn.simpleicons.org/subaru/ffffff" class="w-14 opacity-90 hover:scale-110 transition">
-
-      <img src="https://cdn.simpleicons.org/kia/ffffff" class="w-14 opacity-90 hover:scale-110 transition">
-      <img src="https://cdn.simpleicons.org/hyundai/ffffff" class="w-14 opacity-90 hover:scale-110 transition">
-      <img src="https://cdn.simpleicons.org/tesla/ffffff" class="w-14 opacity-90 hover:scale-110 transition">
+    <!-- ✅ LEFT LOGOS -->
+    <div class="hidden md:grid grid-cols-3 gap-4 justify-items-center">
+      <img src="https://cdn.simpleicons.org/ford/ffffff" class="w-10">
+      <img src="https://cdn.simpleicons.org/toyota/ffffff" class="w-10">
+      <img src="https://cdn.simpleicons.org/honda/ffffff" class="w-10">
+      <img src="https://cdn.simpleicons.org/nissan/ffffff" class="w-10">
+      <img src="https://cdn.simpleicons.org/chevrolet/ffffff" class="w-10">
+      <img src="https://cdn.simpleicons.org/subaru/ffffff" class="w-10">
+      <img src="https://cdn.simpleicons.org/kia/ffffff" class="w-10">
+      <img src="https://cdn.simpleicons.org/hyundai/ffffff" class="w-10">
+      <img src="https://cdn.simpleicons.org/tesla/ffffff" class="w-10">
     </div>
 
-    <!-- CENTER CONTENT -->
-    <div class="text-center px-8">
+    <!-- ✅ CENTER -->
+    <div class="text-center">
       <h1 class="text-5xl font-extrabold mb-6">Grate Auto Deals</h1>
 
-      <p class="text-lg mb-8 leading-relaxed">
-        Your trusted auto broker committed to finding the absolute best vehicle deals, so you don’t have to.
+      <p class="text-lg mb-8 max-w-xl mx-auto">
+        Your trusted auto broker committed to finding the best vehicle deals — without the stress.
       </p>
 
-      <!-- CTA BUTTON -->
       <a href="#consultation-form"
-   class="inline-block bg-blue-600 text-white px-8 py-4 rounded-xl font-semibold text-lg shadow hover:bg-blue-700 transition">
-  Get My Great Deal
-</a>
+         class="inline-block bg-blue-600 text-white px-8 py-4 rounded-xl font-semibold shadow hover:bg-blue-700 transition">
+        Get My Great Deal
+      </a>
+    </div>
 
-
-    <!-- RIGHT LOGOS -->
-    <div class="hidden md:grid grid-cols-3 gap-5 justify-items-center pl-6">
-      <img src="https://cdn.simpleicons.org/bmw/ffffff" class="w-14 opacity-90 hover:scale-110 transition">
-      <img src="https://cdn.simpleicons.org/audi/ffffff" class="w-14 opacity-90 hover:scale-110 transition">
-      <img src="https://cdn.simpleicons.org/volkswagen/ffffff" class="w-14 opacity-90 hover:scale-110 transition">
-
-      <img src="https://cdn.simpleicons.org/porsche/ffffff" class="w-14 opacity-90 hover:scale-110 transition">
-      <img src="https://cdn.simpleicons.org/acura/ffffff" class="w-14 opacity-90 hover:scale-110 transition">
-      <img src="https://cdn.simpleicons.org/infiniti/ffffff" class="w-14 opacity-90 hover:scale-110 transition">
-
-      <img src="https://cdn.simpleicons.org/ferrari/ffffff" class="w-14 opacity-90 hover:scale-110 transition">
-      <img src="https://cdn.simpleicons.org/lamborghini/ffffff" class="w-14 opacity-90 hover:scale-110 transition">
-      <img src="https://cdn.simpleicons.org/jeep/ffffff" class="w-14 opacity-90 hover:scale-110 transition">
+    <!-- ✅ RIGHT LOGOS -->
+    <div class="hidden md:grid grid-cols-3 gap-4 justify-items-center">
+      <img src="https://cdn.simpleicons.org/bmw/ffffff" class="w-10">
+      <img src="https://cdn.simpleicons.org/audi/ffffff" class="w-10">
+      <img src="https://cdn.simpleicons.org/volkswagen/ffffff" class="w-10">
+      <img src="https://cdn.simpleicons.org/porsche/ffffff" class="w-10">
+      <img src="https://cdn.simpleicons.org/acura/ffffff" class="w-10">
+      <img src="https://cdn.simpleicons.org/infiniti/ffffff" class="w-10">
+      <img src="https://cdn.simpleicons.org/ferrari/ffffff" class="w-10">
+      <img src="https://cdn.simpleicons.org/lamborghini/ffffff" class="w-10">
+      <img src="https://cdn.simpleicons.org/jeep/ffffff" class="w-10">
     </div>
 
   </div>
 
 </section>
 
-  <!-- How It Works -->
-  <section class="py-16 px-6 max-w-6xl mx-auto">
-    <h2 class="text-3xl font-bold text-center mb-12">How It Works</h2>
-    <div class="grid grid-cols-1 md:grid-cols-4 gap-6">
-
-      <div class="bg-white rounded-2xl shadow-sm p-6 text-center">
-        <h3 class="font-semibold text-lg">Tell Us What You Want</h3>
-        <p class="text-sm text-gray-600">New or used, budget, features, and preferences.</p>
-      </div>
-
-      <div class="bg-white rounded-2xl shadow-sm p-6 text-center">
-        <h3 class="font-semibold text-lg">We Shop the Market</h3>
-        <p class="text-sm text-gray-600">We negotiate with dealerships and private sellers.</p>
-      </div>
-
-      <div class="bg-white rounded-2xl shadow-sm p-6 text-center">
-        <h3 class="font-semibold text-lg">You Save Money</h3>
-        <p class="text-sm text-gray-600">No pressure, no hidden fees—just real savings.</p>
-      </div>
-
-      <div class="bg-white rounded-2xl shadow-sm p-6 text-center">
-        <h3 class="font-semibold text-lg">Deal Confidence</h3>
-        <p class="text-sm text-gray-600">Every deal reviewed to protect your investment.</p>
-      </div>
-
-    </div>
-  </section>
-
-  <!-- Promise Section -->
-  <section class="bg-white py-16 px-6">
-    <div class="max-w-4xl mx-auto text-center">
-      <h2 class="text-3xl font-bold mb-6">Our Promise</h2>
-      <p class="text-lg text-gray-700">
-        At Grate Auto Deals, we work solely for you—not the dealership. Our mission is to secure the best possible price,
-        fair terms, and a stress-free buying experience. If it’s not a great deal, we won’t recommend it.
-      </p>
-    </div>
-  </section>
-
-  <!-- Contact Section -->
-<section id="contact" class="bg-gray-100 py-16 px-6">
-  <div class="max-w-6xl mx-auto text-center">
-    <h2 class="text-3xl font-bold mb-6">Get in Touch Instantly</h2>
-    <p class="mb-6 text-gray-700">
-      Call or email me directly — no forms, no waiting.
-    </p>
-
-    <div class="flex flex-col md:flex-row justify-center gap-4">
-      <a
-        href="tel:13106865259"
-        class="inline-block bg-black text-white text-lg px-8 py-4 rounded-2xl"
-      >
-        📞 Call 310‑686‑5259
-      </a>
-
-      <a
-        href="mailto:grateautodeals@gmail.com"
-        class="inline-block bg-white border border-black text-black text-lg px-8 py-4 rounded-2xl"
-      >
-        ✉️ Email Me
-      </a>
-    </div>
+<!-- ✅ HOW IT WORKS -->
+<section class="py-16 px-6 max-w-6xl mx-auto text-center">
+  <h2 class="text-3xl font-bold mb-12">How It Works</h2>
+  <div class="grid md:grid-cols-4 gap-6">
+    <div class="bg-white p-6 rounded-xl shadow">Tell Us What You Want</div>
+    <div class="bg-white p-6 rounded-xl shadow">We Shop the Market</div>
+    <div class="bg-white p-6 rounded-xl shadow">You Save Money</div>
+    <div class="bg-white p-6 rounded-xl shadow">Deal Confidence</div>
   </div>
 </section>
 
-<!-- INSTAGRAM SECTION -->
+<!-- ✅ INSTAGRAM -->
 <section class="bg-gray-900 text-white py-16 px-6 text-center">
+  <h2 class="text-3xl font-bold mb-4">Stay Connected</h2>
+  <p class="mb-6 text-gray-300">See real deals and client deliveries.</p>
 
-  <div class="max-w-4xl mx-auto">
-
-    <h2 class="text-3xl font-bold mb-4">
-      Stay Connected with Grate Auto Deals
-    </h2>
-
-    <p class="text-gray-300 mb-8 leading-relaxed">
-      Follow us on Instagram to see real deals, vehicle finds, client deliveries,
-      and behind-the-scenes looks at how we secure the best automotive opportunities.
-    </p>
-
-    <!-- INSTAGRAM BUTTON -->
-   
-<a 
-  href="https://instagram.com/grateautodeals"
-   target="_blank"
-   rel="noopener noreferrer"
-   class="inline-flex items-center gap-2 bg-gradient-to-r from-pink-500 via-red-500 to-yellow-500 text-white font-semibold px-7 py-3 rounded-xl shadow-lg hover:scale-105 transition">
-
-  <!-- ICON -->
-  <svg xmlns="http://www.w3.org/2000/svg"
-       class="w-5 h-5"
-       fill="currentColor"
-       viewBox="0 0 24 24">
-    <path d="M7.75 2h8.5A5.75 5.75 0 0 1 22 7.75v8.5A5.75 5.75 0 0 1 16.25 22h-8.5A5.75 5.75 0 0 1 2 16.25v-8.5A5.75 5.75 0 0 1 7.75 2zm0 1.5A4.25 4.25 0 0 0 3.5 7.75v8.5A4.25 4.25 0 0 0 7.75 20.5h8.5a4.25 4.25 0 0 0 4.25-4.25v-8.5A4.25 4.25 0 0 0 16.25 3.5h-8.5zm9.25 2a.75.75 0 1 1 0 1.5.75.75 0 0 1 0-1.5zM12 7a5 5 0 1 1 0 10 5 5 0 0 1 0-10zm0 1.5a3.5 3.5 0 1 0 0 7 3.5 3.5 0 0 0 0-7z"/>
-  </svg>
-
-  Follow @grateautodeals
-</a>
-
-
-
-  </div>
-
+  <a href="https://instagram.com/grateautodeals"
+     target="_blank"
+     rel="noopener noreferrer"
+     class="inline-flex items-center gap-2 bg-gradient-to-r from-pink-500 via-red-500 to-yellow-500 text-white px-6 py-3 rounded-xl font-semibold hover:scale-105 transition">
+    <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+      <path d="M7.75 2h8.5A5.75 5.75 0 0 1 22 7.75v8.5A5.75 5.75 0 0 1 16.25 22h-8.5A5.75 5.75 0 0 1 2 16.25v-8.5A5.75 5.75 0 0 1 7.75 2z"/>
+    </svg>
+    Follow @grateautodeals
+  </a>
 </section>
 
-
-
-<!-- Consultation Form Section -->
-<!-- CONTACT / CONSULTATION SECTION -->
-<section id="contact" class="bg-gray-100 py-16 px-6">
-
+<!-- ✅ FORM -->
+<section class="bg-gray-100 py-16 px-6">
   <div class="max-w-3xl mx-auto bg-white p-8 rounded-xl shadow">
 
-    <!-- TITLE -->
-    <h2 class="text-3xl font-bold mb-4 text-center">
-      Free Consultation
-    </h2>
+    <h2 class="text-3xl font-bold text-center mb-6">Free Consultation</h2>
 
-    <!-- SUBTEXT -->
-    <p class="text-gray-600 text-center mb-8">
-      Ready to find your next vehicle or service? Fill out the form below and we’ll contact you shortly.
-    </p>
+    <form id="consultation-form" class="space-y-5 scroll-mt-36">
 
-    <!-- ✅ FORM -->
-    <form id="consultation-form" class="space-y-5 scroll-mt-28">
+      <input type="text" placeholder="Full Name" required class="w-full border p-3 rounded-lg">
 
-      <!-- NAME -->
-      <div>
-        <input type="text"
-               name="name"
-               placeholder="Full Name"
-               required
-               class="w-full border border-gray-300 p-3 rounded-lg focus:ring-2 focus:ring-blue-500 outline-none">
-      </div>
+      <input type="email" placeholder="Email" required class="w-full border p-3 rounded-lg">
 
-      <!-- EMAIL -->
-      <div>
-        <input type="email"
-               name="email"
-               placeholder="Email Address"
-               required
-               class="w-full border border-gray-300 p-3 rounded-lg focus:ring-2 focus:ring-blue-500 outline-none">
-      </div>
+      <textarea placeholder="What are you looking for?"
+                class="w-full border p-3 rounded-lg h-32"></textarea>
 
-      <!-- PHONE -->
-      <div>
-        <input type="tel"
-               name="phone"
-               placeholder="Phone Number"
-               class="w-full border border-gray-300 p-3 rounded-lg focus:ring-2 focus:ring-blue-500 outline-none">
-      </div>
-
-      <!-- SERVICE TYPE -->
-      <div>
-        <select name="service"
-                class="w-full border border-gray-300 p-3 rounded-lg focus:ring-2 focus:ring-blue-500 outline-none">
-          <option value="">Select Service</option>
-          <option>Basic Deal Search</option>
-          <option>Full Service Broker</option>
-          <option>Premium Concierge</option>
-          <option>Window Tint</option>
-          <option>Mobile Mechanic</option>
-          <option>Powder Coating Wheels</option>
-          <option>Vehicle Wraps</option>
-        </select>
-      </div>
-
-      <!-- MESSAGE -->
-      <div>
-        <textarea name="message"
-                  placeholder="What vehicle or service are you looking for?"
-                  rows="4"
-                  class="w-full border border-gray-300 p-3 rounded-lg focus:ring-2 focus:ring-blue-500 outline-none"></textarea>
-      </div>
-
-      <!-- SUBMIT BUTTON -->
-      <button type="submit"
-              class="w-full bg-blue-600 text-white py-3 rounded-xl font-semibold hover:bg-blue-700 transition">
+      <button class="w-full bg-blue-600 text-white py-3 rounded-xl">
         Submit Consultation Request
       </button>
 
     </form>
 
   </div>
-
 </section>
- 
-  <!-- Footer -->
-  <footer class="bg-black text-white py-8 text-center text-sm">
-    © 2026 Grate Auto Deals · Auto Broker Services · All Rights Reserved
-  </footer>
+
+<!-- ✅ FOOTER -->
+<footer class="bg-black text-white text-center py-6">
+  © 2026 Grate Auto Deals
+</footer>
 
 </body>
 </html>
