@@ -1,7 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
+<!DOCTYPE html><!DOCTYPE-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Services | Grate Auto Deals</title>
 
@@ -68,7 +65,7 @@
       </ul>
 
       <a href="#pay-section" onclick="setAmount(1500)"
-         class="block w-full text-center bg-blue-600 text-white py-4 rounded-xl hover:bg-blue-700 transition">
+         class="block w-full text-center bg-blue-600 text-white py-4 rounded-xl hover:bg-blue-700">
         Proceed to Payment
       </a>
     </div>
@@ -86,7 +83,7 @@
       </ul>
 
       <a href="#pay-section" onclick="setAmount(2000)"
-         class="block w-full text-center bg-blue-600 text-white py-4 rounded-xl hover:bg-blue-700 transition">
+         class="block w-full text-center bg-blue-600 text-white py-4 rounded-xl hover:bg-blue-700">
         Proceed to Payment
       </a>
     </div>
@@ -97,38 +94,35 @@
 <!-- ADDITIONAL SERVICES -->
 <section class="bg-white py-16 px-6">
   <div class="max-w-6xl mx-auto text-center">
-
     <h2 class="text-3xl font-bold mb-10">Additional Services Available</h2>
 
     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
 
-      <!-- SERVICE CARD -->
       <div class="bg-gray-50 p-6 rounded-2xl border">
         <h3 class="font-semibold text-lg mb-2">Window Tint</h3>
         <p class="text-gray-600 text-sm mb-4">Professional tinting for privacy and heat reduction.</p>
-        <a href="index.html#contact" class="block text-center border py-2 rounded-lg hover:bg-gray-100">Request Quote</a>
+        <a href="index.html#contact" class="block border py-2 rounded">Request Quote</a>
       </div>
 
       <div class="bg-gray-50 p-6 rounded-2xl border">
         <h3 class="font-semibold text-lg mb-2">Mobile Mechanic</h3>
-        <p class="text-gray-600 text-sm mb-4">Convenient on-site maintenance and repairs.</p>
-        <a href="index.html#contact" class="block text-center border py-2 rounded-lg hover:bg-gray-100">Request Quote</a>
+        <p class="text-gray-600 text-sm mb-4">On-site maintenance and repairs.</p>
+        <a href="index.html#contact" class="block border py-2 rounded">Request Quote</a>
       </div>
 
       <div class="bg-gray-50 p-6 rounded-2xl border">
         <h3 class="font-semibold text-lg mb-2">Powder Coating Wheels</h3>
-        <p class="text-gray-600 text-sm mb-4">Custom wheel finishes for a premium look.</p>
-        <a href="index.html#contact" class="block text-center border py-2 rounded-lg hover:bg-gray-100">Request Quote</a>
+        <p class="text-gray-600 text-sm mb-4">Custom finishes for wheels.</p>
+        <a href="index.html#contact" class="block border py-2 rounded">Request Quote</a>
       </div>
 
       <div class="bg-gray-50 p-6 rounded-2xl border">
         <h3 class="font-semibold text-lg mb-2">Vehicle Wraps</h3>
-        <p class="text-gray-600 text-sm mb-4">Full and partial wraps for customization and protection.</p>
-        <a href="index.html#contact" class="block text-center border py-2 rounded-lg hover:bg-gray-100">Request Quote</a>
+        <p class="text-gray-600 text-sm mb-4">Wraps for customization and protection.</p>
+        <a href="index.html#contact" class="block border py-2 rounded">Request Quote</a>
       </div>
 
     </div>
-
   </div>
 </section>
 
@@ -141,10 +135,16 @@
     <div id="paypal-button-container"></div>
 
     <p class="text-xs text-gray-500 mt-6">
-      By proceeding with payment, you agree that services are non-refundable after work begins and subject to third-party dealership availability.
+      Payments are for brokerage services and are non-refundable once work begins.
     </p>
   </div>
 </section>
+
+<!-- EMAILJS -->
+<script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+<script>
+  emailjs.init("79GpKgIC8W7-vVqDA");
+</script>
 
 <!-- PAYPAL -->
 <script src="https://www.paypal.com/sdk/js?client-id=AWESQ-Q9rVEWOHcFu75iP651SjAs8NuMTNTptIOuYtCePXq4rwE1BSPKzWgfbN_FM3niikyisn37lyWr&currency=USD"></script>
@@ -168,17 +168,15 @@ paypal.Buttons({
   onApprove: function(data, actions) {
     return actions.order.capture().then(function(details) {
 
-      const subject = "New Payment Received";
-      const body = `
-Name: ${details.payer.name.given_name} ${details.payer.name.surname}
-Email: ${details.payer.email_address}
-Amount: $${selectedAmount}
-Transaction: ${data.orderID}
-      `;
-
-      window.location.href = `mailto:youremail@example.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+      emailjs.send("service_gyx73ey", "template_15618jp", {
+        name: details.payer.name.given_name + " " + details.payer.name.surname,
+        email: details.payer.email_address,
+        amount: selectedAmount,
+        transaction: details.id
+      });
 
       alert("Payment completed successfully!");
+
     });
   }
 
@@ -187,3 +185,6 @@ Transaction: ${data.orderID}
 
 </body>
 </html>
+<html lang="en">
+<head>
+
