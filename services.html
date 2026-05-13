@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Services | Grate Auto Deals</title>
 
-  <script src="https://cdn.tailwindcss.com"></script>
+  https://cdn.tailwindcss.com>
 </head>
 
 <body class="bg-gray-50 text-gray-900">
@@ -17,9 +17,9 @@
     <div class="font-bold text-lg">Grate Auto Deals</div>
 
     <div class="space-x-6">
-      <a href="index.html" class="hover:opacity-80">Home</a>
-      <a href="services.html" class="font-semibold border-b-2 border-white">Services</a>
-      <a href="index.html#contact" class="hover:opacity-80">Contact</a>
+      index.htmlHome</a>
+      services.htmlServices</a>
+      index.html#contact
     </div>
 
   </div>
@@ -54,13 +54,11 @@
       </p>
 
       <div class="space-y-3">
-        <a href="tel:13106865259"
-           class="block w-full text-center border border-gray-300 py-3 rounded-xl hover:bg-gray-100 transition">
+        tel:13106865259
           Call to Discuss
         </a>
 
-        <a href="index.html#contact"
-           class="block w-full text-center border border-gray-300 py-3 rounded-xl hover:bg-gray-100 transition">
+        index.html#contact
           Contact / Start My Deal
         </a>
       </div>
@@ -82,14 +80,11 @@
 
       <div class="space-y-3">
 
-        <a href="#pay-section"
-           onclick="setAmount(1500)"
-           class="block w-full text-center bg-blue-600 hover:bg-blue-700 text-white py-4 rounded-xl font-semibold transition">
+        #pay-section text-center bg-blue-600 hover:bg-blue-700 text-white py-4 rounded-xl font-semibold transition">
           Proceed to Payment
         </a>
 
-        <a href="index.html#contact"
-           class="block w-full text-center border border-gray-300 py-3 rounded-xl hover:bg-gray-100 transition">
+        index.html#contact
           Contact / Ask Questions
         </a>
 
@@ -99,5 +94,100 @@
     <!-- PREMIUM -->
     <div class="bg-white p-6 rounded-2xl shadow-md border">
       <h2 class="text-xl font-bold mb-3">Premium Concierge</h2>
+
+      <p class="text-2xl font-bold mb-4">$2,000</p>
+
+      <ul class="list-disc pl-5 text-gray-700 mb-6">
+        <li>Nationwide sourcing</li>
+        <li>Luxury & specialty vehicles</li>
+        <li>Out‑of‑state coordination</li>
+        <li>Priority communication</li>
+      </ul>
+
+      <div class="space-y-3">
+
+        #pay-sectionblock w-full text-center bg-blue-600 hover:bg-blue-700 text-white py-4 rounded-xl font-semibold transition">
+          Proceed to Payment
+        </a>
+
+        index.html#contact
+          Contact / Ask Questions
+        </a>
+
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- PAYMENT -->
+<section id="pay-section" class="bg-gray-100 py-20 px-6">
+  <div class="max-w-md mx-auto bg-white p-8 rounded-2xl shadow-md text-center">
+
+    <h2 class="text-2xl font-bold mb-2">Secure Payment</h2>
+
+    <p class="text-gray-600 mb-6">
+      Pay with PayPal, Apple Pay, or debit/credit card.
+    </p>
+
+    <div id="paypal-button-container"></div>
+
+    <p class="text-xs text-gray-500 mt-6">
+      Apple Pay appears automatically on supported devices (iPhone & Safari).
+    </p>
+
+  </div>
+</section>
+
+<!-- ADDITIONAL SERVICES -->
+<section class="bg-white py-16 px-6">
+  <div class="max-w-5xl mx-auto">
+
+    <h2 class="text-3xl font-bold mb-8 text-center">
+      Additional Services Available
+    </h2>
+
+    <ul class="grid grid-cols-1 md:grid-cols-2 gap-6 text-gray-700">
+      <li class="p-4 rounded-xl border">✅ Window Tint</li>
+      <li class="p-4 rounded-xl border">✅ Powder Coating Wheels & Rims</li>
+      <li class="p-4 rounded-xl border">✅ Vehicle Wraps</li>
+      <li class="p-4 rounded-xl border">✅ Mobile Mechanic Services</li>
+      <li class="p-4 rounded-xl border">✅ Pre‑Purchase Inspections</li>
+      <li class="p-4 rounded-xl border">✅ Custom Automotive Requests</li>
+    </ul>
+
+  </div>
+</section>
+
+<!-- PAYPAL SDK -->
+https://www.paypal.com/sdk/js?client-id=AWESQ-Q9rVEWOHcFu75iP651SjAs8NuMTNTptIOuYtCePXq4rwE1BSPKzWgfbN_FM3niikyisn37lyWr&currency=USD&enable-funding=venmo,paylater,card
+
+<script>
+  let selectedAmount = "1500.00";
+
+  function setAmount(amount) {
+    selectedAmount = amount.toFixed(2);
+  }
+
+  paypal.Buttons({
+    createOrder: function(data, actions) {
+      return actions.order.create({
+        purchase_units: [{
+          amount: { value: selectedAmount }
+        }]
+      });
+    },
+
+    onApprove: function(data, actions) {
+      return actions.order.capture().then(function() {
+        window.location.href = "next-steps.html";
+      });
+    }
+
+  }).render('#paypal-button-container');
+</script>
+
+</body>
+</html>
 
 
