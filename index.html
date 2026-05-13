@@ -142,34 +142,99 @@ btn.onclick = () => menu.classList.toggle("hidden");
   </a>
 </section>
 
-<!-- ✅ FORM -->
+<!-- ✅ CONSULTATION FORM SECTION -->
 <section class="bg-gray-100 py-16 px-6">
+
   <div class="max-w-3xl mx-auto bg-white p-8 rounded-xl shadow">
 
-    <h2 class="text-3xl font-bold text-center mb-6">Free Consultation</h2>
+    <!-- TITLE -->
+    <h2 class="text-3xl font-bold text-center mb-4">
+      Free Consultation
+    </h2>
 
+    <!-- SUBTEXT -->
+    <p class="text-gray-600 text-center mb-8">
+      Tell us what you're looking for and we’ll help you secure the best deal possible.
+    </p>
+
+    <!-- ✅ FORM -->
     <form id="consultation-form" class="space-y-5 scroll-mt-36">
 
-      <input type="text" placeholder="Full Name" required class="w-full border p-3 rounded-lg">
+      <!-- NAME -->
+      <input type="text"
+             name="name"
+             placeholder="Full Name"
+             required
+             class="w-full border border-gray-300 p-3 rounded-lg focus:ring-2 focus:ring-blue-500 outline-none">
 
-      <input type="email" placeholder="Email" required class="w-full border p-3 rounded-lg">
+      <!-- EMAIL -->
+      <input type="email"
+             name="email"
+             placeholder="Email Address"
+             required
+             class="w-full border border-gray-300 p-3 rounded-lg focus:ring-2 focus:ring-blue-500 outline-none">
 
-      <textarea placeholder="What are you looking for?"
-                class="w-full border p-3 rounded-lg h-32"></textarea>
+      <!-- PHONE -->
+      <input type="tel"
+             name="phone"
+             placeholder="Phone Number"
+             class="w-full border border-gray-300 p-3 rounded-lg focus:ring-2 focus:ring-blue-500 outline-none">
 
-      <button class="w-full bg-blue-600 text-white py-3 rounded-xl">
+      <!-- ✅ SERVICE SELECT (AUTO-FILL TARGET) -->
+      <select id="service-select"
+              name="service"
+              class="w-full border border-gray-300 p-3 rounded-lg focus:ring-2 focus:ring-blue-500 outline-none">
+
+        <option value="">Select Service</option>
+
+        <option>Basic Deal Search</option>
+        <option>Full Service Broker</option>
+        <option>Premium Concierge</option>
+        <option>Window Tint</option>
+        <option>Mobile Mechanic</option>
+        <option>Powder Coating Wheels</option>
+        <option>Vehicle Wraps</option>
+
+      </select>
+
+      <!-- MESSAGE -->
+      <textarea name="message"
+                placeholder="What vehicle or service are you looking for?"
+                rows="4"
+                class="w-full border border-gray-300 p-3 rounded-lg focus:ring-2 focus:ring-blue-500 outline-none"></textarea>
+
+      <!-- SUBMIT BUTTON -->
+      <button type="submit"
+              class="w-full bg-blue-600 text-white py-3 rounded-xl font-semibold hover:bg-blue-700 transition">
         Submit Consultation Request
       </button>
 
     </form>
 
   </div>
+
 </section>
 
 <!-- ✅ FOOTER -->
 <footer class="bg-black text-white text-center py-6">
   © 2026 Grate Auto Deals
 </footer>
+  
+  <script>
+// ✅ Auto-fill service from URL
+window.addEventListener("DOMContentLoaded", function () {
+  const params = new URLSearchParams(window.location.search);
+  const service = params.get("service");
+
+  if (service) {
+    const select = document.getElementById("service-select");
+
+    if (select) {
+      select.value = service;
+    }
+  }
+});
+</script>
 
 </body>
 </html>
