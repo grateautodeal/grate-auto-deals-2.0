@@ -5,15 +5,16 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Services | Grate Auto Deals</title>
 
-  <!-- Tailwind CSS -->
-  <script src="https://cdn.tailwindcss
+  <!-- Tailwind -->
+  <script src="https://cdn.tailwindcss.com"></script>
 </head>
 
 <body class="bg-gray-50 text-gray-900">
 
-<!-- NAVIGATION -->
+<!-- NAV -->
 <nav class="bg-gray-900 text-white fixed top-0 w-full z-50 shadow-md">
   <div class="max-w-6xl mx-auto px-4 py-4 flex justify-between items-center">
+    
     <div class="font-bold text-lg">Grate Auto Deals</div>
 
     <div class="space-x-6">
@@ -21,6 +22,7 @@
       <a href="services.html" class="font-semibold border-b-2 border-white">Services</a>
       <a href="index.html#contact" class="hover:opacity-80">Contact</a>
     </div>
+
   </div>
 </nav>
 
@@ -53,17 +55,19 @@
       </p>
 
       <div class="space-y-3">
-        <a href="tel:13106865259" class="block w-full text-center border border-gray-300 py-3 rounded-xl hover:bg-gray-100">
+        <a href="tel:13106865259"
+           class="block w-full text-center border border-gray-300 py-3 rounded-xl hover:bg-gray-100">
           Call to Discuss
         </a>
 
-        <a href="index.html#contact" class="block w-full text-center border border-gray-300 py-3 rounded-xl hover:bg-gray-100">
+        <a href="index.html#contact"
+           class="block w-full text-center border border-gray-300 py-3 rounded-xl hover:bg-gray-100">
           Contact / Start My Deal
         </a>
       </div>
     </div>
 
-    <!-- FULL SERVICE -->
+    <!-- FULL -->
     <div class="bg-white p-6 rounded-2xl border-2 border-blue-600 shadow">
       <span class="text-blue-600 text-sm font-semibold">Most Popular</span>
 
@@ -78,12 +82,13 @@
       </ul>
 
       <div class="space-y-3">
-        <a href="#pay-section" onclick="setAmount(1500)" 
-           class="block w-full text-center bg-blue-600 text-white py-4 rounded-xl hover:bg-blue-700 transition">
+        <a href="#pay-section" onclick="setAmount(1500)"
+           class="block w-full text-center bg-blue-600 text-white py-4 rounded-xl hover:bg-blue-700">
           Proceed to Payment
         </a>
 
-        <a href="index.html#contact" class="block w-full text-center border border-gray-300 py-3 rounded-xl hover:bg-gray-100">
+        <a href="index.html#contact"
+           class="block w-full text-center border border-gray-300 py-3 rounded-xl hover:bg-gray-100">
           Contact / Ask Questions
         </a>
       </div>
@@ -103,12 +108,13 @@
       </ul>
 
       <div class="space-y-3">
-        <a href="#pay-section" onclick="setAmount(2000)" 
-           class="block w-full text-center bg-blue-600 text-white py-4 rounded-xl hover:bg-blue-700 transition">
+        <a href="#pay-section" onclick="setAmount(2000)"
+           class="block w-full text-center bg-blue-600 text-white py-4 rounded-xl hover:bg-blue-700">
           Proceed to Payment
         </a>
 
-        <a href="index.html#contact" class="block w-full text-center border border-gray-300 py-3 rounded-xl hover:bg-gray-100">
+        <a href="index.html#contact"
+           class="block w-full text-center border border-gray-300 py-3 rounded-xl hover:bg-gray-100">
           Contact / Ask Questions
         </a>
       </div>
@@ -132,21 +138,21 @@
   </div>
 </section>
 
-<!-- PAYPAL SCRIPT -->
-<script src="https://www.paypal.com/sdk/js?client-id=AWESQ-Q9rVEWOHcFu75iP651SjAs8NuMTNTptIOuYtCePXq4rwE1BSPKzWgfbN_FM3niikyisn37lyWr&currency=USD&enable-funding=venmo,paylater,card"></script>
+<!-- PAYPAL -->
+<script src="https://www.paypal.com/sdk/js?client-id=AWESQ-Q9rVEWOHcFu75iP651SjAs8NuMTNTptIOuYtCePXq4rwE1BSPKzWgfbN_FM3niikyisn37lyWr&currency=USD"></script>
 
 <script>
-let selectedAmount = 1500;
+let selectedAmount = "1500.00";
 
 function setAmount(amount){
-  selectedAmount = amount;
+  selectedAmount = amount.toFixed(2);
 }
 
 paypal.Buttons({
   createOrder: function(data, actions) {
     return actions.order.create({
       purchase_units: [{
-        amount: { value: selectedAmount.toFixed(2) }
+        amount: { value: selectedAmount }
       }]
     });
   },
