@@ -12,56 +12,22 @@
 <body class="scroll-smooth bg-gray-50 text-gray-900">
 
 <!-- NAV -->
-<nav class="bg-gray-900 text-white fixed top-0 w-full z-50 shadow-md">
+<nav class="bg-gray-900 text-white fixed top-0 w-full z-50">
 
-  <div class="max-w-6xl mx-auto px-4 py-4 flex justify-between items-center">
+  <div class="flex justify-between items-center p-4">
 
-    <!-- LEFT: BRAND -->
-    <div class="font-bold text-lg">
-      Grate Auto Deals
-    </div>
+    <!-- Brand -->
+    <div>Grate Auto Deals</div>
 
-    <!-- RIGHT SIDE: DESKTOP LINKS + HAMBURGER -->
-    <div class="flex items-center space-x-6">
-
-      <!-- DESKTOP LINKS -->
-      <div class="hidden md:flex space-x-6">
-        Home
-        </a>
-
-        Services
-        </a>
-
-        Contact Us
-        </a>
-      </div>
-
-      <!-- ✅ HAMBURGER (RIGHT SIDE ON MOBILE) -->
-      <button id="menu-btn" class="md:hidden text-2xl">
-        ☰
-      </button>
-
-    </div>
+    <!-- Hamburger -->
+    <button id="menu-btn">☰</button>
 
   </div>
 
-  <!-- ✅ MOBILE MENU (VERTICAL STACK) -->
-<div id="mobile-menu" class="hidden md:hidden bg-gray-900 flex flex-col items-center py-4 space-y-4">
-
-  <a href="index.html" class="block w-full text-center py-2 hover:bg-gray-800">
-    Home
-  </a>
-
-  <a href="services.html" class="block w-full text-center py-2 hover:bg-gray-800">
-    Services
-  </a>
-
-  <a href="index.html#consultation-form" class="block w-full text-center py-2 hover:bg-gray-800">
-    Contact Us
-  </a>
-
-</div>
-
+  <!-- Mobile menu -->
+  <div id="mobile-menu" class="hidden">
+    <a href="#consultation-form">Contact Us</a>
+  </div>
 
 </nav>
 
@@ -387,29 +353,24 @@ window.addEventListener("DOMContentLoaded", function () {
   }
 });
 </script>
-<script>
-document.addEvent  const menuBtn = document.getElementById("menu-btn");document.addEventListener("DOMContentLoaded", function () {
+<script><script = function () {
+  const menuBtn = document.getElementById("menu-btn");
   const mobileMenu = document.getElementById("mobile-menu");
 
-  if (!menuBtn || !mobileMenu) return;
-
-  const menuLinks = mobileMenu.querySelectorAll("a");
-
-  // ✅ Toggle menu open/close
-  menuBtn.addEventListener("click", function () {
+  menuBtn.onclick = function () {
     mobileMenu.classList.toggle("hidden");
-  });
+  };
 
-  // ✅ Close menu when ANY link is clicked
-  menuLinks.forEach(link => {
-    link.addEventListener("click", () => {
+  // Close when clicking link
+  const links = mobileMenu.getElementsByTagName("a");
+
+  for (let i = 0; i < links.length; i++) {
+    links[i].onclick = function () {
       mobileMenu.classList.add("hidden");
-    });
-  });
-
-});
+    };
+  }
+};
 </script>
-
 
 </body>
 </html>
