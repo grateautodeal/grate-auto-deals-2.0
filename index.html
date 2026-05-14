@@ -11,8 +11,9 @@
 
 <body class="scroll-smooth bg-gray-50 text-gray-900">
 
-<!-- ✅ NAV -->
-<!-- class="bg-gray-900 text-white fixed top-0 w-full z-50 shadow-md">
+<!-- NAV -->
+<nav class="bg-gray-900 text-white fixed top-0 w-full z-50 shadow-md">
+
   <div class="max-w-6xl mx-auto px-4 py-4 flex justify-between items-center">
 
     <!-- LEFT: BRAND -->
@@ -20,48 +21,45 @@
       Grate Auto Deals
     </div>
 
-    <!-- RIGHT: DESKTOP LINKS -->
-    <div class="hidden md:flex space-x-6">
+    <!-- RIGHT SIDE: DESKTOP LINKS + HAMBURGER -->
+    <div class="flex items-center space-x-6">
 
-      index.html
+      <!-- DESKTOP LINKS -->
+      <div class="hidden md:flex space-x-6">
         Home
-      </a>
+        </a>
 
-      services.html
         Services
-      </a>
+        </a>
 
-      index.html#consultation-form
         Contact Us
-      </a>
+        </a>
+      </div>
+
+      <!-- ✅ HAMBURGER (RIGHT SIDE ON MOBILE) -->
+      <button id="menu-btn" class="md:hidden text-2xl">
+        ☰
+      </button>
 
     </div>
 
-    <!-- MOBILE HAMBURGER -->
-    <button id="menu-btn" class="md:hidden text-2xl">
-      ☰
-    </button>
-
   </div>
 
-  <!-- MOBILE MENU -->
+  <!-- ✅ MOBILE MENU -->
   <div id="mobile-menu" class="hidden md:hidden bg-gray-900 text-center space-y-4 py-4">
 
-    index.html
-      Home
+    Home
     </a>
 
-    services.html
-      Services
+    Services
     </a>
 
-    index.html#consultation-form
-      Contact Us
+    Contact Us
     </a>
 
   </div>
-</nav>
 
+</nav>
 
 
 <div class="h-20"></div>
