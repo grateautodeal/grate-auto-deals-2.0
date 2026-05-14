@@ -315,16 +315,30 @@ window.onload = () => {
   </div>
 
 </section>
-  <script>
-  const menuBtn = document.getElementById("menu-btn");
+<script>
+document.addEvent  const menuBtn = document.getElementById("menu-btn");document.addEventListener("DOMContentLoaded", function () {
   const mobileMenu = document.getElementById("mobile-menu");
 
-  if (menuBtn && mobileMenu) {
-    menuBtn.addEventListener("click", () => {
-      mobileMenu.classList.toggle("hidden");
+  if (!menuBtn || !mobileMenu) return;
+
+  const menuLinks = mobileMenu.querySelectorAll("a");
+
+  // ✅ Toggle menu open/close
+  menuBtn.addEventListener("click", function () {
+    mobileMenu.classList.toggle("hidden");
+  });
+
+  // ✅ Close menu when ANY link is clicked
+  menuLinks.forEach(link => {
+    link.addEventListener("click", () => {
+      mobileMenu.classList.add("hidden");
     });
-  }
+  });
+
+});
 </script>
+
+
 
 </body>
   
