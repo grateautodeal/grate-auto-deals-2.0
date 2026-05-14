@@ -170,134 +170,140 @@ btn.onclick = () => menu.classList.toggle("hidden");
     </p>
 
     <!-- ✅ FORM -->
-    <form id="consultation-form" class="space-y-5 scroll-mt-36">
+  <form id="consultation-form" class="space-y-5 scroll-mt-36">
 
-      <!-- NAME -->
-      <input type="text"
-             name="name"
-             placeholder="Full Name"
-             required
-             class="w-full border border-gray-300 p-3 rounded-lg focus:ring-2 focus:ring-blue-500 outline-none">
+  <!-- NAME -->
+  <input type="text"
+         name="name"
+         placeholder="Full Name"
+         required
+         class="w-full border p-3 rounded-lg">
 
-      <!-- EMAIL -->
-      <input type="email"
-             name="email"
-             placeholder="Email Address"
-             required
-             class="w-full border border-gray-300 p-3 rounded-lg focus:ring-2 focus:ring-blue-500 outline-none">
+  <!-- EMAIL -->
+  <input type="email"
+         name="email"
+         placeholder="Email Address"
+         required
+         class="w-full border p-3 rounded-lg">
 
-      <!-- PHONE -->
-      <input type="tel"
-             name="phone"
-             placeholder="Phone Number (optional)"
-             class="w-full border border-gray-300 p-3 rounded-lg focus:ring-2 focus:ring-blue-500 outline-none">
+  <!-- PHONE -->
+  <input type="tel"
+         name="phone"
+         placeholder="Phone Number (optional)"
+         class="w-full border p-3 rounded-lg">
 
-      <!-- ✅ SERVICE SELECT (AUTO-FILL TARGET) -->
-      <select id="service-select"
-              name="service"
-              class="w-full border border-gray-300 p-3 rounded-lg focus:ring-2 focus:ring-blue-500 outline-none">
+  <!-- SERVICE -->
+  <select id="service-select"
+          name="service"
+          class="w-full border p-3 rounded-lg">
+    <option value="">Select Service</option>
+    <option>Free Consultation</option>
+    <option>Basic Deal Search</option>
+    <option>Full Service Broker</option>
+    <option>Premium Concierge</option>
+    <option>Window Tint</option>
+    <option>Mobile Mechanic</option>
+    <option>Powder Coating Wheels</option>
+    <option>Vehicle Wraps</option>
+  </select>
 
-        <option value="">Select Service</option>
+  <!-- ✅ VEHICLE DETAILS (ADDED CLEANLY, SAME STYLE) -->
+  <div class="space-y-3">
 
-        <!-- DEFAULT -->
-        <option>Free Consultation</option>
+    <p class="text-sm text-gray-500">
+      Select your vehicle details. If you do not see your make listed, enter it below.
+    </p>
 
-        <!-- CORE SERVICES -->
-        <option>Basic Deal Search</option>
-        <option>Full Service Broker</option>
-        <option>Premium Concierge</option>
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
 
-        <!-- ADDITIONAL SERVICES -->
-        <option>Window Tint</option>
-        <option>Mobile Mechanic</option>
-        <option>Powder Coating Wheels</option>
-        <option>Vehicle Wraps</option>
-
+      <!-- YEAR -->
+      <select name="year" class="w-full border p-3 rounded-lg">
+        <option value="">Year</option>
+        <option>2028</option>
+        <option>2027</option>
+        <option>2026</option>
+        <option>2025</option>
+        <option>2024</option>
+        <option>2023</option>
+        <option>2022</option>
+        <option>2021</option>
+        <option>2020</option>
+        <option>2019</option>
+        <option>2018</option>
+        <option>2017</option>
+        <option>2016</option>
+        <option>2015</option>
+        <option>2014</option>
+        <option>2013</option>
+        <option>2012</option>
+        <option>2011</option>
+        <option>2010</option>
       </select>
-      <!-- VEHICLE DETAILS --><!-- VEHICLEp class="text-sm text-gray-500">
-    Select your vehicle details. If you don’t see your brand listed, enter it below.
-  </p>
 
-  <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+      <!-- MAKE -->
+      <select name="make" class="w-full border p-3 rounded-lg">
+        <option value="">Select Make</option>
+        <option>Toyota</option>
+        <option>Honda</option>
+        <option>Ford</option>
+        <option>Chevrolet</option>
+        <option>Nissan</option>
+        <option>BMW</option>
+        <option>Mercedes-Benz</option>
+        <option>Audi</option>
+        <option>Lexus</option>
+        <option>Acura</option>
+        <option>Tesla</option>
+        <option>Hyundai</option>
+        <option>Kia</option>
+        <option>Subaru</option>
+        <option>Volkswagen</option>
+        <option>Jeep</option>
+        <option>Ram</option>
+        <option>GMC</option>
+        <option>Cadillac</option>
+        <option>Infiniti</option>
+        <option>Volvo</option>
+        <option>Porsche</option>
+      </select>
 
-    <!-- YEAR -->
-    <select name="year" class="w-full border border-gray-300 p-3 rounded-lg">
-      <option value="">Year</option>
+      <!-- MODEL -->
+      <input type="text"
+             name="model"
+             placeholder="Model (Camry, Charger, X5...)"
+             class="w-full border p-3 rounded-lg">
 
-      <option>2028</option>
-      <option>2027</option>
-      <option>2026</option>
-      <option>2025</option>
-      <option>2024</option>
-      <option>2023</option>
-      <option>2022</option>
-      <option>2021</option>
-      <option>2020</option>
-      <option>2019</option>
-      <option>2018</option>
-      <option>2017</option>
-      <option>2016</option>
-      <option>2015</option>
-      <option>2014</option>
-      <option>2013</option>
-      <option>2012</option>
-      <option>2011</option>
-      <option>2010</option>
-    </select>
+    </div>
 
-    <!-- MAKE -->
-    <select name="make" class="w-full border border-gray-300 p-3 rounded-lg">
-      <option value="">Select Make</option>
+    <!-- ✅ CUSTOM MAKE (IMPORTANT FIX) -->
+    <input type="text"
+           name="custom_make"
+           placeholder="If you do not see your make listed, write it here"
+           class="w-full border p-3 rounded-lg">
 
-      <!-- Popular -->
-      <option>Toyota</option>
-      <option>Honda</option>
-      <option>Ford</option>
-      <option>Chevrolet</option>
-      <option>Nissan</option>
+  </div>
 
-      <!-- Luxury -->
-      <option>BMW</option>
-      <option>Mercedes-Benz</option>
-      <option>Audi</option>
-      <option>Lexus</option>
-      <option>Acura</option>
+  <!-- ✅ MESSAGE (FIXED WORDING + KEPT STYLE) -->
+  <div class="space-y-2">
 
-      <!-- Performance -->
-      <option>Dodge</option>
-      <option>Chevrolet Corvette</option>
-      <option>Ford Performance</option>
+    <p class="text-sm text-gray-500">
+      Please include your vehicle details along with any additional questions or comments regarding the service you are interested in.
+    </p>
 
-      <!-- EV -->
-      <option>Tesla</option>
-      <option>Rivian</option>
+    <textarea name="message"
+              placeholder="Enter your vehicle details and any additional questions or comments..."
+              rows="4"
+              class="w-full border p-3 rounded-lg"></textarea>
 
-      <!-- Other major -->
-      <option>Hyundai</option>
+  </div>
 
-<div class="space-y-3">
+  <!-- SUBMIT -->
+  <button type="submit"
+          class="w-full bg-blue-600 text-white py-3 rounded-xl font-semibold hover:bg-blue-700">
+    Submit Consultation Request
+  </button>
 
-
-      
-
-      <!-- ✅ FORM HELPER TEXT -->
-      <p class="text-sm text-gray-500">
-        Please include Year, Make, and Model for the most accurate quote.
-      </p>
-
-      <!-- ✅ MESSAGE (CUSTOM INPUT) -->
-      <textarea name="message"
-                placeholder="Enter vehicle details (Year, Make, Model), budget, timeline, or any details about the service you need..."
-                rows="4"
-                class="w-full border border-gray-300 p-3 rounded-lg focus:ring-2 focus:ring-blue-500 outline-none"></textarea>
-
-      <!-- SUBMIT BUTTON -->
-      <button type="submit"
-              class="w-full bg-blue-600 text-white py-3 rounded-xl font-semibold hover:bg-blue-700 transition">
-        Submit Consultation Request
-      </button>
-
-    </form>
+</form>
 
   </div>
 
