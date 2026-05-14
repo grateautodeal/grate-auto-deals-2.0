@@ -1,5 +1,8 @@
-<!DOCTYPE html><!DOCTYPE-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Services | Grate Auto Deals</title>
 
   <!-- Tailwind -->
@@ -16,7 +19,7 @@
     <div class="space-x-6">
       <a href="index.html" class="hover:opacity-80">Home</a>
       <a href="services.html" class="font-semibold border-b-2 border-white">Services</a>
-      <a href="index.html#contact" class="hover:opacity-80">Contact</a>
+      <a href="index.html#consultation-form" class="hover:opacity-80">Contact</a>
     </div>
   </div>
 </nav>
@@ -27,7 +30,7 @@
 <section class="py-16 px-6 text-center bg-white">
   <h1 class="text-4xl font-extrabold mb-4">Services & Pricing</h1>
   <p class="text-gray-700 max-w-2xl mx-auto">
-    Professional automotive brokerage and concierge services with secure payment options.
+    Professional automotive brokerage and concierge services designed to save you time, money, and stress.
   </p>
 </section>
 
@@ -39,13 +42,11 @@
     <div class="bg-white p-6 rounded-2xl shadow border">
       <h2 class="text-xl font-bold mb-3">Basic Deal Search</h2>
       <ul class="list-disc pl-5 mb-6 text-gray-700">
-        <li>Vehicle search</li>
-        <li>Market pricing review</li>
-        <li>Deal recommendation</li>
+        <li>Targeted vehicle search</li>
+        <li>Market pricing analysis</li>
+        <li>Expert deal recommendations</li>
       </ul>
-
-      <button onclick="openModal('basicModal')"
-        class="block w-full border border-gray-300 py-3 rounded-xl hover:bg-gray-100">
+      <button onclick="openModal('basicModal')" class="block w-full border py-3 rounded-xl hover:bg-gray-100">
         More Information
       </button>
     </div>
@@ -53,18 +54,14 @@
     <!-- FULL -->
     <div class="bg-white p-6 rounded-2xl border-2 border-blue-600 shadow">
       <span class="text-blue-600 text-sm font-semibold">Most Popular</span>
-
       <h2 class="text-xl font-bold mt-2 mb-3">Full Service Broker</h2>
-
       <ul class="list-disc pl-5 mb-6 text-gray-700">
-        <li>Full vehicle sourcing</li>
+        <li>Vehicle sourcing</li>
         <li>Dealer negotiation</li>
         <li>Trade-in guidance</li>
         <li>Contract review</li>
       </ul>
-
-      <button onclick="openModal('fullModal')"
-        class="block w-full bg-blue-600 text-white py-4 rounded-xl hover:bg-blue-700">
+      <button onclick="openModal('fullModal')" class="block w-full bg-blue-600 text-white py-4 rounded-xl hover:bg-blue-700">
         More Information
       </button>
     </div>
@@ -72,199 +69,82 @@
     <!-- PREMIUM -->
     <div class="bg-white p-6 rounded-2xl shadow border">
       <h2 class="text-xl font-bold mb-3">Premium Concierge</h2>
-
       <ul class="list-disc pl-5 mb-6 text-gray-700">
         <li>Nationwide sourcing</li>
         <li>Luxury & specialty vehicles</li>
-        <li>Priority communication</li>
+        <li>Priority support</li>
       </ul>
-
-      <button onclick="openModal('premiumModal')"
-        class="block w-full bg-blue-600 text-white py-4 rounded-xl hover:bg-blue-700">
+      <button onclick="openModal('premiumModal')" class="block w-full bg-blue-600 text-white py-4 rounded-xl hover:bg-blue-700">
         More Information
       </button>
     </div>
 
   </div>
 </section>
-  <!-- ✅ MODALS GO HERE -->
 
-<div id="basicModal" class="hidden fixed inset-0 bg-black bg-opacity-50 items-center justify-center">
+<!-- MODALS -->
+<div id="basicModal" class="hidden fixed inset-0 bg-black/50 flex items-center justify-center">
   <div class="bg-white p-8 rounded-xl max-w-md w-full relative">
     <button onclick="closeModal('basicModal')" class="absolute top-3 right-4 text-xl">&times;</button>
     <h2 class="text-xl font-bold mb-4">Basic Deal Search</h2>
-    <p class="mb-4">We find the best deals and guide your purchase.</p>
+    <p class="mb-4">We help you find the best deals and avoid overpaying.</p>
     <p class="text-2xl font-bold mb-6">$500</p>
     <div id="paypal-basic"></div>
   </div>
 </div>
-  
+
+<div id="fullModal" class="hidden fixed inset-0 bg-black/50 flex items-center justify-center">
+  <div class="bg-white p-8 rounded-xl max-w-md w-full relative">
+    <button onclick="closeModal('fullModal')" class="absolute top-3 right-4 text-xl">&times;</button>
+    <h2 class="text-xl font-bold mb-4">Full Service Broker</h2>
+    <p class="mb-4">We handle the full deal start to finish.</p>
+    <p class="text-2xl font-bold mb-6">$1,500</p>
+    <div id="paypal-full"></div>
+  </div>
+</div>
+
+<div id="premiumModal" class="hidden fixed inset-0 bg-black/50 flex items-center justify-center">
+  <div class="bg-white p-8 rounded-xl max-w-md w-full relative">
+    <button onclick="closeModal('premiumModal')" class="absolute top-3 right-4 text-xl">&times;</button>
+    <h2 class="text-xl font-bold mb-4">Premium Concierge</h2>
+    <p class="mb-4">White-glove nationwide vehicle sourcing.</p>
+    <p class="text-2xl font-bold mb-6">$2,000</p>
+    <div id="paypal-premium"></div>
+  </div>
+</div>
+
 <!-- ADDITIONAL SERVICES -->
 <section class="py-16 px-6 bg-white">
-  <div class="max-w-6xl mx-auto">
+  <div class="max-w-6xl mx-auto text-center">
+    <h2 class="text-3xl font-bold mb-10">Additional Services Available</h2>
 
-    <h2 class="text-3xl font-bold text-center mb-10">
-      Additional Services Available
-    </h2>
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
 
-    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 text-center">
-
-      <!-- WINDOW TINT -->
-      <div class="bg-gray-50 p-6 rounded-2xl shadow border">
-        <h3 class="font-semibold text-lg mb-2">Window Tint</h3>
-        <p class="text-sm text-gray-600 mb-4">
-          Professional tinting for privacy and heat reduction.
-        </p>
+      <div class="bg-gray-50 p-6 rounded-2xl border shadow">
+        <h3 class="mb-2 font-semibold">Window Tint</h3>
+        <p class="text-sm mb-4">Professional tinting</p>
         <a href="index.html?service=Window%20Tint#consultation-form"
-           class="block w-full border border-gray-300 py-2 rounded-lg hover:bg-gray-100 transition">
-          Request Quote
+           class="block border py-2 rounded-lg hover:bg-gray-100">
+           Request Quote
         </a>
       </div>
 
-      <!-- MOBILE MECHANIC -->
-      <div class="bg-gray-50 p-6 rounded-2xl shadow border">
-        <h3 class="font-semibold text-lg mb-2">Mobile Mechanic</h3>
-        <p class="text-sm text-gray-600 mb-4">
-          On-site maintenance and repairs.
-        </p>
+      <div class="bg-gray-50 p-6 rounded-2xl border shadow">
+        <h3 class="mb-2 font-semibold">Mobile Mechanic</h3>
+        <p class="text-sm mb-4">On-site repairs</p>
         <a href="index.html?service=Mobile%20Mechanic#consultation-form"
-           class="block w-full border border-gray-300 py-2 rounded-lg hover:bg-gray-100 transition">
-          Request Quote
+           class="block border py-2 rounded-lg hover:bg-gray-100">
+           Request Quote
         </a>
       </div>
 
-      <!-- POWDER COATING -->
-      <div class="bg-gray-50 p-6 rounded-2xl shadow border">
-        <h3 class="font-semibold text-lg mb-2">Powder Coating Wheels</h3>
-        <p class="text-sm text-gray-600 mb-4">
-          Custom finishes for wheels.
-        </p>
+      <div class="bg-gray-50 p-6 rounded-2xl border shadow">
+        <h3 class="mb-2 font-semibold">Powder Coating Wheels</h3>
+        <p class="text-sm mb-4">Custom finishes</p>
         <a href="index.html?service=Powder%20Coating%20Wheels#consultation-form"
-           class="block w-full border border-gray-300 py-2 rounded-lg hover:bg-gray-100 transition">
-          Request Quote
+           class="block border py-2 rounded-lg hover:bg-gray-100">
+           Request Quote
         </a>
       </div>
 
-      <!-- VEHICLE WRAPS -->
-      <div class="bg-gray-50 p-6 rounded-2xl shadow border">
-        <h3 class="font-semibold text-lg mb-2">Vehicle Wraps</h3>
-        <p class="text-sm text-gray-600 mb-4">
-          Wraps for customization and protection.
-        </p>
-        <a href="index.html?service=Vehicle%20Wraps#consultation-form"
-           class="block w-full border border-gray-300 py-2 rounded-lg hover:bg-gray-100 transition">
-          Request Quote
-        </a>
-      </div>
-
-    </div>
-
-  </div>
-</section>
-
-<!-- PAYMENT -->
-<section id="pay-section" class="bg-gray-100 py-20 px-6">
-  <div class="max-w-md mx-auto bg-white p-8 rounded-xl shadow text-center">
-    <h2 class="text-2xl font-bold mb-3">Secure Payment</h2>
-    <p class="text-gray-600 mb-6">Pay with PayPal, Apple Pay, credit, or debit card.</p>
-
-    <div id="paypal-button-container"></div>
-
-    <p class="text-xs text-gray-500 mt-6">
-      Payments are for brokerage services and are non-refundable once work begins.
-    </p>
-  </div>
-</section>
-
-<!-- EMAILJS -->
-<script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
-<script>
-  emailjs.init("79GpKgIC8W7-vVqDA");
-</script>
-
-<!-- PAYPAL -->
-<script src="https://www.paypal.com/sdk/js?client-id=AWESQ-Q9rVEWOHcFu75iP651SjAs8NuMTNTptIOuYtCePXq4rwE1BSPKzWgfbN_FM3niikyisn37lyWr&currency=USD"></script>
-
-<script>
-let selectedAmount = 1500;
-
-function setAmount(amount){
-  selectedAmount = amount;
-}
-
-paypal.Buttons({
-  createOrder: function(data, actions) {
-    return actions.order.create({
-      purchase_units: [{
-        amount: { value: selectedAmount.toFixed(2) }
-      }]
-    });
-  },
-
-  onApprove: function(data, actions) {
-    return actions.order.capture().then(function(details) {
-
-      emailjs.send("service_gyx73ey", "template_15618jp", {
-        name: details.payer.name.given_name + " " + details.payer.name.surname,
-        email: details.payer.email_address,
-        amount: selectedAmount,
-        transaction: details.id
-      });
-
-      alert("Payment completed successfully!");
-
-    });
-  }
-
-}).render('#paypal-button-container');
-</script>
-<!-- ✅ PAYPAL SDK -->
-https://www.paypal.com/sdk/js?client-id=AWESQ-Q9rVEWOHcFu75iP651SjAs8NuMTNTptIOuYtCePXq4rwE1BSPKzWgfbN_FM3niikyisn37lyWr&currency=USDscript>
-
-<script>
-  
-// ✅ MODAL CONTROL
-function openModal(id) {
-  document.getElementById(id).classList.add("active");
-}
-
-function closeModal(id) {
-  document.getElementById(id).classList.remove("active");
-}
-
-// ✅ RENDER PAYPAL BUTTONS ON LOAD
-function renderButtons() {
-
-  paypal.Buttons({
-    createOrder: (data, actions) => {
-      return actions.order.create({
-        purchase_units: [{ amount: { value: "500" } }]
-      });
-    }
-  }).render("#paypal-basic");
-
-  paypal.Buttons({
-    createOrder: (data, actions) => {
-      return actions.order.create({
-        purchase_units: [{ amount: { value: "1500" } }]
-      });
-    }
-  }).render("#paypal-full");
-
-  paypal.Buttons({
-    createOrder: (data, actions) => {
-      return actions.order.create({
-        purchase_units: [{ amount: { value: "2000" } }]
-      });
-    }
-  }).render("#paypal-premium");
-}
-
-// ✅ ENSURE PAYPAL LOADS AFTER PAGE
-window.addEventListener("load", renderButtons);
-</script>
-</body>
-</html>
-<html lang="en">
-<head>
 
