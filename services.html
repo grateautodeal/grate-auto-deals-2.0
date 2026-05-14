@@ -12,7 +12,7 @@
 <body class="bg-gray-50 text-gray-900">
 
 <!-- NAV -->
-<nav class="bg-gray-900 text-white fixed top-0 w-full z-50 shadow-md">
+<!-- class="bg-gray-900 text-white fixed top-0 w-full z-50 shadow-md">
   <div class="max-w-6xl mx-auto px-4 py-4 flex justify-between items-center">
 
     <!-- LEFT: BRAND -->
@@ -20,25 +20,48 @@
       Grate Auto Deals
     </div>
 
-    <!-- RIGHT: LINKS -->
-    <div class="space-x-6">
+    <!-- RIGHT: DESKTOP LINKS -->
+    <div class="hidden md:flex space-x-6">
 
-      <a href="index.html" class="hover:opacity-80">
+      index.html
         Home
       </a>
 
-      <a href="services.html" class="hover:opacity-80">
+      services.html
         Services
       </a>
 
-      <a href="index.html#consultation-form" class="hover:opacity-80">
+      index.html#consultation-form
         Contact Us
       </a>
 
     </div>
 
+    <!-- MOBILE HAMBURGER -->
+    <button id="menu-btn" class="md:hidden text-2xl">
+      ☰
+    </button>
+
+  </div>
+
+  <!-- MOBILE MENU -->
+  <div id="mobile-menu" class="hidden md:hidden bg-gray-900 text-center space-y-4 py-4">
+
+    index.html
+      Home
+    </a>
+
+    services.html
+      Services
+    </a>
+
+    index.html#consultation-form
+      Contact Us
+    </a>
+
   </div>
 </nav>
+
 
 <div class="h-20"></div>
 
