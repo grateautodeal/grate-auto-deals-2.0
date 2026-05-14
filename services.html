@@ -43,19 +43,18 @@
         <li>Market pricing review</li>
         <li>Deal recommendation</li>
       </ul>
-      <p class="text-sm mb-6 text-gray-500">Pricing discussed prior to starting.</p>
 
-      <a href="tel:13106865259"
-         class="block w-full text-center border border-gray-300 py-3 rounded-xl hover:bg-gray-100">
-        Call to Discuss
-      </a>
+      <button onclick="openModal('basicModal')"
+        class="block w-full border border-gray-300 py-3 rounded-xl hover:bg-gray-100">
+        More Information
+      </button>
     </div>
 
     <!-- FULL -->
     <div class="bg-white p-6 rounded-2xl border-2 border-blue-600 shadow">
       <span class="text-blue-600 text-sm font-semibold">Most Popular</span>
+
       <h2 class="text-xl font-bold mt-2 mb-3">Full Service Broker</h2>
-      <p class="text-2xl font-bold mb-4">$1,500</p>
 
       <ul class="list-disc pl-5 mb-6 text-gray-700">
         <li>Full vehicle sourcing</li>
@@ -64,33 +63,42 @@
         <li>Contract review</li>
       </ul>
 
-      <a href="#pay-section" onclick="setAmount(1500)"
-         class="block w-full text-center bg-blue-600 text-white py-4 rounded-xl hover:bg-blue-700">
-        Proceed to Payment
-      </a>
+      <button onclick="openModal('fullModal')"
+        class="block w-full bg-blue-600 text-white py-4 rounded-xl hover:bg-blue-700">
+        More Information
+      </button>
     </div>
 
     <!-- PREMIUM -->
     <div class="bg-white p-6 rounded-2xl shadow border">
       <h2 class="text-xl font-bold mb-3">Premium Concierge</h2>
-      <p class="text-2xl font-bold mb-4">$2,000</p>
 
       <ul class="list-disc pl-5 mb-6 text-gray-700">
         <li>Nationwide sourcing</li>
         <li>Luxury & specialty vehicles</li>
-        <li>Out-of-state coordination</li>
         <li>Priority communication</li>
       </ul>
 
-      <a href="#pay-section" onclick="setAmount(2000)"
-         class="block w-full text-center bg-blue-600 text-white py-4 rounded-xl hover:bg-blue-700">
-        Proceed to Payment
-      </a>
+      <button onclick="openModal('premiumModal')"
+        class="block w-full bg-blue-600 text-white py-4 rounded-xl hover:bg-blue-700">
+        More Information
+      </button>
     </div>
 
   </div>
 </section>
+  <!-- ✅ MODALS GO HERE -->
 
+<div id="basicModal" class="hidden fixed inset-0 bg-black bg-opacity-50 items-center justify-center">
+  <div class="bg-white p-8 rounded-xl max-w-md w-full relative">
+    <button onclick="closeModal('basicModal')" class="absolute top-3 right-4 text-xl">&times;</button>
+    <h2 class="text-xl font-bold mb-4">Basic Deal Search</h2>
+    <p class="mb-4">We find the best deals and guide your purchase.</p>
+    <p class="text-2xl font-bold mb-6">$500</p>
+    <div id="paypal-basic"></div>
+  </div>
+</div>
+  
 <!-- ADDITIONAL SERVICES -->
 <section class="py-16 px-6 bg-white">
   <div class="max-w-6xl mx-auto">
@@ -210,7 +218,51 @@ paypal.Buttons({
 
 }).render('#paypal-button-container');
 </script>
+<!-- ✅ PAYPAL SDK -->
+https://www.paypal.com/sdk/js?client-id=AWESQ-Q9rVEWOHcFu75iP651SjAs8NuMTNTptIOuYtCePXq4rwE1BSPKzWgfbN_FM3niikyisn37lyWr&currency=USDscript>
 
+<script>
+  
+// ✅ MODAL CONTROL
+function openModal(id) {
+  document.getElementById(id).classList.add("active");
+}
+
+function closeModal(id) {
+  document.getElementById(id).classList.remove("active");
+}
+
+// ✅ RENDER PAYPAL BUTTONS ON LOAD
+function renderButtons() {
+
+  paypal.Buttons({
+    createOrder: (data, actions) => {
+      return actions.order.create({
+        purchase_units: [{ amount: { value: "500" } }]
+      });
+    }
+  }).render("#paypal-basic");
+
+  paypal.Buttons({
+    createOrder: (data, actions) => {
+      return actions.order.create({
+        purchase_units: [{ amount: { value: "1500" } }]
+      });
+    }
+  }).render("#paypal-full");
+
+  paypal.Buttons({
+    createOrder: (data, actions) => {
+      return actions.order.create({
+        purchase_units: [{ amount: { value: "2000" } }]
+      });
+    }
+  }).render("#paypal-premium");
+}
+
+// ✅ ENSURE PAYPAL LOADS AFTER PAGE
+window.addEventListener("load", renderButtons);
+</script>
 </body>
 </html>
 <html lang="en">
