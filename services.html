@@ -28,9 +28,12 @@
 
 <!-- HEADER -->
 <section class="py-16 px-6 text-center bg-white">
-  <h1 class="text-4xl font-extrabold mb-4">Services & Pricing</h1>
+  <h1 class="text-4xl font-extrabold mb-4">
+    Stop Overpaying. Start Driving Smarter.
+  </h1>
+
   <p class="text-gray-700 max-w-2xl mx-auto">
-    Professional automotive brokerage and concierge services designed to save you time, money, and stress.
+    We negotiate, source, and secure the best possible deal — so you don’t waste time, money, or energy dealing with dealerships.
   </p>
 </section>
 
@@ -43,39 +46,45 @@
       <h2 class="text-xl font-bold mb-3">Basic Deal Search</h2>
       <ul class="list-disc pl-5 mb-6 text-gray-700">
         <li>Targeted vehicle search</li>
-        <li>Market pricing analysis</li>
-        <li>Expert deal recommendations</li>
+        <li>True market pricing analysis</li>
+        <li>Clear deal recommendations</li>
       </ul>
+
       <button onclick="openModal('basicModal')" class="block w-full border py-3 rounded-xl hover:bg-gray-100">
-        More Information
+        Learn More
       </button>
     </div>
 
     <!-- FULL -->
     <div class="bg-white p-6 rounded-2xl border-2 border-blue-600 shadow">
       <span class="text-blue-600 text-sm font-semibold">Most Popular</span>
+
       <h2 class="text-xl font-bold mt-2 mb-3">Full Service Broker</h2>
+
       <ul class="list-disc pl-5 mb-6 text-gray-700">
-        <li>Vehicle sourcing</li>
+        <li>Full vehicle sourcing</li>
         <li>Dealer negotiation</li>
         <li>Trade-in guidance</li>
-        <li>Contract review</li>
+        <li>Contract protection</li>
       </ul>
+
       <button onclick="openModal('fullModal')" class="block w-full bg-blue-600 text-white py-4 rounded-xl hover:bg-blue-700">
-        More Information
+        See Why This Wins
       </button>
     </div>
 
     <!-- PREMIUM -->
     <div class="bg-white p-6 rounded-2xl shadow border">
       <h2 class="text-xl font-bold mb-3">Premium Concierge</h2>
+
       <ul class="list-disc pl-5 mb-6 text-gray-700">
         <li>Nationwide sourcing</li>
-        <li>Luxury & specialty vehicles</li>
-        <li>Priority support</li>
+        <li>Luxury & rare vehicles</li>
+        <li>Priority service</li>
       </ul>
+
       <button onclick="openModal('premiumModal')" class="block w-full bg-blue-600 text-white py-4 rounded-xl hover:bg-blue-700">
-        More Information
+        Go VIP
       </button>
     </div>
 
@@ -87,7 +96,7 @@
   <div class="bg-white p-8 rounded-xl max-w-md w-full relative">
     <button onclick="closeModal('basicModal')" class="absolute top-3 right-4 text-xl">&times;</button>
     <h2 class="text-xl font-bold mb-4">Basic Deal Search</h2>
-    <p class="mb-4">We help you find the best deals and avoid overpaying.</p>
+    <p class="mb-4">Perfect if you want guidance without pressure. We show you the smartest deals so you don’t get taken advantage of.</p>
     <p class="text-2xl font-bold mb-6">$500</p>
     <div id="paypal-basic"></div>
   </div>
@@ -97,7 +106,7 @@
   <div class="bg-white p-8 rounded-xl max-w-md w-full relative">
     <button onclick="closeModal('fullModal')" class="absolute top-3 right-4 text-xl">&times;</button>
     <h2 class="text-xl font-bold mb-4">Full Service Broker</h2>
-    <p class="mb-4">We handle the full deal start to finish.</p>
+    <p class="mb-4">We take control of the entire deal and negotiate like it’s our own money on the line.</p>
     <p class="text-2xl font-bold mb-6">$1,500</p>
     <div id="paypal-full"></div>
   </div>
@@ -107,7 +116,7 @@
   <div class="bg-white p-8 rounded-xl max-w-md w-full relative">
     <button onclick="closeModal('premiumModal')" class="absolute top-3 right-4 text-xl">&times;</button>
     <h2 class="text-xl font-bold mb-4">Premium Concierge</h2>
-    <p class="mb-4">White-glove nationwide vehicle sourcing.</p>
+    <p class="mb-4">The white-glove experience. We find vehicles others can’t and manage everything.</p>
     <p class="text-2xl font-bold mb-6">$2,000</p>
     <div id="paypal-premium"></div>
   </div>
@@ -116,35 +125,63 @@
 <!-- ADDITIONAL SERVICES -->
 <section class="py-16 px-6 bg-white">
   <div class="max-w-6xl mx-auto text-center">
-    <h2 class="text-3xl font-bold mb-10">Additional Services Available</h2>
+    <h2 class="text-3xl font-bold mb-10">Additional Services</h2>
 
     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
 
       <div class="bg-gray-50 p-6 rounded-2xl border shadow">
-        <h3 class="mb-2 font-semibold">Window Tint</h3>
-        <p class="text-sm mb-4">Professional tinting</p>
+        <h3 class="font-semibold mb-2">Window Tint</h3>
+        <p class="text-sm mb-4">Privacy + heat protection</p>
         <a href="index.html?service=Window%20Tint#consultation-form"
            class="block border py-2 rounded-lg hover:bg-gray-100">
-           Request Quote
+          Request Quote
         </a>
       </div>
 
       <div class="bg-gray-50 p-6 rounded-2xl border shadow">
-        <h3 class="mb-2 font-semibold">Mobile Mechanic</h3>
-        <p class="text-sm mb-4">On-site repairs</p>
+        <h3 class="font-semibold mb-2">Mobile Mechanic</h3>
+        <p class="text-sm mb-4">We come to you</p>
         <a href="index.html?service=Mobile%20Mechanic#consultation-form"
            class="block border py-2 rounded-lg hover:bg-gray-100">
-           Request Quote
+          Request Quote
         </a>
       </div>
 
       <div class="bg-gray-50 p-6 rounded-2xl border shadow">
-        <h3 class="mb-2 font-semibold">Powder Coating Wheels</h3>
-        <p class="text-sm mb-4">Custom finishes</p>
+        <h3 class="font-semibold mb-2">Powder Coating Wheels</h3>
+        <p class="text-sm mb-4">Durable custom finishes</p>
         <a href="index.html?service=Powder%20Coating%20Wheels#consultation-form"
            class="block border py-2 rounded-lg hover:bg-gray-100">
-           Request Quote
+          Request Quote
         </a>
       </div>
 
+      <div class="bg-gray-50 p-6 rounded-2xl border shadow">
+        <h3 class="font-semibold mb-2">Vehicle Wraps</h3>
+        <p class="text-sm mb-4">Style + protection</p>
+        <a href="index.html?service=Vehicle%20Wraps#consultation-form"
+           class="block border py-2 rounded-lg hover:bg-gray-100">
+          Request Quote
+        </a>
+      </div>
 
+    </div>
+  </div>
+</section>
+
+<!-- PAYPAL -->
+<script src="https://www.paypal.com/sdk/js?client-id=AWESQ-Q9rVEWOHcFu75iP651SjAs8NuMTNTptIOuYtCePXq4rwE1BSPKzWgfbN_FM3niikyisn37lyWr&currency=USD"></script>
+
+<script>
+function openModal(id){ document.getElementById(id).classList.remove("hidden"); }
+function closeModal(id){ document.getElementById(id).classList.add("hidden"); }
+
+window.onload = () => {
+  paypal.Buttons({ createOrder:(d,a)=>a.order.create({purchase_units:[{amount:{value:"500"}}]}) }).render("#paypal-basic");
+  paypal.Buttons({ createOrder:(d,a)=>a.order.create({purchase_units:[{amount:{value:"1500"}}]}) }).render("#paypal-full");
+  paypal.Buttons({ createOrder:(d,a)=>a.order.create({purchase_units:[{amount:{value:"2000"}}]}) }).render("#paypal-premium");
+};
+</script>
+
+</body>
+</html>
