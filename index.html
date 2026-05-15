@@ -375,17 +375,15 @@ window.onload = function () {
   }
 };
 </script>
-  <!-- ✅ EMAILJS SCRIPT (CORRECT + WORKING) -->
+<!-- ✅ EMAILJS SCRIPT (CORRECT) -->
 <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
 
 <!-- ✅ EMAILJS FORM HANDLER -->
 <script>
-  // ✅ Initialize EmailJS with YOUR public key
-  (function() {
+  (function () {
     emailjs.init("79GpKgIC8W7-vVqDA");
   })();
 
-  // ✅ Wait for page to load
   document.addEventListener("DOMContentLoaded", function () {
 
     const form = document.getElementById("consultation-form");
@@ -395,18 +393,21 @@ window.onload = function () {
       form.addEventListener("submit", function (e) {
         e.preventDefault();
 
-        // ✅ Send form using EmailJS
         emailjs.sendForm(
-          "YOUR_SERVICE_ID",          // 🔴 REPLACE THIS ONLY
-          "template_8agwm1c",          // ✅ your template
+          "service_gyx73ey",       // ✅ YOUR SERVICE ID (ADDED)
+          "template_8agwm1c",      // ✅ YOUR TEMPLATE ID
           this
         )
-        .then(function () {
+        .then(function (response) {
+          console.log("SUCCESS!", response.status, response.text);
+
           alert("✅ Request sent successfully!");
           form.reset();
+
         })
         .catch(function (error) {
-          console.error("EmailJS Error:", error);
+          console.error("FAILED...", error);
+
           alert("❌ Failed to send. Check console.");
         });
 
@@ -418,6 +419,5 @@ window.onload = function () {
 
   });
 </script>
-
 </body>
 </html>
