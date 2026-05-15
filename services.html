@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Services | Grate Auto Deals</title>
 
-  <!-- Tailwind -->
+  <!-- ✅ Tailwind -->
   <script src="https://cdn.tailwindcss.com"></script>
 </head>
 
@@ -16,10 +16,8 @@
 
   <div class="max-w-6xl mx-auto px-4 py-4 flex justify-between items-center">
 
-    <!-- LEFT -->
     <div class="font-bold text-lg">Grate Auto Deals</div>
 
-    <!-- RIGHT -->
     <div class="flex items-center space-x-6">
 
       <!-- DESKTOP LINKS -->
@@ -32,16 +30,14 @@
       <!-- HAMBURGER -->
       <button id="menu-btn" class="md:hidden text-2xl">☰</button>
 
-
+    </div>
   </div>
 
-  <!-- ✅ MOBILE MENU -->
+  <!-- MOBILE MENU -->
   <div id="mobile-menu" class="hidden md:hidden bg-gray-900 flex flex-col text-center space-y-4 py-4">
-
     <a href="index.html" class="block">Home</a>
     <a href="services.html" class="block">Services</a>
     <a href="index.html#consultation-form" class="block">Contact Us</a>
-
   </div>
 
 </nav>
@@ -50,23 +46,18 @@
 
 <!-- HEADER -->
 <section class="py-16 px-6 text-center bg-white">
-
-  <h1 class="text-4xl font-extrabold mb-4">
-    Services and Pricing
-  </h1>
+  <h1 class="text-4xl font-extrabold mb-4">Services and Pricing</h1>
 
   <p class="text-gray-700 max-w-2xl mx-auto mb-4">
     Professional automotive brokerage and concierge services designed to save you time, money, and frustration.
   </p>
 
-  <!-- ✅ CATCHY SLOGAN -->
   <p class="text-blue-600 font-semibold text-lg">
     We find the right vehicle, negotiate the best deal, and handle the process so you do not have to.
   </p>
-
 </section>
 
-<!-- ===================== SERVICES ===================== -->
+<!-- SERVICES -->
 <section class="py-16 px-6">
   <div class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-6">
 
@@ -126,112 +117,89 @@
   </div>
 </section>
 
-
-<!-- ===================== MODALS ===================== -->
-
-<!-- BASIC -->
+<!-- MODALS -->
 <div id="basicModal" class="hidden fixed inset-0 bg-black/50 flex items-center justify-center z-50">
   <div class="bg-white p-8 rounded-xl max-w-md w-full relative">
     <button onclick="closeModal('basicModal')" class="absolute top-3 right-4 text-xl">&times;</button>
-
     <h2 class="text-xl font-bold mb-4">Basic Deal Search</h2>
-
-    <p class="mb-4 text-gray-700">
-      This service is built for buyers who want clarity and confidence before stepping into a dealership.
-      We analyze current market pricing, identify strong opportunities, and eliminate overpriced or risky deals.
-    </p>
-
-    <ul class="text-sm text-gray-600 mb-4 space-y-1">
-      <li>✔ Understand true market value instantly</li>
-      <li>✔ Avoid hidden markups and overpriced listings</li>
-      <li>✔ Save hours of research and guesswork</li>
-      <li>✔ Make a confident, informed buying decision</li>
-    </ul>
-
-    <p class="font-semibold mb-4">
-      You handle the purchase — we ensure it’s the right deal.
-    </p>
-
     <p class="text-2xl font-bold mb-6">$1,000</p>
-
     <div id="paypal-basic"></div>
   </div>
 </div>
 
-
-<!-- FULL -->
 <div id="fullModal" class="hidden fixed inset-0 bg-black/50 flex items-center justify-center z-50">
   <div class="bg-white p-8 rounded-xl max-w-md w-full relative">
     <button onclick="closeModal('fullModal')" class="absolute top-3 right-4 text-xl">&times;</button>
-
     <h2 class="text-xl font-bold mb-4">Full Service Broker</h2>
-
-    <p class="mb-4 text-gray-700">
-      This is our most popular option for a reason. We take over the entire buying process so you don’t have to deal with the stress, pressure, or negotiation tactics of dealerships.
-    </p>
-
-    <ul class="text-sm text-gray-600 mb-4 space-y-1">
-      <li>✔ We locate and secure the best available vehicle</li>
-      <li>✔ We negotiate directly with dealerships on your behalf</li>
-      <li>✔ We protect you from hidden fees and bad contracts</li>
-      <li>✔ We guide you through every step of the transaction</li>
-    </ul>
-
-    <p class="font-semibold mb-4">
-      If it’s not a great deal — we won’t let you take it.
-    </p>
-
     <p class="text-2xl font-bold mb-6">$1,500</p>
-
     <div id="paypal-full"></div>
   </div>
 </div>
 
-
-<!-- PREMIUM -->
 <div id="premiumModal" class="hidden fixed inset-0 bg-black/50 flex items-center justify-center z-50">
   <div class="bg-white p-8 rounded-xl max-w-md w-full relative">
     <button onclick="closeModal('premiumModal')" class="absolute top-3 right-4 text-xl">&times;</button>
-
     <h2 class="text-xl font-bold mb-4">Premium Concierge</h2>
-
-    <p class="mb-4 text-gray-700">
-      Designed for buyers who want a white‑glove experience. We go beyond local inventory and search nationwide to secure rare, luxury, or highly specific vehicles.
-    </p>
-
-    <ul class="text-sm text-gray-600 mb-4 space-y-1">
-      <li>✔ Nationwide sourcing for the exact vehicle you want</li>
-      <li>✔ Access to rare, luxury, and hard-to-find vehicles</li>
-      <li>✔ Coordination of out-of-state purchases</li>
-      <li>✔ Priority communication and dedicated support</li>
-    </ul>
-
-    <p class="font-semibold mb-4">
-      The easiest way to secure the exact vehicle you want — without stress.
-    </p>
-
     <p class="text-2xl font-bold mb-6">$2,000</p>
-
     <div id="paypal-premium"></div>
   </div>
 </div>
 
+<!-- ✅ ADDITIONAL SERVICES (FIXED) -->
+<section class="py-16 px-6 bg-white">
+  <div class="max-w-6xl mx-auto text-center">
+    <h2 class="text-3xl font-bold mb-10">Additional Services</h2>
 
-<!-- ===================== PAYPAL ===================== -->
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+
+      <div class="bg-gray-50 p-6 rounded-2xl border shadow">
+        <h3 class="font-semibold mb-2">Window Tint</h3>
+        <p class="text-sm mb-4">Privacy + heat protection</p>
+        <a href="index.html?service=Window%20Tint#consultation-form" class="block border py-2 rounded-lg hover:bg-gray-100">
+          Request Quote
+        </a>
+      </div>
+
+      <div class="bg-gray-50 p-6 rounded-2xl border shadow">
+        <h3 class="font-semibold mb-2">Mobile Mechanic</h3>
+        <p class="text-sm mb-4">We come to you</p>
+        <a href="index.html?service=Mobile%20Mechanic#consultation-form" class="block border py-2 rounded-lg hover:bg-gray-100">
+          Request Quote
+        </a>
+      </div>
+
+      <div class="bg-gray-50 p-6 rounded-2xl border shadow">
+        <h3 class="font-semibold mb-2">Powder Coating Wheels</h3>
+        <p class="text-sm mb-4">Durable custom finishes</p>
+        <a href="index.html?service=Powder%20Coating%20Wheels#consultation-form" class="block border py-2 rounded-lg hover:bg-gray-100">
+          Request Quote
+        </a>
+      </div>
+
+      <div class="bg-gray-50 p-6 rounded-2xl border shadow">
+        <h3 class="font-semibold mb-2">Vehicle Wraps</h3>
+        <p class="text-sm mb-4">Style + protection</p>
+        <a href="index.html?service=Vehicle%20Wraps#consultation-form" class="block border py-2 rounded-lg hover:bg-gray-100">
+          Request Quote
+        </a>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ✅ PAYPAL -->
 <script src="https://www.paypal.com/sdk/js?client-id=AWESQ-Q9rVEWOHcFu75iP651SjAs8NuMTNTptIOuYtCePXq4rwE1BSPKzWgfbN_FM3niikyisn37lyWr&currency=USD"></script>
 
-
-<!-- ===================== SCRIPT ===================== -->
+<!-- ✅ SCRIPT -->
 <script>
 
 function openModal(id){
-  const modal = document.getElementById(id);
-  if (modal) modal.classList.remove("hidden");
+  document.getElementById(id).classList.remove("hidden");
 }
 
 function closeModal(id){
-  const modal = document.getElementById(id);
-  if (modal) modal.classList.add("hidden");
+  document.getElementById(id).classList.add("hidden");
 }
 
 document.addEventListener("DOMContentLoaded", () => {
@@ -247,9 +215,14 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   if (window.paypal) {
-    paypal.Buttons({ createOrder:(d,a)=>a.order.create({purchase_units:[{amount:{value:"1000"}}]}) }).render("#paypal-basic");
-    paypal.Buttons({ createOrder:(d,a)=>a.order.create({purchase_units:[{amount:{value:"1500"}}]}) }).render("#paypal-full");
+    paypal.Buttons({createOrder:(d,a)=>a.order.create({purchase_units:[{amount:{value:"1000"}}]})}).render("#paypal-basic");
+    paypal.Buttons({createOrder:(d,a)=>a.order.create({purchase_units:[{amount:{value:"1500"}}]})}).render("#paypal-full");
+    paypal.Buttons({createOrder:(d,a)=>a.order.create({purchase_units:[{amount:{value:"2000"}}]})}).render("#paypal-premium");
+  }
 
+});
+
+</script>
 
 </body>
 </html>
