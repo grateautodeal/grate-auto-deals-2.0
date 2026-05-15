@@ -314,20 +314,25 @@ window.addEventListener("DOMContentLoaded", function () {
     }
   }
 
-  <script>
+<script>
 
-
-// ✅ 1. MODAL FUNCTIONS (GO ABOVE EVERYTHING)
+// ✅ MODAL FUNCTIONS (THIS FIXES YOUR BUTTONS)
 function openModal(id){
-  document.getElementById(id).classList.remove("hidden");
+  const modal = document.getElementById(id);
+  if (modal) {
+    modal.classList.remove("hidden");
+  }
 }
 
 function closeModal(id){
-  document.getElementById(id).classList.add("hidden");
+  const modal = document.getElementById(id);
+  if (modal) {
+    modal.classList.add("hidden");
+  }
 }
 
 
-// ✅ 2. YOUR EXISTING CODE (DO NOT MOVE THIS OUT)
+// ✅ RUN EVERYTHING AFTER PAGE LOAD
 window.addEventListener("DOMContentLoaded", function () {
 
   // ✅ MENU
@@ -339,31 +344,33 @@ window.addEventListener("DOMContentLoaded", function () {
       mobileMenu.classList.toggle("hidden");
     };
 
-    const links = mobileMenu.getElementsByTagName("a");
-    for (let i = 0; i < links.length; i++) {
-      links[i].onclick = () => {
+    const links = mobileMenu.querySelectorAll("a");
+    links.forEach(link => {
+      link.onclick = () => {
         mobileMenu.classList.add("hidden");
       };
-    }
+    });
   }
 
-  // ✅ PAYPAL (leave exactly where it is)
-  paypal.Buttons({
-    createOrder: (d,a)=>a.order.create({purchase_units:[{amount:{value:"1000"}}]})
-  }).render("#paypal-basic");
+  // ✅ PAYPAL (KEEP YOUR PROCEED BUTTONS)
+  if (window.paypal) {
 
-  paypal.Buttons({
-    createOrder: (d,a)=>a.order.create({purchase_units:[{amount:{value:"1500"}}]})
-  }).render("#paypal-full");
+    paypal.Buttons({
+      createOrder: (d,a)=>a.order.create({purchase_units:[{amount:{value:"1000"}}]})
+    }).render("#paypal-basic");
 
-  paypal.Buttons({
-    createOrder: (d,a)=>a.order.create({purchase_units:[{amount:{value:"2000"}}]})
-  }).render("#paypal-premium");
+    paypal.Buttons({
+      createOrder: (d,a)=>a.order.create({purchase_units:[{amount:{value:"1500"}}]})
+    }).render("#paypal-full");
+
+    paypal.Buttons({
+      createOrder: (d,a)=>a.order.create({purchase_units:[{amount:{value:"2000"}}]})
+    }).render("#paypal-premium");
+
+  }
 
 });
-
 </script>
-
 
 </body>
   
