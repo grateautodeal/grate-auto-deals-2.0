@@ -32,10 +32,6 @@
       <!-- HAMBURGER -->
       <button id="menu-btn" class="md:hidden text-2xl">☰</button>
 
-    </div>
-
-  </div>
-
 
   </div>
 
@@ -49,12 +45,6 @@
   </div>
 
 </nav>
-
-
-  <div class="max-w-6xl mx-auto px-4 py-4 flex justify-between items-center">
-
-    <!-- LEFT -->
-
 
 <div class="h-20"></div>
 
@@ -268,18 +258,9 @@
 <!-- PAYPAL -->
 <script src="https://www.paypal.com/sdk/js?client-id=AWESQ-Q9rVEWOHcFu75iP651SjAs8NuMTNTptIOuYtCePXq4rwE1BSPKzWgfbN_FM3niikyisn37lyWr&currency=USD"></script>
 
-<script>
-function openModal(id){ document.getElementById(id).classList.remove("hidden"); }
-function closeModal(id){ document.getElementById(id).classList.add("hidden"); }
 
-window.onload = () => {
-  paypal.Buttons({ createOrder:(d,a)=>a.order.create({purchase_units:[{amount:{value:"1000"}}]}) }).render("#paypal-basic");
-  paypal.Buttons({ createOrder:(d,a)=>a.order.create({purchase_units:[{amount:{value:"1500"}}]}) }).render("#paypal-full");
-  paypal.Buttons({ createOrder:(d,a)=>a.order.create({purchase_units:[{amount:{value:"2000"}}]}) }).render("#paypal-premium");
-};
-</script>
 <!-- YOUR LAST SECTION (services, payment, etc.) -->
-</section>
+
 
 <!-- ✅ ADD DISCLAIMER HERE -->
 <section class="bg-gray-100 text-gray-600 py-10 px-6 text-sm">
@@ -303,7 +284,7 @@ window.onload = () => {
 
   </div>
 
-</section>
+
 <script>
 
 window.addEventListener("DOMContentLoaded", function () {
