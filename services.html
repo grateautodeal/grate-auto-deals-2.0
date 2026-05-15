@@ -70,7 +70,7 @@
 <section class="py-16 px-6">
   <div class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-6">
 
-    <!-- BASIC -->
+  <!-- BASIC -->
 <div class="bg-white p-6 rounded-2xl shadow border">
   <h2 class="text-xl font-bold mb-3">Basic Deal Search</h2>
   <ul class="list-disc pl-5 mb-6 text-gray-700">
@@ -81,7 +81,7 @@
 
   <button type="button"
           onclick="openModal('basicModal')"
-          class="block w-full border py-3 rounded-xl hover:bg-gray-100">
+          class="block w-full bg-blue-600 text-white py-3 rounded-xl hover:bg-blue-700">
     Learn More
   </button>
 </div>
@@ -223,11 +223,15 @@ window.addEventListener("DOMContentLoaded", function () {
 
 <script>
 
-// ✅ MODAL FUNCTIONS (THIS FIXES YOUR BUTTONS)
+<script>
+
+// ✅ MODAL FUNCTIONS (MATCH BUTTONS → MODALS)
 function openModal(id){
   const modal = document.getElementById(id);
   if (modal) {
     modal.classList.remove("hidden");
+  } else {
+    console.warn("Modal not found:", id);
   }
 }
 
@@ -242,7 +246,7 @@ function closeModal(id){
 // ✅ RUN EVERYTHING AFTER PAGE LOAD
 window.addEventListener("DOMContentLoaded", function () {
 
-  // ✅ MENU
+  // ✅ MENU (matches your nav IDs)
   const menuBtn = document.getElementById("menu-btn");
   const mobileMenu = document.getElementById("mobile-menu");
 
@@ -259,26 +263,50 @@ window.addEventListener("DOMContentLoaded", function () {
     });
   }
 
-  // ✅ PAYPAL (KEEP YOUR PROCEED BUTTONS)
+  // ✅ PAYPAL (MATCHES YOUR MODAL DIV IDS EXACTLY)
   if (window.paypal) {
 
-    paypal.Buttons({
-      createOrder: (d,a)=>a.order.create({purchase_units:[{amount:{value:"1000"}}]})
-    }).render("#paypal-basic");
+    const basic = document.getElementById("paypal-basic");
+    const full = document.getElementById("paypal-full");
+    const premium = document.getElementById("paypal-premium");
 
-    paypal.Buttons({
-      createOrder: (d,a)=>a.order.create({purchase_units:[{amount:{value:"1500"}}]})
-    }).render("#paypal-full");
+    if (basic) {
+      paypal.Buttons({
+        createOrder: (data, actions) => {
+          return actions.order.create({
+            purchase_units: [{ amount: { value: "1000" } }]
+          });
+        }
+      }).render("#paypal-basic");
+    }
 
-    paypal.Buttons({
-      createOrder: (d,a)=>a.order.create({purchase_units:[{amount:{value:"2000"}}]})
-    }).render("#paypal-premium");
+    if (full) {
+      paypal.Buttons({
+        createOrder: (data, actions) => {
+          return actions.order.create({
+            purchase_units: [{ amount: { value: "1500" } }]
+          });
+        }
+      }).render("#paypal-full");
+    }
 
+    if (premium) {
+      paypal.Buttons({
+        createOrder: (data, actions) => {
+          return actions.order.create({
+            purchase_units: [{ amount: { value: "2000" } }]
+          });
+        }
+      }).render("#paypal-premium");
+    }
+
+  } else {
+    console.warn("PayPal script not loaded.");
   }
 
 });
 </script>
-
+``
 </body>
   
 </html>
