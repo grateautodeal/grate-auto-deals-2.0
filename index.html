@@ -12,7 +12,12 @@
 <body class="scroll-smooth bg-gray-50 text-gray-900">
 
 <!-- NAV -->
-"><nav class="bg-gray-900 text-white fixed top-0 w-full z-50 shadow-md">
+<nav class="bg-gray-900 text-white fixed top-0 w-full z-50 shadow-md">
+
+  <div class="max-w-6xl mx-auto px-4 py-4 flex justify-between items-center">
+
+    <!-- LEFT -->
+    <div class="font-bold text-lg">
       Grate Auto Deals
     </div>
 
@@ -45,17 +50,10 @@
   </div>
 
 </nav>
-``
-
-  <div class="max-w-6xl mx-auto px-4 py-4 flex justify-between items-center">
-
-    <!-- LEFT -->
-
-
-
 
 <div class="h-20"></div>
-  <!-- HEADER -->
+
+<!-- HEADER -->
 <section class="py-16 px-6 text-center bg-white">
 
   <p class="text-gray-700 max-w-2xl mx-auto mb-6">
@@ -68,12 +66,22 @@
 
 </section>
 
+<!-- ✅ SCRIPT FIX -->
 <script>
-const btn = document.getElementById("menuBtn");
-const menu = document.getElementById("mobileMenu");
-btn.onclick = () => menu.classList.toggle("hidden");
+document.addEventListener("DOMContentLoaded", function () {
+  const btn = document.getElementById("menu-btn");
+  const menu = document.getElementById("mobile-menu");
+
+  if (!btn || !menu) return;
+
+  btn.onclick = () => menu.classList.toggle("hidden");
+
+  const links = menu.getElementsByTagName("a");
+  for (let i = 0; i < links.length; i++) {
+    links[i].onclick = () => menu.classList.add("hidden");
+  }
+});
 </script>
-  
 
 <section class="bg-gradient-to-br from-gray-900 via-gray-800 to-black text-white py-20 px-6">
 
@@ -81,71 +89,48 @@ btn.onclick = () => menu.classList.toggle("hidden");
 
     <!-- LEFT LOGOS -->
     <div class="hidden md:grid grid-cols-3 gap-5 justify-items-center pr-6">
-      <img src="https://cdn.simpleicons.org/ford/ffffff" alt="Ford"
-           class="w-12 h-12 object-contain opacity-90 hover:opacity-100 transition" />
-      <img src="https://cdn.simpleicons.org/toyota/ffffff" alt="Toyota"
-           class="w-12 h-12 object-contain opacity-90 hover:opacity-100 transition" />
-      <img src="https://cdn.simpleicons.org/honda/ffffff" alt="Honda"
-           class="w-12 h-12 object-contain opacity-90 hover:opacity-100 transition" />
-
-      <img src="https://cdn.simpleicons.org/nissan/ffffff" alt="Nissan"
-           class="w-12 h-12 object-contain opacity-90 hover:opacity-100 transition" />
-      <img src="https://cdn.simpleicons.org/chevrolet/ffffff" alt="Chevrolet"
-           class="w-12 h-12 object-contain opacity-90 hover:opacity-100 transition" />
-      <img src="https://cdn.simpleicons.org/subaru/ffffff" alt="Subaru"
-           class="w-12 h-12 object-contain opacity-90 hover:opacity-100 transition" />
-
-      <img src="https://cdn.simpleicons.org/kia/ffffff" alt="Kia"
-           class="w-12 h-12 object-contain opacity-90 hover:opacity-100 transition" />
-      <img src="https://cdn.simpleicons.org/hyundai/ffffff" alt="Hyundai"
-           class="w-12 h-12 object-contain opacity-90 hover:opacity-100 transition" />
-      <img src="https://cdn.simpleicons.org/tesla/ffffff" alt="Tesla"
-           class="w-12 h-12 object-contain opacity-90 hover:opacity-100 transition" />
+      <img src="https://cdn.simpleicons.org/ford/ffffff" class="w-12 h-12"/>
+      <img src="https://cdn.simpleicons.org/toyota/ffffff" class="w-12 h-12"/>
+      <img src="https://cdn.simpleicons.org/honda/ffffff" class="w-12 h-12"/>
+      <img src="https://cdn.simpleicons.org/nissan/ffffff" class="w-12 h-12"/>
+      <img src="https://cdn.simpleicons.org/chevrolet/ffffff" class="w-12 h-12"/>
+      <img src="https://cdn.simpleicons.org/subaru/ffffff" class="w-12 h-12"/>
+      <img src="https://cdn.simpleicons.org/kia/ffffff" class="w-12 h-12"/>
+      <img src="https://cdn.simpleicons.org/hyundai/ffffff" class="w-12 h-12"/>
+      <img src="https://cdn.simpleicons.org/tesla/ffffff" class="w-12 h-12"/>
     </div>
 
     <!-- CENTER CONTENT -->
     <div class="text-center px-8">
+
       <h1 class="text-5xl font-extrabold mb-6">Grate Auto Deals</h1>
 
       <p class="text-lg mb-8 leading-relaxed">
         Your trusted auto broker committed to finding the absolute best vehicle deals so you don’t have to.
       </p>
 
-      <!-- CTA BUTTON -->
       <a href="#consultation-form"
          class="inline-block bg-blue-600 text-white px-8 py-4 rounded-xl font-semibold text-lg shadow hover:bg-blue-700 transition">
         Get My Great Deal
       </a>
+
     </div>
 
     <!-- RIGHT LOGOS -->
     <div class="hidden md:grid grid-cols-3 gap-5 justify-items-center pl-6">
-      <img src="https://cdn.simpleicons.org/bmw/ffffff" alt="BMW"
-           class="w-12 h-12 object-contain opacity-90 hover:opacity-100 transition" />
-      <img src="https://cdn.simpleicons.org/audi/ffffff" alt="Audi"
-           class="w-12 h-12 object-contain opacity-90 hover:opacity-100 transition" />
-      <img src="https://cdn.simpleicons.org/volkswagen/ffffff" alt="Volkswagen"
-           class="w-12 h-12 object-contain opacity-90 hover:opacity-100 transition" />
-
-      <img src="https://cdn.simpleicons.org/porsche/ffffff" alt="Porsche"
-           class="w-12 h-12 object-contain opacity-90 hover:opacity-100 transition" />
-      <img src="https://cdn.simpleicons.org/acura/ffffff" alt="Acura"
-           class="w-12 h-12 object-contain opacity-90 hover:opacity-100 transition" />
-      <img src="https://cdn.simpleicons.org/infiniti/ffffff" alt="Infiniti"
-           class="w-12 h-12 object-contain opacity-90 hover:opacity-100 transition" />
-
-      <img src="https://cdn.simpleicons.org/ferrari/ffffff" alt="Ferrari"
-           class="w-12 h-12 object-contain opacity-90 hover:opacity-100 transition" />
-      <img src="https://cdn.simpleicons.org/lamborghini/ffffff" alt="Lamborghini"
-           class="w-12 h-12 object-contain opacity-90 hover:opacity-100 transition" />
-      <img src="https://cdn.simpleicons.org/jeep/ffffff" alt="Jeep"
-           class="w-12 h-12 object-contain opacity-90 hover:opacity-100 transition" />
+      <img src="https://cdn.simpleicons.org/bmw/ffffff" class="w-12 h-12"/>
+      <img src="https://cdn.simpleicons.org/audi/ffffff" class="w-12 h-12"/>
+      <img src="https://cdn.simpleicons.org/volkswagen/ffffff" class="w-12 h-12"/>
+      <img src="https://cdn.simpleicons.org/porsche/ffffff" class="w-12 h-12"/>
+      <img src="https://cdn.simpleicons.org/acura/ffffff" class="w-12 h-12"/>
+      <img src="https://cdn.simpleicons.org/infiniti/ffffff" class="w-12 h-12"/>
+      <img src="https://cdn.simpleicons.org/ferrari/ffffff" class="w-12 h-12"/>
+      <img src="https://cdn.simpleicons.org/lamborghini/ffffff" class="w-12 h-12"/>
+      <img src="https://cdn.simpleicons.org/jeep/ffffff" class="w-12 h-12"/>
     </div>
 
   </div>
-
 </section>
-
 <!-- HOW IT WORKS -->
 <section class="py-16 px-6 max-w-6xl mx-auto">
   <h2 class="text-3xl font-bold text-center mb-12">How It Works</h2>
