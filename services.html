@@ -12,9 +12,12 @@
 <body class="bg-gray-50 text-gray-900">
 
 <!-- NAV -->
-"><nav class="bg-gray-900 text-white fixed top-0 w-full z-50 shadow-md">
-      Grate Auto Deals
-    </div>
+<nav class="bg-gray-900 text-white fixed top-0 w-full z-50 shadow-md">
+
+  <div class="max-w-6xl mx-auto px-4 py-4 flex justify-between items-center">
+
+    <!-- LEFT -->
+    <div class="font-bold text-lg">Grate Auto Deals</div>
 
     <!-- RIGHT -->
     <div class="flex items-center space-x-6">
@@ -26,12 +29,13 @@
         <a href="index.html#consultation-form" class="hover:opacity-80">Contact Us</a>
       </div>
 
-      <!-- ✅ HAMBURGER -->
-      <button id="menu-btn" class="md:hidden text-2xl">
-        ☰
-      </button>
+      <!-- HAMBURGER -->
+      <button id="menu-btn" class="md:hidden text-2xl">☰</button>
 
     </div>
+
+  </div>
+
 
   </div>
 
@@ -301,27 +305,43 @@ window.onload = () => {
 
 </section>
 <script>
-window.onload = function () {
+
+window.addEventListener("DOMContentLoaded", function () {
+
+  // ✅ MENU
   const menuBtn = document.getElementById("menu-btn");
   const mobileMenu = document.getElementById("mobile-menu");
 
-  if (!menuBtn || !mobileMenu) return;
-
-  // ✅ Toggle menu open/close
-  menuBtn.onclick = function () {
-    mobileMenu.classList.toggle("hidden");
-  };
-
-  // ✅ Close menu when clicking any link
-  const links = mobileMenu.getElementsByTagName("a");
-
-  for (let i = 0; i < links.length; i++) {
-    links[i].onclick = function () {
-      mobileMenu.classList.add("hidden");
+  if (menuBtn && mobileMenu) {
+    menuBtn.onclick = () => {
+      mobileMenu.classList.toggle("hidden");
     };
+
+    const links = mobileMenu.getElementsByTagName("a");
+    for (let i = 0; i < links.length; i++) {
+      links[i].onclick = () => {
+        mobileMenu.classList.add("hidden");
+      };
+    }
   }
-};
+
+  // ✅ PAYPAL
+  paypal.Buttons({
+    createOrder: (d,a)=>a.order.create({purchase_units:[{amount:{value:"1000"}}]})
+  }).render("#paypal-basic");
+
+  paypal.Buttons({
+    createOrder: (d,a)=>a.order.create({purchase_units:[{amount:{value:"1500"}}]})
+  }).render("#paypal-full");
+
+  paypal.Buttons({
+    createOrder: (d,a)=>a.order.create({purchase_units:[{amount:{value:"2000"}}]})
+  }).render("#paypal-premium");
+
+});
+
 </script>
+
 
 </body>
   
