@@ -71,149 +71,56 @@
   <div class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-6">
 
     <!-- BASIC -->
-    <div class="bg-white p-6 rounded-2xl shadow border">
-      <h2 class="text-xl font-bold mb-3">Basic Deal Search</h2>
-      <ul class="list-disc pl-5 mb-6 text-gray-700">
-        <li>Targeted vehicle search</li>
-        <li>True market pricing analysis</li>
-        <li>Clear deal recommendations</li>
-      </ul>
-
-    <button type="button"
-        onclick="openModal('basicModal')"
-        class="block w-full border py-3 rounded-xl hover:bg-gray-100">
-  Learn More
-</button>
-
-    </div>
-
-    <!-- FULL -->
-    <div class="bg-white p-6 rounded-2xl border-2 border-blue-600 shadow">
-      <span class="text-blue-600 text-sm font-semibold">Most Popular</span>
-
-      <h2 class="text-xl font-bold mt-2 mb-3">Full Service Broker</h2>
-
-      <ul class="list-disc pl-5 mb-6 text-gray-700">
-        <li>Full vehicle sourcing</li>
-        <li>Dealer negotiation</li>
-        <li>Trade-in guidance</li>
-        <li>Contract protection</li>
-      </ul>
+<div class="bg-white p-6 rounded-2xl shadow border">
+  <h2 class="text-xl font-bold mb-3">Basic Deal Search</h2>
+  <ul class="list-disc pl-5 mb-6 text-gray-700">
+    <li>Targeted vehicle search</li>
+    <li>True market pricing analysis</li>
+    <li>Clear deal recommendations</li>
+  </ul>
 
   <button type="button"
-        onclick="openModal('fullModal')"
-        class="block w-full bg-blue-600 text-white py-4 rounded-xl hover:bg-blue-700">
-  Learn More
-</button>
-
-
-    </div>
-
-    <!-- PREMIUM -->
-    <div class="bg-white p-6 rounded-2xl shadow border">
-      <h2 class="text-xl font-bold mb-3">Premium Concierge</h2>
-
-      <ul class="list-disc pl-5 mb-6 text-gray-700">
-        <li>Nationwide sourcing</li>
-        <li>Luxury & rare vehicles</li>
-        <li>Priority service</li>
-      </ul>
-
-    <button type="button"
-        onclick="openModal('premiumModal')"
-        class="block w-full bg-blue-600 text-white py-4 rounded-xl hover:bg-blue-700">
-  Learn More
-</button>
-
-    </div>
-
-  </div>
-</section>
-
-<!-- MODALS -->
-<div id="basicModal" class="hidden fixed inset-0 bg-black/50 flex items-center justify-center">
-  <div class="bg-white p-8 rounded-xl max-w-md w-full relative">
-    <button onclick="closeModal('basicModal')" class="absolute top-3 right-4 text-xl">&times;</button>
-
-    <h2 class="text-xl font-bold mb-4">Basic Deal Search</h2>
-
-    <p class="mb-4 text-gray-700">
-      Built for buyers who want clarity before making a move. We analyze the market,
-      filter out overpriced vehicles, and guide you toward the smartest options.
-    </p>
-
-    <ul class="text-sm text-gray-600 mb-4 space-y-1">
-      <li>✔ Saves hours of research</li>
-      <li>✔ Avoid bad deals and hidden markups</li>
-      <li>✔ Know exactly what a fair price is</li>
-      <li>✔ Make confident buying decisions</li>
-    </ul>
-
-    <p class="font-semibold mb-4">
-      You handle the purchase — we make sure it’s the right one.
-    </p>
-
-    <p class="text-2xl font-bold mb-6">$1,000</p>
-
-    <div id="paypal-basic"></div>
-  </div>
+          onclick="openModal('basicModal')"
+          class="block w-full border py-3 rounded-xl hover:bg-gray-100">
+    Learn More
+  </button>
 </div>
 
-<div id="fullModal" class="hidden fixed inset-0 bg-black/50 flex items-center justify-center">
-  <div class="bg-white p-8 rounded-xl max-w-md w-full relative">
-    <button onclick="closeModal('fullModal')" class="absolute top-3 right-4 text-xl">&times;</button>
+<!-- FULL -->
+<div class="bg-white p-6 rounded-2xl border-2 border-blue-600 shadow">
+  <span class="text-blue-600 text-sm font-semibold">Most Popular</span>
 
-    <h2 class="text-xl font-bold mb-4">Full Service Broker</h2>
+  <h2 class="text-xl font-bold mt-2 mb-3">Full Service Broker</h2>
 
-    <p class="mb-4 text-gray-700">
-      This is where we step in and take control of the entire process.
-      From sourcing to negotiation, we handle everything so you don’t have to.
-    </p>
+  <ul class="list-disc pl-5 mb-6 text-gray-700">
+    <li>Full vehicle sourcing</li>
+    <li>Dealer negotiation</li>
+    <li>Trade-in guidance</li>
+    <li>Contract protection</li>
+  </ul>
 
-    <ul class="text-sm text-gray-600 mb-4 space-y-1">
-      <li>✔ We negotiate directly with dealerships</li>
-      <li>✔ We protect you from hidden fees</li>
-      <li>✔ We review contracts before you sign</li>
-      <li>✔ We ensure you’re getting a real deal</li>
-    </ul>
-
-    <p class="font-semibold mb-4">
-      If it’s not a great deal — we won’t let you take it.
-    </p>
-
-    <p class="text-2xl font-bold mb-6">$1,500</p>
-
-    <div id="paypal-full"></div>
-  </div>
+  <button type="button"
+          onclick="openModal('fullModal')"
+          class="block w-full bg-blue-600 text-white py-4 rounded-xl hover:bg-blue-700">
+    Learn More
+  </button>
 </div>
 
-<div id="premiumModal" class="hidden fixed inset-0 bg-black/50 flex items-center justify-center">
-  <div class="bg-white p-8 rounded-xl max-w-md w-full relative">
-    <button onclick="closeModal('premiumModal')" class="absolute top-3 right-4 text-xl">&times;</button>
+<!-- PREMIUM -->
+<div class="bg-white p-6 rounded-2xl shadow border">
+  <h2 class="text-xl font-bold mb-3">Premium Concierge</h2>
 
-    <h2 class="text-xl font-bold mb-4">Premium Concierge</h2>
+  <ul class="list-disc pl-5 mb-6 text-gray-700">
+    <li>Nationwide sourcing</li>
+    <li>Luxury & rare vehicles</li>
+    <li>Priority service</li>
+  </ul>
 
-    <p class="mb-4 text-gray-700">
-      A full luxury experience built for high-end buyers.
-      We go beyond local inventory and search nationwide
-      to find rare, luxury, or highly specific vehicles.
-    </p>
-
-    <ul class="text-sm text-gray-600 mb-4 space-y-1">
-      <li>✔ Nationwide sourcing access</li>
-      <li>✔ Rare & specialty vehicle targeting</li>
-      <li>✔ Out-of-state deal coordination</li>
-      <li>✔ Priority support and communication</li>
-    </ul>
-
-    <p class="font-semibold mb-4">
-      The easiest way to secure a hard-to-find vehicle without stress.
-    </p>
-
-    <p class="text-2xl font-bold mb-6">$2,000</p>
-
-    <div id="paypal-premium"></div>
-  </div>
+  <button type="button"
+          onclick="openModal('premiumModal')"
+          class="block w-full bg-blue-600 text-white py-4 rounded-xl hover:bg-blue-700">
+    Learn More
+  </button>
 </div>
 
 <!-- ADDITIONAL SERVICES -->
