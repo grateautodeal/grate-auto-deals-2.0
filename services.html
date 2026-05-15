@@ -306,7 +306,40 @@ window.addEventListener("DOMContentLoaded", function () {
     }
   }
 
-  // ✅ PAYPAL
+  <script>
+
+
+// ✅ 1. MODAL FUNCTIONS (GO ABOVE EVERYTHING)
+function openModal(id){
+  document.getElementById(id).classList.remove("hidden");
+}
+
+function closeModal(id){
+  document.getElementById(id).classList.add("hidden");
+}
+
+
+// ✅ 2. YOUR EXISTING CODE (DO NOT MOVE THIS OUT)
+window.addEventListener("DOMContentLoaded", function () {
+
+  // ✅ MENU
+  const menuBtn = document.getElementById("menu-btn");
+  const mobileMenu = document.getElementById("mobile-menu");
+
+  if (menuBtn && mobileMenu) {
+    menuBtn.onclick = () => {
+      mobileMenu.classList.toggle("hidden");
+    };
+
+    const links = mobileMenu.getElementsByTagName("a");
+    for (let i = 0; i < links.length; i++) {
+      links[i].onclick = () => {
+        mobileMenu.classList.add("hidden");
+      };
+    }
+  }
+
+  // ✅ PAYPAL (leave exactly where it is)
   paypal.Buttons({
     createOrder: (d,a)=>a.order.create({purchase_units:[{amount:{value:"1000"}}]})
   }).render("#paypal-basic");
