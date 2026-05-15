@@ -305,27 +305,19 @@ document.addEventListener("DOMContentLoaded", function () {
 
     </div>
 
-    <!-- ✅ CUSTOM MAKE (IMPORTANT FIX) -->
-    <input type="text"
-           name="custom_make"
-           placeholder="If you do not see your make listed, write it here"
-           class="w-full border p-3 rounded-lg">
+  <!-- ✅ VEHICLE DETAILS + NOTES COMBINED -->
+<div class="space-y-2">
 
-  </div>
+  <p class="text-sm text-gray-500">
+    If you do not see your make listed, enter it here. Also include your vehicle preferences, budget, and any questions so we can secure the best possible deal for you.
+  </p>
 
-  <!-- ✅ MESSAGE (FIXED WORDING + KEPT STYLE) -->
-  <div class="space-y-2">
+  <textarea name="details"
+            placeholder="Example: 2024 Toyota Camry XSE, black, under $30k — also interested in lease options or similar vehicles..."
+            rows="5"
+            class="w-full border p-3 rounded-lg"></textarea>
 
-    <p class="text-sm text-gray-500">
-      Please include your vehicle details along with any additional questions or comments regarding the service you are interested in.
-    </p>
-
-    <textarea name="message"
-              placeholder="Enter your vehicle details and any additional questions or comments..."
-              rows="4"
-              class="w-full border p-3 rounded-lg"></textarea>
-
-  </div>
+</div>
 
   <!-- SUBMIT -->
   <button type="submit"
