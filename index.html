@@ -51,11 +51,6 @@
         <a href="index.html" class="hover:text-blue-400 transition duration-200">Home</a>
         <a href="services.html" class="hover:text-blue-400 transition duration-200">Services</a>
         <a href="#consultation-form" class="hover:text-blue-400 transition duration-200">Contact Us</a>
-        <a href="#consultation-form" class="relative group inline-flex items-center justify-center p-0.5 overflow-hidden text-sm font-bold rounded-xl group bg-gradient-to-br from-blue-500 to-cyan-400 group-hover:from-blue-600 group-hover:to-cyan-500 text-white shadow-lg shadow-blue-500/25">
-          <span class="relative px-5 py-2.5 transition-all ease-in duration-75 bg-gray-950 rounded-[10px] group-hover:bg-opacity-0">
-            Get Started
-          </span>
-        </a>
       </div>
 
       <!-- HAMBURGER BUTTON -->
@@ -324,7 +319,6 @@
 <!-- ✅ CONSOLIDATED JS -->
 <script>
   document.addEventListener("DOMContentLoaded", function () {
-    // Mobile menu logic
     const menuBtn = document.getElementById("menu-btn");
     const mobileMenu = document.getElementById("mobile-menu");
 
@@ -341,7 +335,6 @@
       }
     }
 
-    // URL parameter service pre-selection
     const params = new URLSearchParams(window.location.search);
     const serviceParam = params.get("service");
     const serviceSelect = document.getElementById("service-select");
@@ -350,10 +343,8 @@
       serviceSelect.value = serviceParam;
     }
 
-    // Initialize EmailJS
     emailjs.init("79GpKgIC8W7-vVqDA");
 
-    // Form submission
     const form = document.getElementById("consultation-form");
     if (form) {
       form.addEventListener("submit", function (e) {
