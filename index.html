@@ -3,421 +3,373 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Grate Auto Deals</title>
+  <title>Grate Auto Deals | Premier Auto Broker</title>
 
-  <!-- ✅ Tailwind -->
+  <!-- ✅ Tailwind CSS -->
   <script src="https://cdn.tailwindcss.com"></script>
+  
+  <!-- ✅ Custom Styling for Glows & Smooth Scrolling -->
+  <style>
+    /* Hide scrollbar for brand row on mobile */
+    .no-scrollbar::-webkit-scrollbar {
+      display: none;
+    }
+    .no-scrollbar {
+      -ms-overflow-style: none;
+      scrollbar-width: none;
+    }
+
+    /* Ambient background mesh glow animation */
+    @keyframes pulseGlow {
+      0%, 100% { opacity: 0.3; transform: scale(1); }
+      50% { opacity: 0.55; transform: scale(1.08); }
+    }
+    .animate-pulse-glow {
+      animation: pulseGlow 8s ease-in-out infinite;
+    }
+  </style>
 </head>
 
-<body class="scroll-smooth bg-gray-50 text-gray-900">
+<body class="scroll-smooth bg-gray-950 text-gray-100 antialiased selection:bg-blue-500 selection:text-white">
 
 <!-- NAV -->
-<nav class="bg-gray-900 text-white fixed top-0 w-full z-50 shadow-md">
+<nav class="bg-gray-950/80 backdrop-blur-xl text-white fixed top-0 w-full z-50 border-b border-gray-800/80 shadow-2xl shadow-black/50">
+  <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
 
-  <div class="max-w-6xl mx-auto px-4 py-4 flex justify-between items-center">
+    <!-- LEFT LOGO -->
+    <a href="index.html" class="flex items-center gap-2 group">
+      <div class="w-9 h-9 rounded-xl bg-gradient-to-tr from-blue-600 via-indigo-500 to-cyan-400 flex items-center justify-center font-black text-xl text-white shadow-lg shadow-blue-500/30 group-hover:scale-105 transition duration-300">
+        G
+      </div>
+      <span class="font-black text-xl tracking-tight text-transparent bg-clip-text bg-gradient-to-r from-white via-gray-200 to-blue-400">
+        Grate Auto Deals
+      </span>
+    </a>
 
-    <!-- LEFT -->
-    <div class="font-bold text-lg">
-      Grate Auto Deals
-    </div>
-
-    <!-- RIGHT -->
+    <!-- RIGHT NAV -->
     <div class="flex items-center space-x-6">
-
       <!-- DESKTOP LINKS -->
-      <div class="hidden md:flex space-x-6">
-        <a href="index.html" class="hover:opacity-80">Home</a>
-        <a href="services.html" class="hover:opacity-80">Services</a>
-        <a href="index.html#consultation-form" class="hover:opacity-80">Contact Us</a>
+      <div class="hidden md:flex items-center space-x-8 text-sm font-semibold text-gray-300">
+        <a href="index.html" class="hover:text-blue-400 transition duration-200">Home</a>
+        <a href="services.html" class="hover:text-blue-400 transition duration-200">Services</a>
+        <a href="#consultation-form" class="hover:text-blue-400 transition duration-200">Contact Us</a>
+        <a href="#consultation-form" class="relative group inline-flex items-center justify-center p-0.5 overflow-hidden text-sm font-bold rounded-xl group bg-gradient-to-br from-blue-500 to-cyan-400 group-hover:from-blue-600 group-hover:to-cyan-500 text-white shadow-lg shadow-blue-500/25">
+          <span class="relative px-5 py-2.5 transition-all ease-in duration-75 bg-gray-950 rounded-[10px] group-hover:bg-opacity-0">
+            Get Started
+          </span>
+        </a>
       </div>
 
-      <!-- ✅ HAMBURGER -->
-      <button id="menu-btn" class="md:hidden text-2xl">
+      <!-- HAMBURGER BUTTON -->
+      <button id="menu-btn" class="md:hidden text-2xl text-gray-300 focus:outline-none hover:text-white transition" aria-label="Toggle Menu">
         ☰
       </button>
-
     </div>
 
   </div>
 
-  <!-- ✅ MOBILE MENU -->
-  <div id="mobile-menu" class="hidden md:hidden bg-gray-900 flex flex-col text-center space-y-4 py-4">
-
-    <a href="index.html" class="block">Home</a>
-    <a href="services.html" class="block">Services</a>
-    <a href="index.html#consultation-form" class="block">Contact Us</a>
-
+  <!-- MOBILE MENU -->
+  <div id="mobile-menu" class="hidden md:hidden bg-gray-950/95 border-b border-gray-800 backdrop-blur-2xl flex flex-col text-center space-y-4 py-6 font-semibold text-gray-200">
+    <a href="index.html" class="hover:text-blue-400 transition">Home</a>
+    <a href="services.html" class="hover:text-blue-400 transition">Services</a>
+    <a href="#consultation-form" class="hover:text-blue-400 transition">Contact Us</a>
   </div>
-
 </nav>
 
-<div class="h-20"></div>
+<div class="h-16"></div>
 
-<!-- HEADER -->
-<section class="py-16 px-6 text-center bg-white">
-
-  <p class="text-gray-700 max-w-2xl mx-auto mb-6">
-    We negotiate, source, and secure the best possible deal so you do not waste time, money, or energy dealing with dealerships.
+<!-- ANNOUNCEMENT BAR -->
+<section class="relative py-3.5 px-6 text-center bg-gray-900/60 border-b border-gray-800/80 backdrop-blur-md overflow-hidden">
+  <div class="absolute inset-0 bg-gradient-to-r from-blue-600/10 via-indigo-500/10 to-cyan-500/10 pointer-events-none"></div>
+  <p class="relative z-10 text-gray-300 max-w-3xl mx-auto text-sm md:text-base font-medium">
+    We negotiate, source, and secure the best deal so you don't waste time, money, or energy at dealerships. 
+    <span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-300 font-bold block sm:inline mt-1 sm:mt-0">Trusted across all major auto brands.</span>
   </p>
-
-  <p class="text-blue-600 font-semibold text-lg">
-    Trusted across all brands, we can source and secure any make or model.
-  </p>
-
 </section>
 
-<!-- ✅ SCRIPT FIX -->
-<script>
-document.addEventListener("DOMContentLoaded", function () {
-  const btn = document.getElementById("menu-btn");
-  const menu = document.getElementById("mobile-menu");
+<!-- HERO SECTION -->
+<section class="relative bg-gray-950 text-white py-20 md:py-28 px-6 overflow-hidden">
+  
+  <!-- AMBIENT BACKGROUND GLOWS -->
+  <div class="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[350px] bg-blue-600/20 blur-[130px] rounded-full pointer-events-none animate-pulse-glow"></div>
+  <div class="absolute top-1/3 right-10 w-[300px] h-[300px] bg-cyan-500/15 blur-[100px] rounded-full pointer-events-none"></div>
 
-  if (!btn || !menu) return;
-
-  btn.onclick = () => menu.classList.toggle("hidden");
-
-  const links = menu.getElementsByTagName("a");
-  for (let i = 0; i < links.length; i++) {
-    links[i].onclick = () => menu.classList.add("hidden");
-  }
-});
-</script>
-
-<section class="bg-gradient-to-br from-gray-900 via-gray-800 to-black text-white py-20 px-6">
-
-  <div class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-3 items-center gap-6">
-
-    <!-- LEFT LOGOS -->
-    <div class="hidden md:grid grid-cols-3 gap-5 justify-items-center pr-6">
-      <img src="https://cdn.simpleicons.org/ford/ffffff" class="w-12 h-12"/>
-      <img src="https://cdn.simpleicons.org/toyota/ffffff" class="w-12 h-12"/>
-      <img src="https://cdn.simpleicons.org/honda/ffffff" class="w-12 h-12"/>
-      <img src="https://cdn.simpleicons.org/nissan/ffffff" class="w-12 h-12"/>
-      <img src="https://cdn.simpleicons.org/chevrolet/ffffff" class="w-12 h-12"/>
-      <img src="https://cdn.simpleicons.org/subaru/ffffff" class="w-12 h-12"/>
-      <img src="https://cdn.simpleicons.org/kia/ffffff" class="w-12 h-12"/>
-      <img src="https://cdn.simpleicons.org/hyundai/ffffff" class="w-12 h-12"/>
-      <img src="https://cdn.simpleicons.org/tesla/ffffff" class="w-12 h-12"/>
+  <div class="max-w-7xl mx-auto relative z-10">
+    
+    <!-- MOBILE LOGO ROW (VISIBLE ON MOBILE ONLY) -->
+    <div class="md:hidden mb-12">
+      <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-blue-500/10 border border-blue-500/20 text-blue-400 text-xs font-bold uppercase tracking-widest mb-4 mx-auto block w-max">
+        Sourcing All Major Brands
+      </div>
+      <div class="flex items-center space-x-7 overflow-x-auto pb-4 no-scrollbar justify-start px-2 opacity-80">
+        <img src="https://cdn.simpleicons.org/ford/ffffff" class="w-8 h-8 flex-shrink-0" alt="Ford"/>
+        <img src="https://cdn.simpleicons.org/toyota/ffffff" class="w-8 h-8 flex-shrink-0" alt="Toyota"/>
+        <img src="https://cdn.simpleicons.org/bmw/ffffff" class="w-8 h-8 flex-shrink-0" alt="BMW"/>
+        <img src="https://cdn.simpleicons.org/mercedes/ffffff" class="w-8 h-8 flex-shrink-0" alt="Mercedes"/>
+        <img src="https://cdn.simpleicons.org/porsche/ffffff" class="w-8 h-8 flex-shrink-0" alt="Porsche"/>
+        <img src="https://cdn.simpleicons.org/tesla/ffffff" class="w-8 h-8 flex-shrink-0" alt="Tesla"/>
+        <img src="https://cdn.simpleicons.org/audi/ffffff" class="w-8 h-8 flex-shrink-0" alt="Audi"/>
+        <img src="https://cdn.simpleicons.org/honda/ffffff" class="w-8 h-8 flex-shrink-0" alt="Honda"/>
+      </div>
     </div>
 
-    <!-- CENTER CONTENT -->
-    <div class="text-center px-8">
+    <div class="grid grid-cols-1 md:grid-cols-3 items-center gap-10">
 
-      <h1 class="text-5xl font-extrabold mb-6">Grate Auto Deals</h1>
+      <!-- LEFT LOGOS (DESKTOP) -->
+      <div class="hidden md:grid grid-cols-3 gap-8 justify-items-center opacity-60 hover:opacity-100 transition duration-500 p-6 bg-gray-900/30 rounded-3xl border border-gray-800/50 backdrop-blur-sm">
+        <img src="https://cdn.simpleicons.org/ford/ffffff" class="w-9 h-9 hover:scale-125 hover:drop-shadow-[0_0_12px_rgba(59,130,246,0.8)] transition duration-300" alt="Ford"/>
+        <img src="https://cdn.simpleicons.org/toyota/ffffff" class="w-9 h-9 hover:scale-125 hover:drop-shadow-[0_0_12px_rgba(59,130,246,0.8)] transition duration-300" alt="Toyota"/>
+        <img src="https://cdn.simpleicons.org/honda/ffffff" class="w-9 h-9 hover:scale-125 hover:drop-shadow-[0_0_12px_rgba(59,130,246,0.8)] transition duration-300" alt="Honda"/>
+        <img src="https://cdn.simpleicons.org/nissan/ffffff" class="w-9 h-9 hover:scale-125 hover:drop-shadow-[0_0_12px_rgba(59,130,246,0.8)] transition duration-300" alt="Nissan"/>
+        <img src="https://cdn.simpleicons.org/chevrolet/ffffff" class="w-9 h-9 hover:scale-125 hover:drop-shadow-[0_0_12px_rgba(59,130,246,0.8)] transition duration-300" alt="Chevrolet"/>
+        <img src="https://cdn.simpleicons.org/subaru/ffffff" class="w-9 h-9 hover:scale-125 hover:drop-shadow-[0_0_12px_rgba(59,130,246,0.8)] transition duration-300" alt="Subaru"/>
+        <img src="https://cdn.simpleicons.org/kia/ffffff" class="w-9 h-9 hover:scale-125 hover:drop-shadow-[0_0_12px_rgba(59,130,246,0.8)] transition duration-300" alt="Kia"/>
+        <img src="https://cdn.simpleicons.org/hyundai/ffffff" class="w-9 h-9 hover:scale-125 hover:drop-shadow-[0_0_12px_rgba(59,130,246,0.8)] transition duration-300" alt="Hyundai"/>
+        <img src="https://cdn.simpleicons.org/tesla/ffffff" class="w-9 h-9 hover:scale-125 hover:drop-shadow-[0_0_12px_rgba(59,130,246,0.8)] transition duration-300" alt="Tesla"/>
+      </div>
 
-      <p class="text-lg mb-8 leading-relaxed">
-        Your trusted auto broker committed to finding the absolute best vehicle deals so you don’t have to.
-      </p>
+      <!-- CENTER CONTENT -->
+      <div class="text-center px-2">
+        <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-blue-500/10 border border-blue-500/20 text-blue-400 text-xs font-bold uppercase tracking-widest mb-6">
+          <span class="w-2 h-2 rounded-full bg-blue-400 animate-ping"></span> Premium Auto Advisory
+        </div>
 
-      <a href="#consultation-form"
-         class="inline-block bg-blue-600 text-white px-8 py-4 rounded-xl font-semibold text-lg shadow hover:bg-blue-700 transition">
-        Get My Great Deal
-      </a>
+        <h1 class="text-5xl md:text-6xl font-black mb-6 tracking-tight text-white leading-none">
+          Grate Auto <span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 via-indigo-300 to-cyan-400">Deals</span>
+        </h1>
+
+        <p class="text-gray-300 text-base md:text-lg mb-8 leading-relaxed max-w-xl mx-auto font-medium">
+          Your premier auto broker dedicated to securing top-tier vehicles with maximum savings and zero hassle.
+        </p>
+
+        <a href="#consultation-form"
+           class="inline-flex items-center justify-center bg-gradient-to-r from-blue-600 via-blue-500 to-cyan-500 hover:from-blue-500 hover:to-cyan-400 text-white px-9 py-4 rounded-xl font-extrabold text-lg shadow-xl shadow-blue-500/25 hover:shadow-blue-500/40 hover:-translate-y-0.5 transition duration-200">
+          Get My Great Deal
+        </a>
+      </div>
+
+      <!-- RIGHT LOGOS (DESKTOP) -->
+      <div class="hidden md:grid grid-cols-3 gap-8 justify-items-center opacity-60 hover:opacity-100 transition duration-500 p-6 bg-gray-900/30 rounded-3xl border border-gray-800/50 backdrop-blur-sm">
+        <img src="https://cdn.simpleicons.org/bmw/ffffff" class="w-9 h-9 hover:scale-125 hover:drop-shadow-[0_0_12px_rgba(59,130,246,0.8)] transition duration-300" alt="BMW"/>
+        <img src="https://cdn.simpleicons.org/audi/ffffff" class="w-9 h-9 hover:scale-125 hover:drop-shadow-[0_0_12px_rgba(59,130,246,0.8)] transition duration-300" alt="Audi"/>
+        <img src="https://cdn.simpleicons.org/volkswagen/ffffff" class="w-9 h-9 hover:scale-125 hover:drop-shadow-[0_0_12px_rgba(59,130,246,0.8)] transition duration-300" alt="Volkswagen"/>
+        <img src="https://cdn.simpleicons.org/porsche/ffffff" class="w-9 h-9 hover:scale-125 hover:drop-shadow-[0_0_12px_rgba(59,130,246,0.8)] transition duration-300" alt="Porsche"/>
+        <img src="https://cdn.simpleicons.org/acura/ffffff" class="w-9 h-9 hover:scale-125 hover:drop-shadow-[0_0_12px_rgba(59,130,246,0.8)] transition duration-300" alt="Acura"/>
+        <img src="https://cdn.simpleicons.org/infiniti/ffffff" class="w-9 h-9 hover:scale-125 hover:drop-shadow-[0_0_12px_rgba(59,130,246,0.8)] transition duration-300" alt="Infiniti"/>
+        <img src="https://cdn.simpleicons.org/ferrari/ffffff" class="w-9 h-9 hover:scale-125 hover:drop-shadow-[0_0_12px_rgba(59,130,246,0.8)] transition duration-300" alt="Ferrari"/>
+        <img src="https://cdn.simpleicons.org/lamborghini/ffffff" class="w-9 h-9 hover:scale-125 hover:drop-shadow-[0_0_12px_rgba(59,130,246,0.8)] transition duration-300" alt="Lamborghini"/>
+        <img src="https://cdn.simpleicons.org/jeep/ffffff" class="w-9 h-9 hover:scale-125 hover:drop-shadow-[0_0_12px_rgba(59,130,246,0.8)] transition duration-300" alt="Jeep"/>
+      </div>
 
     </div>
-
-    <!-- RIGHT LOGOS -->
-    <div class="hidden md:grid grid-cols-3 gap-5 justify-items-center pl-6">
-      <img src="https://cdn.simpleicons.org/bmw/ffffff" class="w-12 h-12"/>
-      <img src="https://cdn.simpleicons.org/audi/ffffff" class="w-12 h-12"/>
-      <img src="https://cdn.simpleicons.org/volkswagen/ffffff" class="w-12 h-12"/>
-      <img src="https://cdn.simpleicons.org/porsche/ffffff" class="w-12 h-12"/>
-      <img src="https://cdn.simpleicons.org/acura/ffffff" class="w-12 h-12"/>
-      <img src="https://cdn.simpleicons.org/infiniti/ffffff" class="w-12 h-12"/>
-      <img src="https://cdn.simpleicons.org/ferrari/ffffff" class="w-12 h-12"/>
-      <img src="https://cdn.simpleicons.org/lamborghini/ffffff" class="w-12 h-12"/>
-      <img src="https://cdn.simpleicons.org/jeep/ffffff" class="w-12 h-12"/>
-    </div>
-
   </div>
 </section>
+
 <!-- HOW IT WORKS -->
-<section class="py-16 px-6 max-w-6xl mx-auto">
-  <h2 class="text-3xl font-bold text-center mb-12">How It Works</h2>
+<section class="py-24 px-6 max-w-7xl mx-auto relative">
+  <div class="text-center mb-16">
+    <h2 class="text-3xl md:text-4xl font-black text-white mb-3 tracking-tight">How It Works</h2>
+    <p class="text-gray-400 max-w-xl mx-auto text-sm md:text-base">Four easy steps to driving home your dream car without dealership games.</p>
+  </div>
 
-  <div class="grid grid-cols-1 md:grid-cols-4 gap-6 text-center">
+  <div class="grid grid-cols-1 md:grid-cols-4 gap-6">
 
-    <div class="bg-white rounded-2xl shadow-sm p-6">
-      <h3 class="font-semibold text-lg mb-2">Tell Us What You Want</h3>
-      <p class="text-sm text-gray-600">
-        New or used, budget, features, and preferences.
-      </p>
+    <div class="bg-gradient-to-b from-gray-900/90 to-gray-950 border border-gray-800/80 rounded-2xl p-7 relative overflow-hidden group hover:border-blue-500/50 hover:shadow-2xl hover:shadow-blue-500/10 transition duration-300">
+      <div class="w-10 h-10 rounded-xl bg-blue-500/10 border border-blue-500/20 text-blue-400 font-black text-lg flex items-center justify-center mb-5 group-hover:bg-blue-600 group-hover:text-white transition duration-300">01</div>
+      <h3 class="font-bold text-xl mb-2 text-white">Tell Us What You Want</h3>
+      <p class="text-sm text-gray-400 leading-relaxed">New or used, budget, features, and preferences.</p>
     </div>
 
-    <div class="bg-white rounded-2xl shadow-sm p-6">
-      <h3 class="font-semibold text-lg mb-2">We Shop the Market</h3>
-      <p class="text-sm text-gray-600">
-        We negotiate with dealerships and private sellers.
-      </p>
+    <div class="bg-gradient-to-b from-gray-900/90 to-gray-950 border border-gray-800/80 rounded-2xl p-7 relative overflow-hidden group hover:border-blue-500/50 hover:shadow-2xl hover:shadow-blue-500/10 transition duration-300">
+      <div class="w-10 h-10 rounded-xl bg-blue-500/10 border border-blue-500/20 text-blue-400 font-black text-lg flex items-center justify-center mb-5 group-hover:bg-blue-600 group-hover:text-white transition duration-300">02</div>
+      <h3 class="font-bold text-xl mb-2 text-white">We Shop the Market</h3>
+      <p class="text-sm text-gray-400 leading-relaxed">We negotiate directly with dealerships and private sellers.</p>
     </div>
 
-    <div class="bg-white rounded-2xl shadow-sm p-6">
-      <h3 class="font-semibold text-lg mb-2">You Save Money</h3>
-      <p class="text-sm text-gray-600">
-        No pressure, no hidden fees—just real savings.
-      </p>
+    <div class="bg-gradient-to-b from-gray-900/90 to-gray-950 border border-gray-800/80 rounded-2xl p-7 relative overflow-hidden group hover:border-blue-500/50 hover:shadow-2xl hover:shadow-blue-500/10 transition duration-300">
+      <div class="w-10 h-10 rounded-xl bg-blue-500/10 border border-blue-500/20 text-blue-400 font-black text-lg flex items-center justify-center mb-5 group-hover:bg-blue-600 group-hover:text-white transition duration-300">03</div>
+      <h3 class="font-bold text-xl mb-2 text-white">You Save Money</h3>
+      <p class="text-sm text-gray-400 leading-relaxed">No pressure, no hidden fees—just real savings.</p>
     </div>
 
-    <div class="bg-white rounded-2xl shadow-sm p-6">
-      <h3 class="font-semibold text-lg mb-2">Deal Confidence</h3>
-      <p class="text-sm text-gray-600">
-        Every deal reviewed to protect your investment.
-      </p>
+    <div class="bg-gradient-to-b from-gray-900/90 to-gray-950 border border-gray-800/80 rounded-2xl p-7 relative overflow-hidden group hover:border-blue-500/50 hover:shadow-2xl hover:shadow-blue-500/10 transition duration-300">
+      <div class="w-10 h-10 rounded-xl bg-blue-500/10 border border-blue-500/20 text-blue-400 font-black text-lg flex items-center justify-center mb-5 group-hover:bg-blue-600 group-hover:text-white transition duration-300">04</div>
+      <h3 class="font-bold text-xl mb-2 text-white">Deal Confidence</h3>
+      <p class="text-sm text-gray-400 leading-relaxed">Every deal reviewed thoroughly to protect your investment.</p>
     </div>
 
   </div>
 </section>
 
-<!-- ✅ INSTAGRAM -->
-<section class="bg-gray-900 text-white py-16 px-6 text-center">
-  <h2 class="text-3xl font-bold mb-4">Stay Connected</h2>
-  <p class="mb-6 text-gray-300">See real deals and client deliveries.</p>
+<!-- INSTAGRAM SECTION -->
+<section class="relative bg-gray-900/50 border-y border-gray-800/80 text-white py-20 px-6 text-center backdrop-blur-md overflow-hidden">
+  <div class="max-w-4xl mx-auto relative z-10">
+    <h2 class="text-3xl md:text-4xl font-black mb-3">Stay Connected</h2>
+    <p class="mb-8 text-gray-400 max-w-lg mx-auto">See real deals, client deliveries, and vehicle showcases on our official Instagram.</p>
 
-  <a href="https://instagram.com/grateautodeals"
-     target="_blank"
-     rel="noopener noreferrer"
-     class="inline-flex items-center gap-2 bg-gradient-to-r from-pink-500 via-red-500 to-yellow-500 text-white px-6 py-3 rounded-xl font-semibold hover:scale-105 transition">
-    <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
-      <path d="M7.75 2h8.5A5.75 5.75 0 0 1 22 7.75v8.5A5.75 5.75 0 0 1 16.25 22h-8.5A5.75 5.75 0 0 1 2 16.25v-8.5A5.75 5.75 0 0 1 7.75 2z"/>
-    </svg>
-    Follow @grateautodeals
-  </a>
+    <a href="https://instagram.com/grateautodeals"
+       target="_blank"
+       rel="noopener noreferrer"
+       class="inline-flex items-center gap-3 bg-gradient-to-r from-pink-500 via-red-500 to-yellow-500 text-white px-8 py-4 rounded-xl font-extrabold shadow-xl shadow-pink-500/20 hover:shadow-pink-500/35 hover:-translate-y-0.5 transition duration-200">
+      <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+        <path d="M7.75 2h8.5A5.75 5.75 0 0 1 22 7.75v8.5A5.75 5.75 0 0 1 16.25 22h-8.5A5.75 5.75 0 0 1 2 16.25v-8.5A5.75 5.75 0 0 1 7.75 2z"/>
+      </svg>
+      Follow @grateautodeals
+    </a>
+  </div>
 </section>
 
-<!-- ✅ CONSULTATION FORM SECTION -->
-<section class="bg-gray-100 py-16 px-6">
+<!-- CONSULTATION FORM SECTION -->
+<section class="py-24 px-6 bg-gray-950 relative">
+  
+  <!-- FORM AMBIENT GLOW -->
+  <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] bg-blue-600/10 blur-[150px] rounded-full pointer-events-none"></div>
 
-  <div class="max-w-3xl mx-auto bg-white p-8 rounded-xl shadow">
+  <div class="max-w-3xl mx-auto bg-gradient-to-b from-gray-900 to-gray-950 border border-gray-800 p-8 md:p-12 rounded-3xl shadow-2xl relative z-10">
 
-    <!-- TITLE -->
-    <h2 class="text-3xl font-bold text-center mb-4">
+    <h2 class="text-3xl md:text-4xl font-black text-center mb-3 text-white">
       How Can We Assist?
     </h2>
 
-    <!-- SUBTEXT -->
-    <p class="text-gray-600 text-center mb-8">
-      Tell us what you're looking for and we’ll help you secure the best deal possible.
+    <p class="text-gray-400 text-center mb-10 text-sm md:text-base">
+      Tell us what vehicle you're looking for and we’ll secure the best deal possible.
     </p>
 
-    <!-- ✅ FORM -->
-  <form id="consultation-form" class="space-y-5 scroll-mt-35">
+    <!-- ✅ FORM WITH CORRECT ID AND SCROLL MARGIN -->
+    <form id="consultation-form" class="space-y-6 scroll-mt-28">
 
-  <!-- NAME -->
-  <input type="text"
-         name="name"
-         placeholder="Full Name"
-         required
-         class="w-full border p-3 rounded-lg">
+      <input type="text" name="name" placeholder="Full Name" required
+             class="w-full bg-gray-950/80 border border-gray-800 text-white p-4 rounded-xl focus:border-blue-500 focus:ring-1 focus:ring-blue-500 focus:outline-none transition">
 
-  <!-- EMAIL -->
-  <input type="email"
-         name="email"
-         placeholder="Email Address"
-         required
-         class="w-full border p-3 rounded-lg">
+      <input type="email" name="email" placeholder="Email Address" required
+             class="w-full bg-gray-950/80 border border-gray-800 text-white p-4 rounded-xl focus:border-blue-500 focus:ring-1 focus:ring-blue-500 focus:outline-none transition">
 
-  <!-- PHONE -->
-  <input type="tel"
-         name="phone"
-         placeholder="Phone Number (optional)"
-         class="w-full border p-3 rounded-lg">
+      <input type="tel" name="phone" placeholder="Phone Number (optional)"
+             class="w-full bg-gray-950/80 border border-gray-800 text-white p-4 rounded-xl focus:border-blue-500 focus:ring-1 focus:ring-blue-500 focus:outline-none transition">
 
-  <!-- SERVICE -->
-  <select id="service-select"
-          name="service"
-          class="w-full border p-3 rounded-lg">
-    <option value="">Select Service</option>
-    <option>General Inquiry</option>
-    <option>Basic Deal Search</option>
-    <option>Full Service Broker</option>
-    <option>Premium Concierge</option>
-    <option>Window Tint</option>
-    <option>Mobile Detail</option>
-    <option>Powder Coating Wheels</option>
-    <option>Vehicle Wraps</option>
-  </select>
-
-  <!-- ✅ VEHICLE DETAILS (ADDED CLEANLY, SAME STYLE) -->
-  <div class="space-y-3">
-
-    <p class="text-sm text-gray-500">
-      Select your vehicle details. If you do not see your make listed, enter it below.
-    </p>
-
-    <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
-
-      <!-- YEAR -->
-      <select name="year" class="w-full border p-3 rounded-lg">
-        <option value="">Year</option>
-        <option>2028</option>
-        <option>2027</option>
-        <option>2026</option>
-        <option>2025</option>
-        <option>2024</option>
-        <option>2023</option>
-        <option>2022</option>
-        <option>2021</option>
-        <option>2020</option>
-        <option>2019</option>
-        <option>2018</option>
-        <option>2017</option>
-        <option>2016</option>
-        <option>2015</option>
-        <option>2014</option>
-        <option>2013</option>
-        <option>2012</option>
-        <option>2011</option>
-        <option>2010</option>
+      <select id="service-select" name="service"
+              class="w-full bg-gray-950/80 border border-gray-800 text-white p-4 rounded-xl focus:border-blue-500 focus:ring-1 focus:ring-blue-500 focus:outline-none transition">
+        <option value="">Select Service</option>
+        <option>General Inquiry</option>
+        <option>Basic Deal Search</option>
+        <option>Full Service Broker</option>
+        <option>Premium Concierge</option>
+        <option>Window Tint</option>
+        <option>Mobile Detail</option>
+        <option>Powder Coating Wheels</option>
+        <option>Vehicle Wraps</option>
       </select>
 
-      <!-- MAKE -->
-      <select name="make" class="w-full border p-3 rounded-lg">
-        <option value="">Select Make</option>
-        <option>Toyota</option>
-        <option>Honda</option>
-        <option>Ford</option>
-        <option>Chevrolet</option>
-        <option>Nissan</option>
-        <option>BMW</option>
-        <option>Mercedes-Benz</option>
-        <option>Audi</option>
-        <option>Lexus</option>
-        <option>Acura</option>
-        <option>Tesla</option>
-        <option>Hyundai</option>
-        <option>Kia</option>
-        <option>Subaru</option>
-        <option>Volkswagen</option>
-        <option>Jeep</option>
-        <option>Ram</option>
-        <option>GMC</option>
-        <option>Cadillac</option>
-        <option>Infiniti</option>
-        <option>Volvo</option>
-        <option>Porsche</option>
-      </select>
+      <div class="space-y-3">
+        <p class="text-xs text-gray-400 font-medium">
+          Select your vehicle details. If you do not see your make listed, enter it below.
+        </p>
 
-      <!-- MODEL -->
-      <input type="text"
-             name="model"
-             placeholder="Model (Camry, Charger, X5...)"
-             class="w-full border p-3 rounded-lg">
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+          <select name="year" class="w-full bg-gray-950/80 border border-gray-800 text-white p-4 rounded-xl focus:border-blue-500 focus:ring-1 focus:ring-blue-500 focus:outline-none transition">
+            <option value="">Year</option>
+            <option>2028</option>
+            <option>2027</option>
+            <option>2026</option>
+            <option>2025</option>
+            <option>2024</option>
+            <option>2023</option>
+            <option>2022</option>
+            <option>2021</option>
+            <option>2020</option>
+          </select>
 
-    </div>
+          <select name="make" class="w-full bg-gray-950/80 border border-gray-800 text-white p-4 rounded-xl focus:border-blue-500 focus:outline-none transition">
+            <option value="">Select Make</option>
+            <option>Toyota</option>
+            <option>Honda</option>
+            <option>Ford</option>
+            <option>BMW</option>
+            <option>Mercedes-Benz</option>
+            <option>Porsche</option>
+            <option>Tesla</option>
+          </select>
 
-  <!-- ✅ VEHICLE DETAILS + NOTES COMBINED -->
-<div class="space-y-2">
+          <input type="text" name="model" placeholder="Model (e.g. Camry, X5)"
+                 class="w-full bg-gray-950/80 border border-gray-800 text-white p-4 rounded-xl focus:border-blue-500 focus:ring-1 focus:ring-blue-500 focus:outline-none transition">
+        </div>
+      </div>
 
-  <p class="text-sm text-gray-500">
-    If you do not see your make listed, enter it here. Also include your vehicle preferences, budget, and any questions so we can secure the best possible deal for you.
-  </p>
+      <textarea name="details" placeholder="Example: 2024 Toyota Camry XSE, black, under $30k — also interested in lease options or similar vehicles..." rows="4"
+                class="w-full bg-gray-950/80 border border-gray-800 text-white p-4 rounded-xl focus:border-blue-500 focus:ring-1 focus:ring-blue-500 focus:outline-none transition"></textarea>
 
-  <textarea name="details"
-            placeholder="Example: 2024 Toyota Camry XSE, black, under $30k — also interested in lease options or similar vehicles..."
-            rows="5"
-            class="w-full border p-3 rounded-lg"></textarea>
-
-</div>
-
-  <!-- SUBMIT -->
-  <button type="submit"
-          class="w-full bg-blue-600 text-white py-3 rounded-xl font-semibold hover:bg-blue-700">
-    Submit Consultation Request
-  </button>
-
-</form>
-
+      <button type="submit"
+              class="w-full bg-gradient-to-r from-blue-600 via-blue-500 to-cyan-500 hover:from-blue-500 hover:to-cyan-400 text-white py-4 rounded-xl font-extrabold text-lg shadow-xl shadow-blue-500/25 transition duration-200 transform hover:-translate-y-0.5">
+        Submit Consultation Request
+      </button>
+    </form>
   </div>
-
 </section>
 
-<!-- ✅ FOOTER -->
-<footer class="bg-black text-white text-center py-6">
-  © 2026 Grate Auto Deals
+<!-- FOOTER -->
+<footer class="bg-gray-950 border-t border-gray-800/80 text-gray-500 text-center py-10 text-sm">
+  <p>© 2026 Grate Auto Deals. All rights reserved.</p>
 </footer>
-  
- <script>
-window.addEventListener("DOMContentLoaded", function () {
-  const params = new URLSearchParams(window.location.search);
-  const service = params.get("service");
 
-  const select = document.getElementById("service-select");
-
-  if (select) {
-    if (service) {
-      select.value = service;
-    } else {
-      select.value = "Free Consultation";
-    }
-  }
-});
-</script>
-  
-<script>
-window.onload = function () {
-  const menuBtn = document.getElementById("menu-btn");
-  const mobileMenu = document.getElementById("mobile-menu");
-
-  if (!menuBtn || !mobileMenu) return;
-
-  // ✅ Toggle menu open/close
-  menuBtn.onclick = function () {
-    mobileMenu.classList.toggle("hidden");
-  };
-
-  // ✅ Close menu when clicking any link
-  const links = mobileMenu.getElementsByTagName("a");
-
-  for (let i = 0; i < links.length; i++) {
-    links[i].onclick = function () {
-      mobileMenu.classList.add("hidden");
-    };
-  }
-};
-</script>
-<!-- ✅ EMAILJS SCRIPT (CORRECT) -->
+<!-- ✅ EMAILJS SCRIPT -->
 <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
 
-<!-- ✅ EMAILJS FORM HANDLER -->
+<!-- ✅ UNIFIED & CONSOLIDATED JS -->
 <script>
-  (function () {
-    emailjs.init("79GpKgIC8W7-vVqDA");
-  })();
-
   document.addEventListener("DOMContentLoaded", function () {
+    // Mobile menu logic
+    const menuBtn = document.getElementById("menu-btn");
+    const mobileMenu = document.getElementById("mobile-menu");
 
+    if (menuBtn && mobileMenu) {
+      menuBtn.onclick = function () {
+        mobileMenu.classList.toggle("hidden");
+      };
+
+      const links = mobileMenu.getElementsByTagName("a");
+      for (let i = 0; i < links.length; i++) {
+        links[i].onclick = function () {
+          mobileMenu.classList.add("hidden");
+        };
+      }
+    }
+
+    // Pre-select service option based on URL parameters
+    const params = new URLSearchParams(window.location.search);
+    const serviceParam = params.get("service");
+    const serviceSelect = document.getElementById("service-select");
+
+    if (serviceSelect && serviceParam) {
+      serviceSelect.value = serviceParam;
+    }
+
+    // Initialize EmailJS
+    emailjs.init("79GpKgIC8W7-vVqDA");
+
+    // Form submission logic
     const form = document.getElementById("consultation-form");
-
     if (form) {
-
       form.addEventListener("submit", function (e) {
         e.preventDefault();
 
         emailjs.sendForm(
-          "service_gyx73ey",       // ✅ YOUR SERVICE ID (ADDED)
-          "template_8agwm1c",      // ✅ YOUR TEMPLATE ID
+          "service_gyx73ey",
+          "template_8agwm1c",
           this
         )
         .then(function (response) {
           console.log("SUCCESS!", response.status, response.text);
-
           alert("✅ Request sent successfully!");
           form.reset();
-
         })
         .catch(function (error) {
           console.error("FAILED...", error);
-
-          alert("❌ Failed to send. Check console.");
+          alert("❌ Failed to send request. Check console for details.");
         });
-
       });
-
-    } else {
-      console.error("Form with ID 'consultation-form' not found.");
     }
-
   });
 </script>
+
 </body>
 </html>
