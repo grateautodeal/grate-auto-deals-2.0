@@ -3,264 +3,466 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Services | Grate Auto Deals</title>
+  <title>Services & Pricing | Grate Auto Deals</title>
 
-  <!-- ✅ Tailwind -->
+  <!-- ✅ Tailwind CSS -->
   <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- ✅ Custom Styles for Glow Effects & Smooth Scrolling -->
+  <style>
+    .no-scrollbar::-webkit-scrollbar {
+      display: none;
+    }
+    .no-scrollbar {
+      -ms-overflow-style: none;
+      scrollbar-width: none;
+    }
+
+    @keyframes pulseGlow {
+      0%, 100% { opacity: 0.35; transform: scale(1); }
+      50% { opacity: 0.65; transform: scale(1.08); }
+    }
+    .animate-pulse-glow {
+      animation: pulseGlow 7s ease-in-out infinite;
+    }
+  </style>
 </head>
 
-<body class="bg-gray-50 text-gray-900">
+<body class="scroll-smooth bg-gray-950 text-gray-100 antialiased selection:bg-blue-500 selection:text-white">
 
 <!-- NAV -->
-<nav class="bg-gray-900 text-white fixed top-0 w-full z-50 shadow-md">
+<nav class="bg-gray-950/80 backdrop-blur-xl text-white fixed top-0 w-full z-50 border-b border-gray-800/80 shadow-2xl shadow-black/50">
+  <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
 
-  <div class="max-w-6xl mx-auto px-4 py-4 flex justify-between items-center">
+    <!-- LEFT LOGO -->
+    <a href="index.html" class="flex items-center gap-2 group">
+      <div class="w-9 h-9 rounded-xl bg-gradient-to-tr from-blue-600 via-indigo-500 to-cyan-400 flex items-center justify-center font-black text-xl text-white shadow-lg shadow-blue-500/30 group-hover:scale-105 transition duration-300">
+        G
+      </div>
+      <span class="font-black text-xl tracking-tight text-transparent bg-clip-text bg-gradient-to-r from-white via-gray-200 to-blue-400">
+        Grate Auto Deals
+      </span>
+    </a>
 
-    <div class="font-bold text-lg">Grate Auto Deals</div>
-
+    <!-- RIGHT NAV -->
     <div class="flex items-center space-x-6">
-
       <!-- DESKTOP LINKS -->
-      <div class="hidden md:flex space-x-6">
-        <a href="index.html" class="hover:opacity-80">Home</a>
-        <a href="services.html" class="hover:opacity-80">Services</a>
-        <a href="index.html#consultation-form" class="hover:opacity-80">Contact Us</a>
+      <div class="hidden md:flex items-center space-x-8 text-sm font-semibold text-gray-300">
+        <a href="index.html" class="hover:text-blue-400 transition duration-200">Home</a>
+        <a href="services.html" class="text-blue-400 transition duration-200">Services</a>
+        <a href="index.html#consultation-form" class="hover:text-blue-400 transition duration-200">Contact Us</a>
+        <a href="index.html#consultation-form" class="relative group inline-flex items-center justify-center p-0.5 overflow-hidden text-sm font-bold rounded-xl group bg-gradient-to-br from-blue-500 to-cyan-400 group-hover:from-blue-600 group-hover:to-cyan-500 text-white shadow-lg shadow-blue-500/25">
+          <span class="relative px-5 py-2.5 transition-all ease-in duration-75 bg-gray-950 rounded-[10px] group-hover:bg-opacity-0">
+            Get Started
+          </span>
+        </a>
       </div>
 
-      <!-- HAMBURGER -->
-      <button id="menu-btn" class="md:hidden text-2xl">☰</button>
-
+      <!-- HAMBURGER BUTTON -->
+      <button id="menu-btn" class="md:hidden text-2xl text-gray-300 focus:outline-none hover:text-white transition" aria-label="Toggle Menu">
+        ☰
+      </button>
     </div>
+
   </div>
 
   <!-- MOBILE MENU -->
-  <div id="mobile-menu" class="hidden md:hidden bg-gray-900 flex flex-col text-center space-y-4 py-4">
-    <a href="index.html" class="block">Home</a>
-    <a href="services.html" class="block">Services</a>
-    <a href="index.html#consultation-form" class="block">Contact Us</a>
+  <div id="mobile-menu" class="hidden md:hidden bg-gray-950/95 border-b border-gray-800 backdrop-blur-2xl flex flex-col text-center space-y-4 py-6 font-semibold text-gray-200">
+    <a href="index.html" class="hover:text-blue-400 transition">Home</a>
+    <a href="services.html" class="hover:text-blue-400 transition">Services</a>
+    <a href="index.html#consultation-form" class="hover:text-blue-400 transition">Contact Us</a>
   </div>
-
 </nav>
 
-<div class="h-20"></div>
+<div class="h-16"></div>
 
-<!-- HEADER -->
-<section class="py-16 px-6 text-center bg-white">
-  <h1 class="text-4xl font-extrabold mb-4">Services and Pricing</h1>
+<!-- PAGE HEADER -->
+<section class="relative bg-gray-950 text-white py-16 md:py-24 px-6 overflow-hidden border-b border-gray-800/80">
+  <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[650px] h-[350px] bg-gradient-to-r from-blue-600/20 via-indigo-600/20 to-purple-600/20 blur-[140px] rounded-full pointer-events-none animate-pulse-glow"></div>
 
-  <p class="text-gray-700 max-w-2xl mx-auto mb-4">
-    Professional automotive brokerage and concierge services designed to save you time, money, and frustration.
-  </p>
+  <div class="max-w-4xl mx-auto text-center relative z-10">
+    <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-blue-500/10 border border-blue-500/30 text-blue-400 text-xs font-bold uppercase tracking-widest mb-6 shadow-sm">
+      <svg class="w-4 h-4 text-cyan-400" fill="currentColor" viewBox="0 0 20 20">
+        <path fill-rule="evenodd" d="M2.166 4.999A11.954 11.954 0 0010 1.944 11.954 11.954 0 0017.834 5c.11.65.166 1.32.166 2.001 0 5.225-3.34 9.67-8 11.317C5.34 16.67 2 12.225 2 7c0-.682.057-1.35.166-2.001zm11.541 3.708a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+      </svg>
+      Transparent Advisory & Verified Payment Gateway
+    </div>
 
-  <p class="text-blue-600 font-semibold text-lg">
-    We find the right vehicle, negotiate the best deal, and handle the process so you do not have to.
-  </p>
+    <h1 class="text-4xl md:text-6xl font-black tracking-tight text-white mb-6">
+      Services & <span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 via-indigo-300 to-cyan-400">Pricing Packages</span>
+    </h1>
+
+    <p class="text-gray-300 max-w-2xl mx-auto text-base md:text-lg font-medium leading-relaxed mb-4">
+      Professional automotive brokerage and concierge services engineered to save you thousands in dealership fees, time, and stress.
+    </p>
+
+    <p class="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-300 font-bold text-sm md:text-base">
+      We negotiate directly with sellers, verify contract integrity, and deliver direct savings to you.
+    </p>
+  </div>
 </section>
 
-<!-- SERVICES -->
-<section class="py-16 px-6">
-  <div class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-6">
+<!-- MAIN PACKAGES SECTION -->
+<section class="py-20 px-6 max-w-7xl mx-auto relative">
+  <div class="grid grid-cols-1 md:grid-cols-3 gap-8 items-stretch">
 
-    <!-- BASIC -->
-    <div class="bg-white p-6 rounded-2xl shadow border">
-      <h2 class="text-xl font-bold mb-3">Basic Deal Search</h2>
-      <ul class="list-disc pl-5 mb-6 text-gray-700">
-        <li>Targeted vehicle search</li>
-        <li>True market pricing analysis</li>
-        <li>Clear deal recommendations</li>
-      </ul>
+    <!-- BASIC PACKAGE -->
+    <div class="bg-gray-900/70 backdrop-blur-xl border border-gray-800 rounded-3xl p-8 flex flex-col justify-between shadow-2xl hover:border-blue-500/50 hover:shadow-blue-500/10 transition duration-300 relative group overflow-hidden">
+      <div class="absolute top-0 left-0 w-full h-1.5 bg-gradient-to-r from-blue-500 to-indigo-500"></div>
+
+      <div>
+        <div class="text-xs font-extrabold uppercase tracking-widest text-blue-400 mb-2">Essential Advisory</div>
+        <h2 class="text-2xl font-black text-white mb-2">Basic Deal Search</h2>
+        <div class="flex items-baseline gap-1 mb-6">
+          <span class="text-4xl font-black text-white">$1,000</span>
+          <span class="text-xs font-semibold text-gray-400">/ flat fee</span>
+        </div>
+
+        <ul class="space-y-4 mb-8 text-sm text-gray-300 border-t border-gray-800/80 pt-6">
+          <li class="flex items-start gap-3">
+            <span class="text-blue-400 font-bold text-base">✓</span>
+            <span>Targeted vehicle sourcing & inventory search</span>
+          </li>
+          <li class="flex items-start gap-3">
+            <span class="text-blue-400 font-bold text-base">✓</span>
+            <span>True market valuation & pricing analysis</span>
+          </li>
+          <li class="flex items-start gap-3">
+            <span class="text-blue-400 font-bold text-base">✓</span>
+            <span>Clear, objective deal recommendations</span>
+          </li>
+          <li class="flex items-start gap-3">
+            <span class="text-blue-400 font-bold text-base">✓</span>
+            <span>Uncovering hidden dealer markups & add-ons</span>
+          </li>
+        </ul>
+      </div>
 
       <button type="button"
               onclick="openModal('basicModal')"
-              class="block w-full bg-blue-600 text-white py-3 rounded-xl hover:bg-blue-700">
-        Learn More
+              class="w-full bg-gray-950 border border-blue-500/40 hover:border-blue-500 text-white font-bold py-4 rounded-xl shadow-lg hover:bg-blue-600 transition duration-200 text-center flex items-center justify-center gap-2">
+        <span>Select & Secure</span>
+        <svg class="w-4 h-4 text-blue-400 group-hover:text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
       </button>
     </div>
 
-    <!-- FULL -->
-    <div class="bg-white p-6 rounded-2xl border-2 border-blue-600 shadow">
-      <span class="text-blue-600 text-sm font-semibold">Most Popular</span>
+    <!-- FULL SERVICE PACKAGE (POPULAR HIGHLIGHT) -->
+    <div class="bg-gradient-to-b from-gray-900 via-gray-900 to-blue-950/40 backdrop-blur-xl border-2 border-cyan-400/80 rounded-3xl p-8 flex flex-col justify-between shadow-2xl shadow-cyan-500/10 relative group transform md:-translate-y-3">
+      <div class="absolute -top-4 left-1/2 -translate-x-1/2 bg-gradient-to-r from-blue-500 via-cyan-400 to-indigo-500 text-white text-xs font-black px-5 py-1.5 rounded-full uppercase tracking-widest shadow-lg shadow-cyan-500/30">
+        Most Popular Choice
+      </div>
 
-      <h2 class="text-xl font-bold mt-2 mb-3">Full Service Broker</h2>
+      <div>
+        <div class="text-xs font-extrabold uppercase tracking-widest text-cyan-400 mb-2 mt-2">Hands-Free Negotiation</div>
+        <h2 class="text-2xl font-black text-white mb-2">Full Service Broker</h2>
+        <div class="flex items-baseline gap-1 mb-6">
+          <span class="text-4xl font-black text-transparent bg-clip-text bg-gradient-to-r from-cyan-300 via-blue-400 to-indigo-300">$1,500</span>
+          <span class="text-xs font-semibold text-gray-400">/ flat fee</span>
+        </div>
 
-      <ul class="list-disc pl-5 mb-6 text-gray-700">
-        <li>Full vehicle sourcing</li>
-        <li>Dealer negotiation</li>
-        <li>Trade-in guidance</li>
-        <li>Contract protection</li>
-      </ul>
+        <ul class="space-y-4 mb-8 text-sm text-gray-200 border-t border-gray-800/80 pt-6">
+          <li class="flex items-start gap-3">
+            <span class="text-cyan-400 font-bold text-base">✓</span>
+            <span>Full end-to-end vehicle sourcing & acquisition</span>
+          </li>
+          <li class="flex items-start gap-3">
+            <span class="text-cyan-400 font-bold text-base">✓</span>
+            <span>Direct dealership price & fee negotiation</span>
+          </li>
+          <li class="flex items-start gap-3">
+            <span class="text-cyan-400 font-bold text-base">✓</span>
+            <span>Trade-in appraisal & value maximization</span>
+          </li>
+          <li class="flex items-start gap-3">
+            <span class="text-cyan-400 font-bold text-base">✓</span>
+            <span>Strict finance contract review & protection</span>
+          </li>
+          <li class="flex items-start gap-3">
+            <span class="text-cyan-400 font-bold text-base">✓</span>
+            <span>Shield against aggressive high-pressure sales</span>
+          </li>
+        </ul>
+      </div>
 
       <button type="button"
               onclick="openModal('fullModal')"
-              class="block w-full bg-blue-600 text-white py-4 rounded-xl hover:bg-blue-700">
-        Learn More
+              class="w-full bg-gradient-to-r from-blue-600 via-blue-500 to-cyan-500 hover:from-blue-500 hover:to-cyan-400 text-white font-extrabold py-4 rounded-xl shadow-xl shadow-blue-500/30 transition duration-200 text-center flex items-center justify-center gap-2">
+        <span>Select & Secure</span>
+        <svg class="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
       </button>
     </div>
 
-    <!-- PREMIUM -->
-    <div class="bg-white p-6 rounded-2xl shadow border">
-      <h2 class="text-xl font-bold mb-3">Premium Concierge</h2>
+    <!-- PREMIUM CONCIERGE PACKAGE -->
+    <div class="bg-gray-900/70 backdrop-blur-xl border border-gray-800 rounded-3xl p-8 flex flex-col justify-between shadow-2xl hover:border-purple-500/50 hover:shadow-purple-500/10 transition duration-300 relative group overflow-hidden">
+      <div class="absolute top-0 left-0 w-full h-1.5 bg-gradient-to-r from-indigo-500 to-purple-500"></div>
 
-      <ul class="list-disc pl-5 mb-6 text-gray-700">
-        <li>Nationwide sourcing</li>
-        <li>Luxury & rare vehicles</li>
-        <li>Priority service</li>
-      </ul>
+      <div>
+        <div class="text-xs font-extrabold uppercase tracking-widest text-purple-400 mb-2">Exotic & Rare Specs</div>
+        <h2 class="text-2xl font-black text-white mb-2">Premium Concierge</h2>
+        <div class="flex items-baseline gap-1 mb-6">
+          <span class="text-4xl font-black text-white">$2,000</span>
+          <span class="text-xs font-semibold text-gray-400">/ flat fee</span>
+        </div>
+
+        <ul class="space-y-4 mb-8 text-sm text-gray-300 border-t border-gray-800/80 pt-6">
+          <li class="flex items-start gap-3">
+            <span class="text-purple-400 font-bold text-base">✓</span>
+            <span>Nationwide luxury & exotic vehicle search</span>
+          </li>
+          <li class="flex items-start gap-3">
+            <span class="text-purple-400 font-bold text-base">✓</span>
+            <span>Hard-to-find build specs & rare allocations</span>
+          </li>
+          <li class="flex items-start gap-3">
+            <span class="text-purple-400 font-bold text-base">✓</span>
+            <span>Out-of-state transport & white-glove logistics</span>
+          </li>
+          <li class="flex items-start gap-3">
+            <span class="text-purple-400 font-bold text-base">✓</span>
+            <span>Priority 24/7 dedicated broker advisory</span>
+          </li>
+        </ul>
+      </div>
 
       <button type="button"
               onclick="openModal('premiumModal')"
-              class="block w-full bg-blue-600 text-white py-4 rounded-xl hover:bg-blue-700">
-        Learn More
+              class="w-full bg-gray-950 border border-purple-500/40 hover:border-purple-500 text-white font-bold py-4 rounded-xl shadow-lg hover:bg-purple-600 transition duration-200 text-center flex items-center justify-center gap-2">
+        <span>Select & Secure</span>
+        <svg class="w-4 h-4 text-purple-400 group-hover:text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
       </button>
     </div>
 
+  </div>
+</section>
+
+<!-- TRUST & SECURE PAYMENT BAR -->
+<section class="max-w-7xl mx-auto px-6 mb-20">
+  <div class="bg-gradient-to-r from-gray-900 via-gray-900/90 to-gray-900 border border-gray-800/90 rounded-3xl p-6 md:p-8 shadow-2xl flex flex-col md:flex-row items-center justify-between gap-6 backdrop-blur-xl">
+    <div class="flex items-center gap-4 text-left">
+      <div class="w-12 h-12 rounded-2xl bg-gradient-to-tr from-blue-600 to-cyan-400 text-white flex items-center justify-center flex-shrink-0 shadow-lg shadow-blue-500/20">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/>
+        </svg>
+      </div>
+      <div>
+        <h3 class="font-bold text-white text-base">Direct & Encrypted Checkout</h3>
+        <p class="text-xs text-gray-400">All payments are safely processed via PayPal & major credit/debit cards with 256-bit SSL encryption.</p>
+      </div>
+    </div>
+
+    <!-- LOGO BADGES -->
+    <div class="flex items-center gap-4 opacity-90 text-xs font-bold text-gray-300">
+      <span class="px-3 py-1.5 rounded-lg bg-gray-950 border border-gray-800 text-gray-300">VISA</span>
+      <span class="px-3 py-1.5 rounded-lg bg-gray-950 border border-gray-800 text-gray-300">MC</span>
+      <span class="px-3 py-1.5 rounded-lg bg-gray-950 border border-gray-800 text-gray-300">AMEX</span>
+      <span class="px-3 py-1.5 rounded-lg bg-gray-950 border border-gray-800 text-blue-400">PayPal</span>
+    </div>
+  </div>
+</section>
+
+<!-- CUSTOM SERVICES SECTION -->
+<section class="py-20 px-6 bg-gray-900/40 border-t border-gray-800/80">
+  <div class="max-w-7xl mx-auto text-center">
+    <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-cyan-500/10 border border-cyan-500/20 text-cyan-400 text-xs font-bold uppercase tracking-widest mb-4">
+      Vehicle Customization
+    </div>
+    <h2 class="text-3xl md:text-4xl font-black text-white mb-3 tracking-tight">Additional Custom Services</h2>
+    <p class="text-gray-400 max-w-xl mx-auto text-sm mb-12">Looking for custom aesthetic or protective upgrades? Select a service below to request a quote.</p>
+
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+
+      <div class="bg-gray-900 border border-gray-800 p-6 rounded-2xl shadow-xl hover:border-cyan-500/40 transition duration-300 text-left flex flex-col justify-between group">
+        <div>
+          <div class="w-10 h-10 rounded-xl bg-cyan-500/10 text-cyan-400 font-bold flex items-center justify-center mb-4 group-hover:bg-cyan-500 group-hover:text-white transition">01</div>
+          <h3 class="font-bold text-white text-lg mb-1">Window Tint</h3>
+          <p class="text-xs text-gray-400 mb-6 leading-relaxed">Ceramic privacy film & maximum solar heat rejection.</p>
+        </div>
+        <a href="index.html?service=Window%20Tint#consultation-form" 
+           class="block text-center border border-gray-700 hover:border-cyan-400 text-xs font-bold text-gray-200 hover:text-white py-3 rounded-xl hover:bg-cyan-500/10 transition">
+          Request Quote
+        </a>
+      </div>
+
+      <div class="bg-gray-900 border border-gray-800 p-6 rounded-2xl shadow-xl hover:border-blue-500/40 transition duration-300 text-left flex flex-col justify-between group">
+        <div>
+          <div class="w-10 h-10 rounded-xl bg-blue-500/10 text-blue-400 font-bold flex items-center justify-center mb-4 group-hover:bg-blue-500 group-hover:text-white transition">02</div>
+          <h3 class="font-bold text-white text-lg mb-1">Mobile Detail</h3>
+          <p class="text-xs text-gray-400 mb-6 leading-relaxed">Full interior deep cleaning & exterior paint revival delivered to you.</p>
+        </div>
+        <a href="index.html?service=Mobile%20Detail#consultation-form" 
+           class="block text-center border border-gray-700 hover:border-blue-400 text-xs font-bold text-gray-200 hover:text-white py-3 rounded-xl hover:bg-blue-500/10 transition">
+          Request Quote
+        </a>
+      </div>
+
+      <div class="bg-gray-900 border border-gray-800 p-6 rounded-2xl shadow-xl hover:border-indigo-500/40 transition duration-300 text-left flex flex-col justify-between group">
+        <div>
+          <div class="w-10 h-10 rounded-xl bg-indigo-500/10 text-indigo-400 font-bold flex items-center justify-center mb-4 group-hover:bg-indigo-500 group-hover:text-white transition">03</div>
+          <h3 class="font-bold text-white text-lg mb-1">Powder Coating</h3>
+          <p class="text-xs text-gray-400 mb-6 leading-relaxed">Durable custom wheel finishes, satin, gloss, and color changes.</p>
+        </div>
+        <a href="index.html?service=Powder%20Coating%20Wheels#consultation-form" 
+           class="block text-center border border-gray-700 hover:border-indigo-400 text-xs font-bold text-gray-200 hover:text-white py-3 rounded-xl hover:bg-indigo-500/10 transition">
+          Request Quote
+        </a>
+      </div>
+
+      <div class="bg-gray-900 border border-gray-800 p-6 rounded-2xl shadow-xl hover:border-purple-500/40 transition duration-300 text-left flex flex-col justify-between group">
+        <div>
+          <div class="w-10 h-10 rounded-xl bg-purple-500/10 text-purple-400 font-bold flex items-center justify-center mb-4 group-hover:bg-purple-500 group-hover:text-white transition">04</div>
+          <h3 class="font-bold text-white text-lg mb-1">Vehicle Wraps</h3>
+          <p class="text-xs text-gray-400 mb-6 leading-relaxed">Full vinyl color transformations & clear paint protection film (PPF).</p>
+        </div>
+        <a href="index.html?service=Vehicle%20Wraps#consultation-form" 
+           class="block text-center border border-gray-700 hover:border-purple-400 text-xs font-bold text-gray-200 hover:text-white py-3 rounded-xl hover:bg-purple-500/10 transition">
+          Request Quote
+        </a>
+      </div>
+
+    </div>
   </div>
 </section>
 
 <!-- MODALS -->
-<div id="basicModal" class="hidden fixed inset-0 bg-black/50 flex items-center justify-center z-50">
-  <div class="bg-white p-8 rounded-xl max-w-md w-full relative">
-    <button onclick="closeModal('basicModal')" class="absolute top-3 right-4 text-xl">&times;</button>
-    <h2 class="text-xl font-bold mb-4">Basic Deal Search</h2>
-    <p class="mb-4 text-gray-700">
-  This service gives you complete clarity before you ever step into a dealership. 
-  We analyze real market data to show you exactly what a vehicle is truly worth and where the best deals are. 
-  You’ll avoid overpriced listings, hidden markups, and costly mistakes that most buyers make. 
-  It’s the smartest way to buy with confidence while saving both time and money.
-</p>
-    <p class="text-xl text-gray-800 mb-6 tracking-wide">$1,000.00</p>
-    <div id="paypal-basic"></div>
-  </div>
-</div>
 
-<div id="fullModal" class="hidden fixed inset-0 bg-black/50 flex items-center justify-center z-50">
-  <div class="bg-white p-8 rounded-xl max-w-md w-full relative">
-    <button onclick="closeModal('fullModal')" class="absolute top-3 right-4 text-xl">&times;</button>
-    <h2 class="text-xl font-bold mb-4">Full Service Broker</h2>
-<p class="mb-4 text-gray-700">
- We take over the entire buying process so you don’t have to deal with pressure, stress, or dealership tactics. 
-From sourcing the right vehicle to negotiating the final price, we handle every step on your behalf. 
-Our focus is on protecting you from hidden fees, bad contracts, dealership pressure, nonstop calls, and aggressive tactics used to influence buyers.
-We won't present an offer until it is a great one.
-</p>
-<p class="text-xl text-gray-800 mb-6 tracking-wide">$1,500.00</p>
-    <div id="paypal-full"></div>
-  </div>
-</div>
+<!-- BASIC MODAL -->
+<div id="basicModal" class="hidden fixed inset-0 bg-black/85 backdrop-blur-md flex items-center justify-center z-50 p-4">
+  <div class="bg-gray-950 border border-gray-800 p-6 md:p-8 rounded-3xl max-w-md w-full relative shadow-2xl">
+    <button onclick="closeModal('basicModal')" class="absolute top-4 right-5 text-gray-400 hover:text-white text-2xl font-bold">&times;</button>
+    
+    <div class="text-xs font-bold uppercase tracking-widest text-blue-400 mb-1">Basic Deal Search</div>
+    <h2 class="text-2xl font-black text-white mb-3">Service & Payment</h2>
+    
+    <p class="mb-4 text-gray-300 text-xs leading-relaxed">
+      Analyze real market data before you buy. Avoid overpriced listings, hidden markups, and costly dealership mistakes.
+    </p>
 
-<div id="premiumModal" class="hidden fixed inset-0 bg-black/50 flex items-center justify-center z-50">
-  <div class="bg-white p-8 rounded-xl max-w-md w-full relative">
-    <button onclick="closeModal('premiumModal')" class="absolute top-3 right-4 text-xl">&times;</button>
-    <h2 class="text-xl font-bold mb-4">Premium Concierge</h2>
-<p class="mb-4 text-gray-700">
-  This is a full white‑glove experience designed for buyers seeking something rare, specific, or truly high-end.
-We take complete control of the process from nationwide sourcing and securing the right vehicle to negotiating the final deal on your behalf.  
-Every detail is handled for you, including out-of-state coordination, logistics, and protection from hidden fees, dealership pressure, and aggressive sales tactics.  
-It’s the most seamless, stress-free way to secure a hard-to-find vehicle while ensuring you never settle or overpay.
-</p>
-<p class="text-xl text-gray-800 mb-6 tracking-wide">$2,000.00</p>
-    <div id="paypal-premium"></div>
-  </div>
-</div>
+    <div class="bg-gray-900 border border-gray-800 p-4 rounded-2xl mb-6 flex justify-between items-center">
+      <span class="text-xs text-gray-400 uppercase font-semibold">Package Retainer</span>
+      <span class="text-2xl font-black text-white">$1,000.00</span>
+    </div>
 
-<!-- ✅ ADDITIONAL SERVICES (FIXED) -->
-<section class="py-16 px-6 bg-white">
-  <div class="max-w-6xl mx-auto text-center">
-    <h2 class="text-3xl font-bold mb-10">Additional Services</h2>
+    <!-- PAYPAL RENDER CONTAINER -->
+    <div id="paypal-basic" class="min-h-[150px]"></div>
 
-    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-
-      <div class="bg-gray-50 p-6 rounded-2xl border shadow">
-        <h3 class="font-semibold mb-2">Window Tint</h3>
-        <p class="text-sm mb-4">Privacy + heat protection</p>
-        <a href="index.html?service=Window%20Tint#consultation-form" class="block border py-2 rounded-lg hover:bg-gray-100">
-          Request Quote
-        </a>
-      </div>
-
-      <div class="bg-gray-50 p-6 rounded-2xl border shadow">
-        <h3 class="font-semibold mb-2">Mobile Detail</h3>
-        <p class="text-sm mb-4">We come to you</p>
-        <a href="index.html?service=Mobile%20Mechanic#consultation-form" class="block border py-2 rounded-lg hover:bg-gray-100">
-          Request Quote
-        </a>
-      </div>
-
-      <div class="bg-gray-50 p-6 rounded-2xl border shadow">
-        <h3 class="font-semibold mb-2">Powder Coating Wheels</h3>
-        <p class="text-sm mb-4">Durable custom finishes</p>
-        <a href="index.html?service=Powder%20Coating%20Wheels#consultation-form" class="block border py-2 rounded-lg hover:bg-gray-100">
-          Request Quote
-        </a>
-      </div>
-
-      <div class="bg-gray-50 p-6 rounded-2xl border shadow">
-        <h3 class="font-semibold mb-2">Vehicle Wraps</h3>
-        <p class="text-sm mb-4">Style + protection</p>
-        <a href="index.html?service=Vehicle%20Wraps#consultation-form" class="block border py-2 rounded-lg hover:bg-gray-100">
-          Request Quote
-        </a>
-      </div>
-
+    <div class="mt-4 pt-4 border-t border-gray-800/80 flex items-center justify-center gap-2 text-xs text-gray-400">
+      <svg class="w-4 h-4 text-green-400" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M5 9V7a5 5 0 0110 0v2a2 2 0 012 2v5a2 2 0 01-2 2H5a2 2 0 01-2-2v-5a2 2 0 012-2zm8-2v2H7V7a3 3 0 016 0z" clip-rule="evenodd"/></svg>
+      Encrypted 256-Bit SSL Secured Checkout
     </div>
   </div>
-</section>
+</div>
 
-<!-- ✅ PAYPAL -->
-<script src="https://www.paypal.com/sdk/js?client-id=AWESQ-Q9rVEWOHcFu75iP651SjAs8NuMTNTptIOuYtCePXq4rwE1BSPKzWgfbN_FM3niikyisn37lyWr&currency=USD"></script>
-
-<!-- ✅ SCRIPT -->
-<script>
-
-function openModal(id){
-  document.getElementById(id).classList.remove("hidden");
-}
-
-function closeModal(id){
-  document.getElementById(id).classList.add("hidden");
-}
-
-document.addEventListener("DOMContentLoaded", () => {
-
-  const btn = document.getElementById("menu-btn");
-  const menu = document.getElementById("mobile-menu");
-
-  if (btn && menu) {
-    btn.onclick = () => menu.classList.toggle("hidden");
-    menu.querySelectorAll("a").forEach(link => {
-      link.onclick = () => menu.classList.add("hidden");
-    });
-  }
-
-  if (window.paypal) {
-    paypal.Buttons({createOrder:(d,a)=>a.order.create({purchase_units:[{amount:{value:"1000"}}]})}).render("#paypal-basic");
-    paypal.Buttons({createOrder:(d,a)=>a.order.create({purchase_units:[{amount:{value:"1500"}}]})}).render("#paypal-full");
-    paypal.Buttons({createOrder:(d,a)=>a.order.create({purchase_units:[{amount:{value:"2000"}}]})}).render("#paypal-premium");
-  }
-
-});
-
-</script>
- <!-- ✅ DISCLAIMER -->
-<section class="bg-gray-100 text-gray-600 py-10 px-6 text-sm">
-  <div class="max-w-6xl mx-auto">
-
-    <p class="mb-3 font-semibold text-gray-700">Disclaimer</p>
-
-    <p class="leading-relaxed">
-      Grate Auto Deals provides automotive consulting, vehicle sourcing, and negotiation services and is not a licensed dealership, lender, or financial institution.
+<!-- FULL MODAL -->
+<div id="fullModal" class="hidden fixed inset-0 bg-black/85 backdrop-blur-md flex items-center justify-center z-50 p-4">
+  <div class="bg-gray-950 border border-gray-800 p-6 md:p-8 rounded-3xl max-w-md w-full relative shadow-2xl">
+    <button onclick="closeModal('fullModal')" class="absolute top-4 right-5 text-gray-400 hover:text-white text-2xl font-bold">&times;</button>
+    
+    <div class="text-xs font-bold uppercase tracking-widest text-cyan-400 mb-1">Full Service Broker</div>
+    <h2 class="text-2xl font-black text-white mb-3">Service & Payment</h2>
+    
+    <p class="mb-4 text-gray-300 text-xs leading-relaxed">
+      Complete end-to-end broker management. We negotiate price, trade-in value, and financing terms while protecting you from dealership pressure.
     </p>
 
-    <p class="leading-relaxed mt-2">
-      All purchases, financing, warranties, and related transactions are completed directly between the client and third-party providers.
+    <div class="bg-gray-900 border border-gray-800 p-4 rounded-2xl mb-6 flex justify-between items-center">
+      <span class="text-xs text-gray-400 uppercase font-semibold">Package Retainer</span>
+      <span class="text-2xl font-black text-white">$1,500.00</span>
+    </div>
+
+    <!-- PAYPAL RENDER CONTAINER -->
+    <div id="paypal-full" class="min-h-[150px]"></div>
+
+    <div class="mt-4 pt-4 border-t border-gray-800/80 flex items-center justify-center gap-2 text-xs text-gray-400">
+      <svg class="w-4 h-4 text-green-400" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M5 9V7a5 5 0 0110 0v2a2 2 0 012 2v5a2 2 0 01-2 2H5a2 2 0 01-2-2v-5a2 2 0 012-2zm8-2v2H7V7a3 3 0 016 0z" clip-rule="evenodd"/></svg>
+      Encrypted 256-Bit SSL Secured Checkout
+    </div>
+  </div>
+</div>
+
+<!-- PREMIUM MODAL -->
+<div id="premiumModal" class="hidden fixed inset-0 bg-black/85 backdrop-blur-md flex items-center justify-center z-50 p-4">
+  <div class="bg-gray-950 border border-gray-800 p-6 md:p-8 rounded-3xl max-w-md w-full relative shadow-2xl">
+    <button onclick="closeModal('premiumModal')" class="absolute top-4 right-5 text-gray-400 hover:text-white text-2xl font-bold">&times;</button>
+    
+    <div class="text-xs font-bold uppercase tracking-widest text-purple-400 mb-1">Premium Concierge</div>
+    <h2 class="text-2xl font-black text-white mb-3">Service & Payment</h2>
+    
+    <p class="mb-4 text-gray-300 text-xs leading-relaxed">
+      White-glove service for luxury, rare, or exotic vehicles. Includes nationwide search, out-of-state logistics, contract review, and 24/7 dedicated support.
     </p>
 
-    <p class="leading-relaxed mt-2">
-      We are not responsible for vehicle condition, pricing, availability, or final transaction terms. All decisions remain the responsibility of the client.
-    </p>
+    <div class="bg-gray-900 border border-gray-800 p-4 rounded-2xl mb-6 flex justify-between items-center">
+      <span class="text-xs text-gray-400 uppercase font-semibold">Package Retainer</span>
+      <span class="text-2xl font-black text-white">$2,000.00</span>
+    </div>
 
+    <!-- PAYPAL RENDER CONTAINER -->
+    <div id="paypal-premium" class="min-h-[150px]"></div>
+
+    <div class="mt-4 pt-4 border-t border-gray-800/80 flex items-center justify-center gap-2 text-xs text-gray-400">
+      <svg class="w-4 h-4 text-green-400" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M5 9V7a5 5 0 0110 0v2a2 2 0 012 2v5a2 2 0 01-2 2H5a2 2 0 01-2-2v-5a2 2 0 012-2zm8-2v2H7V7a3 3 0 016 0z" clip-rule="evenodd"/></svg>
+      Encrypted 256-Bit SSL Secured Checkout
+    </div>
+  </div>
+</div>
+
+<!-- DISCLAIMER SECTION -->
+<section class="bg-gray-950 border-t border-gray-800/80 text-gray-500 py-10 px-6 text-xs">
+  <div class="max-w-7xl mx-auto space-y-2 leading-relaxed">
+    <p class="font-bold text-gray-400">Disclaimer</p>
+    <p>Grate Auto Deals provides automotive consulting, vehicle sourcing, and negotiation advisory services and is not a licensed dealership, lender, or financial institution.</p>
+    <p>All vehicle purchases, financing terms, warranties, and related final transactions are executed directly between the client and third-party sellers or licensed dealerships.</p>
   </div>
 </section>
+
+<!-- FOOTER -->
+<footer class="bg-gray-950 border-t border-gray-800/80 text-gray-500 text-center py-8 text-xs">
+  <p>© 2026 Grate Auto Deals. All rights reserved.</p>
+</footer>
+
+<!-- ✅ PAYPAL SDK -->
+<script src="https://www.paypal.com/sdk/js?client-id=AWESQ-Q9rVEWOHcFu75iP651SjAs8NuMTNTptIOuYtCePXq4rwE1BSPKzWgfbN_FM3niikyisn37lyWr&currency=USD"></script>
+
+<!-- ✅ SCRIPT EXECUTION -->
+<script>
+  function openModal(id) {
+    const modal = document.getElementById(id);
+    if (modal) modal.classList.remove("hidden");
+  }
+
+  function closeModal(id) {
+    const modal = document.getElementById(id);
+    if (modal) modal.classList.add("hidden");
+  }
+
+  document.addEventListener("DOMContentLoaded", () => {
+    // Mobile navigation logic
+    const menuBtn = document.getElementById("menu-btn");
+    const mobileMenu = document.getElementById("mobile-menu");
+
+    if (menuBtn && mobileMenu) {
+      menuBtn.onclick = () => mobileMenu.classList.toggle("hidden");
+      mobileMenu.querySelectorAll("a").forEach(link => {
+        link.onclick = () => mobileMenu.classList.add("hidden");
+      });
+    }
+
+    // Paypal SDK Initializations
+    if (window.paypal) {
+      paypal.Buttons({
+        createOrder: (data, actions) => actions.order.create({ purchase_units: [{ amount: { value: "1000.00" } }] })
+      }).render("#paypal-basic");
+
+      paypal.Buttons({
+        createOrder: (data, actions) => actions.order.create({ purchase_units: [{ amount: { value: "1500.00" } }] })
+      }).render("#paypal-full");
+
+      paypal.Buttons({
+        createOrder: (data, actions) => actions.order.create({ purchase_units: [{ amount: { value: "2000.00" } }] })
+      }).render("#paypal-premium");
+    }
+  });
+</script>
+
 </body>
 </html>
-
