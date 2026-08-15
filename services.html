@@ -19,27 +19,27 @@
     }
 
     @keyframes pulseGlow {
-      0%, 100% { opacity: 0.15; transform: scale(1); }
-      50% { opacity: 0.28; transform: scale(1.03); }
+      0%, 100% { opacity: 0.25; transform: scale(1); }
+      50% { opacity: 0.45; transform: scale(1.05); }
     }
     .animate-pulse-glow {
-      animation: pulseGlow 8s ease-in-out infinite;
+      animation: pulseGlow 6s ease-in-out infinite;
     }
   </style>
 </head>
 
-<body class="scroll-smooth bg-gray-950 text-gray-200 antialiased selection:bg-slate-700 selection:text-white">
+<body class="scroll-smooth bg-gray-950 text-gray-100 antialiased selection:bg-amber-500 selection:text-black">
 
 <!-- NAV -->
-<nav class="bg-gray-950/90 backdrop-blur-md text-white fixed top-0 w-full z-50 border-b border-gray-800/80 shadow-lg">
+<nav class="bg-gray-950/90 backdrop-blur-md text-white fixed top-0 w-full z-50 border-b border-gray-800 shadow-xl">
   <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
 
     <!-- LEFT LOGO -->
-    <a href="index.html" class="flex items-center gap-2 group">
-      <div class="w-9 h-9 rounded-xl bg-slate-800 border border-slate-700 flex items-center justify-center font-black text-xl text-slate-100 shadow-md group-hover:border-slate-500 transition duration-300">
+    <a href="index.html" class="flex items-center gap-3 group">
+      <div class="w-10 h-10 rounded-xl bg-gradient-to-br from-amber-400 to-amber-600 border border-amber-300 flex items-center justify-center font-black text-2xl text-gray-950 shadow-lg group-hover:scale-105 transition duration-300">
         G
       </div>
-      <span class="font-bold text-xl tracking-tight text-slate-100">
+      <span class="font-bold text-xl tracking-tight text-white group-hover:text-amber-400 transition">
         Grate Auto Deals
       </span>
     </a>
@@ -48,10 +48,10 @@
     <div class="flex items-center space-x-6">
       <!-- DESKTOP LINKS -->
       <div class="hidden md:flex items-center space-x-8 text-sm font-semibold text-gray-300">
-        <a href="index.html" class="hover:text-slate-100 transition duration-200">Home</a>
-        <a href="services.html" class="text-slate-100 transition duration-200">Services</a>
-        <a href="index.html#consultation-form" class="hover:text-slate-100 transition duration-200">Contact Us</a>
-        <a href="index.html#consultation-form" class="relative group inline-flex items-center justify-center px-5 py-2 text-sm font-bold rounded-xl bg-slate-800 border border-slate-700 hover:border-slate-500 text-white shadow-md transition duration-200">
+        <a href="index.html" class="hover:text-amber-400 transition duration-200">Home</a>
+        <a href="services.html" class="text-amber-400 transition duration-200">Services</a>
+        <a href="index.html#consultation-form" class="hover:text-amber-400 transition duration-200">Contact Us</a>
+        <a href="index.html#consultation-form" class="relative group inline-flex items-center justify-center px-5 py-2 text-sm font-bold rounded-xl bg-gradient-to-r from-amber-500 to-amber-600 hover:from-amber-400 hover:to-amber-500 text-gray-950 shadow-lg shadow-amber-500/20 transition duration-200">
           Get Started
         </a>
       </div>
@@ -66,36 +66,36 @@
 
   <!-- MOBILE MENU -->
   <div id="mobile-menu" class="hidden md:hidden bg-gray-950 border-b border-gray-800 backdrop-blur-xl flex flex-col text-center space-y-4 py-6 font-semibold text-gray-300">
-    <a href="index.html" class="hover:text-white transition">Home</a>
-    <a href="services.html" class="hover:text-white transition">Services</a>
-    <a href="index.html#consultation-form" class="hover:text-white transition">Contact Us</a>
+    <a href="index.html" class="hover:text-amber-400 transition">Home</a>
+    <a href="services.html" class="text-amber-400 transition">Services</a>
+    <a href="index.html#consultation-form" class="hover:text-amber-400 transition">Contact Us</a>
   </div>
 </nav>
 
 <div class="h-16"></div>
 
-<!-- PAGE HEADER -->
-<section class="relative bg-gray-950 text-white py-16 md:py-20 px-6 overflow-hidden border-b border-gray-800/80">
-  <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[550px] h-[300px] bg-slate-800/20 blur-[130px] rounded-full pointer-events-none animate-pulse-glow"></div>
+<!-- HERO HEADER -->
+<section class="relative bg-gray-950 text-white py-20 px-6 overflow-hidden border-b border-gray-800">
+  <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[350px] bg-amber-500/15 blur-[140px] rounded-full pointer-events-none animate-pulse-glow"></div>
 
   <div class="max-w-4xl mx-auto text-center relative z-10">
-    <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-slate-900 border border-slate-800 text-slate-300 text-xs font-semibold uppercase tracking-wider mb-5 shadow-sm">
-      <svg class="w-3.5 h-3.5 text-slate-400" fill="currentColor" viewBox="0 0 20 20">
-        <path fill-rule="evenodd" d="M2.166 4.999A11.954 11.954 0 0010 1.944 11.954 11.954 0 0017.834 5c.11.65.166 1.32.166 2.001 0 5.225-3.34 9.67-8 11.317C5.34 16.67 2 12.225 2 7c0-.682.057-1.35.166-2.001zm11.541 3.708a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+    <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-amber-500/10 border border-amber-500/30 text-amber-400 text-xs font-bold uppercase tracking-wider mb-6 shadow-sm">
+      <svg class="w-4 h-4 text-amber-400" fill="currentColor" viewBox="0 0 20 20">
+        <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
       </svg>
-      Transparent Advisory & Verified Transactions
+      Trusted Auto Advisory & Custom Sourcing
     </div>
 
-    <h1 class="text-4xl md:text-5xl font-extrabold tracking-tight text-white mb-4">
-      Services & Package Overview
+    <h1 class="text-4xl md:text-6xl font-black tracking-tight text-white mb-6 leading-tight">
+      Elevate Your <span class="bg-gradient-to-r from-amber-400 via-amber-300 to-amber-500 bg-clip-text text-transparent">Car Buying Experience</span>
     </h1>
 
-    <p class="text-gray-400 max-w-2xl mx-auto text-base font-medium leading-relaxed mb-2">
-      Professional automotive brokerage and concierge services designed to save you time, money, and dealership friction.
+    <p class="text-gray-300 max-w-2xl mx-auto text-base md:text-lg font-medium leading-relaxed mb-4">
+      Skip dealer markups, stressful negotiations, and hidden fees. Direct auto brokerage tailored to your lifestyle.
     </p>
 
-    <p class="text-slate-300 font-semibold text-sm">
-      Select any service package below to review complete details and pricing.
+    <p class="text-amber-400 font-semibold text-sm">
+      Click "Learn More" on any package to review details and transparent pricing.
     </p>
   </div>
 </section>
@@ -105,26 +105,26 @@
   <div class="grid grid-cols-1 md:grid-cols-3 gap-8 items-stretch">
 
     <!-- BASIC PACKAGE -->
-    <div class="bg-gray-900/60 border border-gray-800 rounded-2xl p-8 flex flex-col justify-between shadow-xl hover:border-slate-700 transition duration-300 relative group">
+    <div class="bg-gray-900/80 border border-gray-800 rounded-2xl p-8 flex flex-col justify-between shadow-2xl hover:border-amber-500/50 transition duration-300 relative group">
       <div>
-        <div class="text-xs font-bold uppercase tracking-wider text-slate-400 mb-2">Essential Advisory</div>
+        <div class="text-xs font-bold uppercase tracking-wider text-amber-400 mb-2">Essential Sourcing</div>
         <h2 class="text-2xl font-bold text-white mb-4">Basic Deal Search</h2>
 
-        <ul class="space-y-3.5 mb-8 text-sm text-gray-300 border-t border-gray-800/80 pt-6">
+        <ul class="space-y-3.5 mb-8 text-sm text-gray-300 border-t border-gray-800 pt-6">
           <li class="flex items-start gap-3">
-            <span class="text-slate-400 font-bold">✓</span>
+            <span class="text-amber-400 font-bold">✓</span>
             <span>Targeted vehicle sourcing & inventory search</span>
           </li>
           <li class="flex items-start gap-3">
-            <span class="text-slate-400 font-bold">✓</span>
+            <span class="text-amber-400 font-bold">✓</span>
             <span>True market valuation & pricing analysis</span>
           </li>
           <li class="flex items-start gap-3">
-            <span class="text-slate-400 font-bold">✓</span>
+            <span class="text-amber-400 font-bold">✓</span>
             <span>Clear, objective deal recommendations</span>
           </li>
           <li class="flex items-start gap-3">
-            <span class="text-slate-400 font-bold">✓</span>
+            <span class="text-amber-400 font-bold">✓</span>
             <span>Uncovering hidden dealer markups & add-ons</span>
           </li>
         </ul>
@@ -132,40 +132,40 @@
 
       <button type="button"
               onclick="openModal('basicModal')"
-              class="w-full bg-slate-800 border border-slate-700 hover:border-slate-500 text-white font-semibold py-3.5 rounded-xl shadow-md transition duration-200 text-center">
+              class="w-full bg-gray-800 border border-gray-700 hover:border-amber-400 hover:text-amber-400 text-white font-bold py-3.5 rounded-xl shadow-lg transition duration-200 text-center">
         Learn More
       </button>
     </div>
 
     <!-- FULL SERVICE PACKAGE -->
-    <div class="bg-gray-900/90 border border-slate-700 rounded-2xl p-8 flex flex-col justify-between shadow-xl relative group">
-      <div class="absolute -top-3.5 left-1/2 -translate-x-1/2 bg-slate-800 border border-slate-700 text-slate-200 text-xs font-bold px-4 py-1 rounded-full uppercase tracking-wider shadow-sm">
-        Most Popular
+    <div class="bg-gray-900 border-2 border-amber-500 rounded-2xl p-8 flex flex-col justify-between shadow-2xl shadow-amber-500/10 relative group">
+      <div class="absolute -top-3.5 left-1/2 -translate-x-1/2 bg-gradient-to-r from-amber-400 to-amber-600 text-gray-950 text-xs font-black px-4 py-1 rounded-full uppercase tracking-wider shadow-md">
+        Most Popular Choice
       </div>
 
       <div>
-        <div class="text-xs font-bold uppercase tracking-wider text-slate-400 mb-2 mt-2">Hands-Free Negotiation</div>
+        <div class="text-xs font-bold uppercase tracking-wider text-amber-400 mb-2 mt-2">End-to-End Negotiation</div>
         <h2 class="text-2xl font-bold text-white mb-4">Full Service Broker</h2>
 
-        <ul class="space-y-3.5 mb-8 text-sm text-gray-300 border-t border-gray-800/80 pt-6">
+        <ul class="space-y-3.5 mb-8 text-sm text-gray-200 border-t border-gray-800 pt-6">
           <li class="flex items-start gap-3">
-            <span class="text-slate-300 font-bold">✓</span>
+            <span class="text-amber-400 font-bold">✓</span>
             <span>Full end-to-end vehicle sourcing & acquisition</span>
           </li>
           <li class="flex items-start gap-3">
-            <span class="text-slate-300 font-bold">✓</span>
+            <span class="text-amber-400 font-bold">✓</span>
             <span>Direct dealership price & fee negotiation</span>
           </li>
           <li class="flex items-start gap-3">
-            <span class="text-slate-300 font-bold">✓</span>
+            <span class="text-amber-400 font-bold">✓</span>
             <span>Trade-in appraisal & value optimization</span>
           </li>
           <li class="flex items-start gap-3">
-            <span class="text-slate-300 font-bold">✓</span>
+            <span class="text-amber-400 font-bold">✓</span>
             <span>Strict finance contract review & protection</span>
           </li>
           <li class="flex items-start gap-3">
-            <span class="text-slate-300 font-bold">✓</span>
+            <span class="text-amber-400 font-bold">✓</span>
             <span>Protection from aggressive dealership sales tactics</span>
           </li>
         </ul>
@@ -173,32 +173,32 @@
 
       <button type="button"
               onclick="openModal('fullModal')"
-              class="w-full bg-slate-700 hover:bg-slate-600 text-white font-semibold py-3.5 rounded-xl shadow-md transition duration-200 text-center">
+              class="w-full bg-gradient-to-r from-amber-500 to-amber-600 hover:from-amber-400 hover:to-amber-500 text-gray-950 font-black py-3.5 rounded-xl shadow-lg transition duration-200 text-center">
         Learn More
       </button>
     </div>
 
     <!-- PREMIUM CONCIERGE PACKAGE -->
-    <div class="bg-gray-900/60 border border-gray-800 rounded-2xl p-8 flex flex-col justify-between shadow-xl hover:border-slate-700 transition duration-300 relative group">
+    <div class="bg-gray-900/80 border border-gray-800 rounded-2xl p-8 flex flex-col justify-between shadow-2xl hover:border-amber-500/50 transition duration-300 relative group">
       <div>
-        <div class="text-xs font-bold uppercase tracking-wider text-slate-400 mb-2">Exotic & Rare Specs</div>
+        <div class="text-xs font-bold uppercase tracking-wider text-amber-400 mb-2">Exotic & Rare Builds</div>
         <h2 class="text-2xl font-bold text-white mb-4">Premium Concierge</h2>
 
-        <ul class="space-y-3.5 mb-8 text-sm text-gray-300 border-t border-gray-800/80 pt-6">
+        <ul class="space-y-3.5 mb-8 text-sm text-gray-300 border-t border-gray-800 pt-6">
           <li class="flex items-start gap-3">
-            <span class="text-slate-400 font-bold">✓</span>
+            <span class="text-amber-400 font-bold">✓</span>
             <span>Nationwide luxury & exotic vehicle search</span>
           </li>
           <li class="flex items-start gap-3">
-            <span class="text-slate-400 font-bold">✓</span>
+            <span class="text-amber-400 font-bold">✓</span>
             <span>Hard-to-find build specs & rare allocations</span>
           </li>
           <li class="flex items-start gap-3">
-            <span class="text-slate-400 font-bold">✓</span>
+            <span class="text-amber-400 font-bold">✓</span>
             <span>Out-of-state transport & white-glove logistics</span>
           </li>
           <li class="flex items-start gap-3">
-            <span class="text-slate-400 font-bold">✓</span>
+            <span class="text-amber-400 font-bold">✓</span>
             <span>Priority 24/7 dedicated broker assistance</span>
           </li>
         </ul>
@@ -206,7 +206,7 @@
 
       <button type="button"
               onclick="openModal('premiumModal')"
-              class="w-full bg-slate-800 border border-slate-700 hover:border-slate-500 text-white font-semibold py-3.5 rounded-xl shadow-md transition duration-200 text-center">
+              class="w-full bg-gray-800 border border-gray-700 hover:border-amber-400 hover:text-amber-400 text-white font-bold py-3.5 rounded-xl shadow-lg transition duration-200 text-center">
         Learn More
       </button>
     </div>
@@ -214,81 +214,141 @@
   </div>
 </section>
 
-<!-- TRUST & SECURE PAYMENT BAR -->
-<section class="max-w-7xl mx-auto px-6 mb-16">
-  <div class="bg-gray-900/80 border border-gray-800 rounded-2xl p-6 md:p-8 shadow-lg flex flex-col md:flex-row items-center justify-between gap-6 backdrop-blur-md">
+<!-- RECENT DELIVERIES PHOTO SHOWCASE -->
+<section class="py-16 px-6 bg-gray-900/40 border-y border-gray-800">
+  <div class="max-w-7xl mx-auto">
+    <div class="text-center mb-12">
+      <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-amber-500/10 border border-amber-500/30 text-amber-400 text-xs font-bold uppercase tracking-wider mb-3">
+        Real Results
+      </div>
+      <h2 class="text-3xl md:text-4xl font-extrabold text-white">Client Deliveries & Work Showcase</h2>
+      <p class="text-gray-400 text-sm max-w-xl mx-auto mt-2">From key handoffs to custom ceramic film and wraps, see how we deliver excellence.</p>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+      
+      <!-- CARD 1 -->
+      <div class="bg-gray-900 border border-gray-800 rounded-2xl overflow-hidden shadow-xl group hover:border-amber-500/50 transition duration-300">
+        <div class="h-56 overflow-hidden relative">
+          <img src="image_agent_tag_9319150425679861462" alt="Key handoff delivery" class="w-full h-full object-cover group-hover:scale-105 transition duration-500" />
+          <div class="absolute inset-0 bg-gradient-to-t from-gray-950 via-transparent to-transparent opacity-80"></div>
+          <span class="absolute bottom-3 left-4 text-xs font-bold bg-amber-500 text-gray-950 px-2.5 py-1 rounded-md uppercase">Hassle-Free Delivery</span>
+        </div>
+        <div class="p-6">
+          <h3 class="font-bold text-lg text-white mb-2">Seamless Vehicle Handoffs</h3>
+          <p class="text-xs text-gray-400 leading-relaxed">Keys delivered directly with all paperwork verified, pre-inspected, and negotiated in advance.</p>
+        </div>
+      </div>
+
+      <!-- CARD 2 -->
+      <div class="bg-gray-900 border border-gray-800 rounded-2xl overflow-hidden shadow-xl group hover:border-amber-500/50 transition duration-300">
+        <div class="h-56 overflow-hidden relative">
+          <img src="image_agent_tag_9319150425679860772" alt="Custom vinyl wrap and window tint garage work" class="w-full h-full object-cover group-hover:scale-105 transition duration-500" />
+          <div class="absolute inset-0 bg-gradient-to-t from-gray-950 via-transparent to-transparent opacity-80"></div>
+          <span class="absolute bottom-3 left-4 text-xs font-bold bg-cyan-500 text-gray-950 px-2.5 py-1 rounded-md uppercase">Custom Upgrades</span>
+        </div>
+        <div class="p-6">
+          <h3 class="font-bold text-lg text-white mb-2">Precision Tint & Protection</h3>
+          <p class="text-xs text-gray-400 leading-relaxed">Ceramic heat rejection film and custom color wraps applied in controlled dust-free facilities.</p>
+        </div>
+      </div>
+
+      <!-- CARD 3 -->
+      <div class="bg-gray-900 border border-gray-800 rounded-2xl overflow-hidden shadow-xl group hover:border-amber-500/50 transition duration-300">
+        <div class="h-56 overflow-hidden relative">
+          <img src="image_agent_tag_9319150425679863165" alt="Professional broker contract review" class="w-full h-full object-cover group-hover:scale-105 transition duration-500" />
+          <div class="absolute inset-0 bg-gradient-to-t from-gray-950 via-transparent to-transparent opacity-80"></div>
+          <span class="absolute bottom-3 left-4 text-xs font-bold bg-amber-500 text-gray-950 px-2.5 py-1 rounded-md uppercase">100% Protection</span>
+        </div>
+        <div class="p-6">
+          <h3 class="font-bold text-lg text-white mb-2">Contract Protection</h3>
+          <p class="text-xs text-gray-400 leading-relaxed">Every document reviewed to guarantee zero unwanted add-ons, dealer markups, or hidden interest spikes.</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- SECURE PAYMENT BAR -->
+<section class="max-w-7xl mx-auto px-6 my-16">
+  <div class="bg-gradient-to-r from-gray-900 via-gray-900 to-gray-900/90 border border-gray-800 rounded-2xl p-6 md:p-8 shadow-2xl flex flex-col md:flex-row items-center justify-between gap-6">
     <div class="flex items-center gap-4 text-left">
-      <div class="w-10 h-10 rounded-xl bg-slate-800 text-slate-300 flex items-center justify-center flex-shrink-0 border border-slate-700">
-        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+      <div class="w-12 h-12 rounded-xl bg-amber-500/10 text-amber-400 flex items-center justify-center flex-shrink-0 border border-amber-500/30 shadow-inner">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/>
         </svg>
       </div>
       <div>
-        <h3 class="font-semibold text-white text-base">Direct & Encrypted Checkout</h3>
-        <p class="text-xs text-gray-400">All payments are safely processed via PayPal & major debit/credit cards with 256-bit SSL encryption.</p>
+        <h3 class="font-bold text-white text-base md:text-lg">Direct & Encrypted Checkout</h3>
+        <p class="text-xs text-gray-400">All payments are safely processed via PayPal & major credit cards with 256-bit SSL encryption.</p>
       </div>
     </div>
 
-    <div class="flex items-center gap-3 opacity-80 text-xs font-semibold text-gray-400">
+    <div class="flex items-center gap-3 opacity-90 text-xs font-bold text-gray-300">
       <span class="px-3 py-1.5 rounded-lg bg-gray-950 border border-gray-800">VISA</span>
       <span class="px-3 py-1.5 rounded-lg bg-gray-950 border border-gray-800">MC</span>
       <span class="px-3 py-1.5 rounded-lg bg-gray-950 border border-gray-800">AMEX</span>
-      <span class="px-3 py-1.5 rounded-lg bg-gray-950 border border-gray-800 text-slate-300">PayPal</span>
+      <span class="px-3 py-1.5 rounded-lg bg-gray-950 border border-amber-500/40 text-amber-400">PayPal</span>
     </div>
   </div>
 </section>
 
 <!-- CUSTOM SERVICES SECTION -->
-<section class="py-16 px-6 bg-gray-900/30 border-t border-gray-800/80">
+<section class="py-16 px-6 bg-gray-900/30 border-t border-gray-800">
   <div class="max-w-7xl mx-auto text-center">
-    <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-slate-900 border border-slate-800 text-slate-400 text-xs font-semibold uppercase tracking-wider mb-3">
+    <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-amber-500/10 border border-amber-500/30 text-amber-400 text-xs font-bold uppercase tracking-wider mb-3">
       Custom Vehicle Services
     </div>
-    <h2 class="text-3xl font-bold text-white mb-2 tracking-tight">Additional Upgrades & Maintenance</h2>
+    <h2 class="text-3xl font-extrabold text-white mb-2 tracking-tight">Additional Upgrades & Detailing</h2>
     <p class="text-gray-400 max-w-xl mx-auto text-xs mb-10">Select any custom service below to request a personalized quote.</p>
 
     <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
 
-      <div class="bg-gray-900 border border-gray-800 p-6 rounded-2xl shadow-md hover:border-slate-700 transition duration-300 text-left flex flex-col justify-between">
+      <div class="bg-gray-900 border border-gray-800 p-6 rounded-2xl shadow-xl hover:border-amber-500/50 transition duration-300 text-left flex flex-col justify-between">
         <div>
+          <div class="w-8 h-8 rounded-lg bg-amber-500/10 text-amber-400 flex items-center justify-center font-bold text-sm mb-3">01</div>
           <h3 class="font-bold text-white text-base mb-1">Window Tint</h3>
           <p class="text-xs text-gray-400 mb-6 leading-relaxed">Ceramic privacy film & heat rejection.</p>
         </div>
         <a href="index.html?service=Window%20Tint#consultation-form" 
-           class="block text-center border border-gray-700 hover:border-slate-500 text-xs font-semibold text-gray-200 py-2.5 rounded-xl hover:bg-slate-800 transition">
+           class="block text-center bg-gray-800 hover:bg-amber-500 hover:text-gray-950 text-xs font-bold text-white py-2.5 rounded-xl transition duration-200">
           Request Quote
         </a>
       </div>
 
-      <div class="bg-gray-900 border border-gray-800 p-6 rounded-2xl shadow-md hover:border-slate-700 transition duration-300 text-left flex flex-col justify-between">
+      <div class="bg-gray-900 border border-gray-800 p-6 rounded-2xl shadow-xl hover:border-amber-500/50 transition duration-300 text-left flex flex-col justify-between">
         <div>
+          <div class="w-8 h-8 rounded-lg bg-amber-500/10 text-amber-400 flex items-center justify-center font-bold text-sm mb-3">02</div>
           <h3 class="font-bold text-white text-base mb-1">Mobile Detail</h3>
           <p class="text-xs text-gray-400 mb-6 leading-relaxed">Full interior deep clean & exterior care delivered to you.</p>
         </div>
         <a href="index.html?service=Mobile%20Detail#consultation-form" 
-           class="block text-center border border-gray-700 hover:border-slate-500 text-xs font-semibold text-gray-200 py-2.5 rounded-xl hover:bg-slate-800 transition">
+           class="block text-center bg-gray-800 hover:bg-amber-500 hover:text-gray-950 text-xs font-bold text-white py-2.5 rounded-xl transition duration-200">
           Request Quote
         </a>
       </div>
 
-      <div class="bg-gray-900 border border-gray-800 p-6 rounded-2xl shadow-md hover:border-slate-700 transition duration-300 text-left flex flex-col justify-between">
+      <div class="bg-gray-900 border border-gray-800 p-6 rounded-2xl shadow-xl hover:border-amber-500/50 transition duration-300 text-left flex flex-col justify-between">
         <div>
+          <div class="w-8 h-8 rounded-lg bg-amber-500/10 text-amber-400 flex items-center justify-center font-bold text-sm mb-3">03</div>
           <h3 class="font-bold text-white text-base mb-1">Powder Coating</h3>
           <p class="text-xs text-gray-400 mb-6 leading-relaxed">Custom wheel finishes, satin, gloss, and color changes.</p>
         </div>
         <a href="index.html?service=Powder%20Coating%20Wheels#consultation-form" 
-           class="block text-center border border-gray-700 hover:border-slate-500 text-xs font-semibold text-gray-200 py-2.5 rounded-xl hover:bg-slate-800 transition">
+           class="block text-center bg-gray-800 hover:bg-amber-500 hover:text-gray-950 text-xs font-bold text-white py-2.5 rounded-xl transition duration-200">
           Request Quote
         </a>
       </div>
 
-      <div class="bg-gray-900 border border-gray-800 p-6 rounded-2xl shadow-md hover:border-slate-700 transition duration-300 text-left flex flex-col justify-between">
+      <div class="bg-gray-900 border border-gray-800 p-6 rounded-2xl shadow-xl hover:border-amber-500/50 transition duration-300 text-left flex flex-col justify-between">
         <div>
+          <div class="w-8 h-8 rounded-lg bg-amber-500/10 text-amber-400 flex items-center justify-center font-bold text-sm mb-3">04</div>
           <h3 class="font-bold text-white text-base mb-1">Vehicle Wraps</h3>
           <p class="text-xs text-gray-400 mb-6 leading-relaxed">Vinyl color transformations & clear paint protection film.</p>
         </div>
         <a href="index.html?service=Vehicle%20Wraps#consultation-form" 
-           class="block text-center border border-gray-700 hover:border-slate-500 text-xs font-semibold text-gray-200 py-2.5 rounded-xl hover:bg-slate-800 transition">
+           class="block text-center bg-gray-800 hover:bg-amber-500 hover:text-gray-950 text-xs font-bold text-white py-2.5 rounded-xl transition duration-200">
           Request Quote
         </a>
       </div>
@@ -300,11 +360,11 @@
 <!-- MODALS -->
 
 <!-- BASIC MODAL -->
-<div id="basicModal" class="hidden fixed inset-0 bg-black/80 backdrop-blur-sm flex items-center justify-center z-50 p-4">
-  <div class="bg-gray-950 border border-gray-800 p-6 md:p-8 rounded-2xl max-w-md w-full relative shadow-2xl">
+<div id="basicModal" class="hidden fixed inset-0 bg-black/85 backdrop-blur-md flex items-center justify-center z-50 p-4">
+  <div class="bg-gray-950 border border-amber-500/40 p-6 md:p-8 rounded-2xl max-w-md w-full relative shadow-2xl">
     <button onclick="closeModal('basicModal')" class="absolute top-4 right-5 text-gray-400 hover:text-white text-2xl font-bold">&times;</button>
     
-    <div class="text-xs font-bold uppercase tracking-wider text-slate-400 mb-1">Package Details</div>
+    <div class="text-xs font-bold uppercase tracking-wider text-amber-400 mb-1">Package Details</div>
     <h2 class="text-2xl font-bold text-white mb-3">Basic Deal Search</h2>
     
     <p class="mb-4 text-gray-300 text-xs leading-relaxed">
@@ -313,13 +373,13 @@
 
     <div class="bg-gray-900 border border-gray-800 p-4 rounded-xl mb-6 flex justify-between items-center">
       <span class="text-xs text-gray-400 uppercase font-semibold">Service Fee</span>
-      <span class="text-2xl font-extrabold text-white">$1,000.00</span>
+      <span class="text-2xl font-extrabold text-amber-400">$1,000.00</span>
     </div>
 
     <!-- PAYPAL RENDER CONTAINER -->
     <div id="paypal-basic" class="min-h-[150px]"></div>
 
-    <div class="mt-4 pt-4 border-t border-gray-800/80 flex items-center justify-center gap-2 text-xs text-gray-400">
+    <div class="mt-4 pt-4 border-t border-gray-800 flex items-center justify-center gap-2 text-xs text-gray-400">
       <svg class="w-4 h-4 text-emerald-500" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M5 9V7a5 5 0 0110 0v2a2 2 0 012 2v5a2 2 0 01-2 2H5a2 2 0 01-2-2v-5a2 2 0 012-2zm8-2v2H7V7a3 3 0 016 0z" clip-rule="evenodd"/></svg>
       Encrypted 256-Bit SSL Checkout Guarantee
     </div>
@@ -327,11 +387,11 @@
 </div>
 
 <!-- FULL MODAL -->
-<div id="fullModal" class="hidden fixed inset-0 bg-black/80 backdrop-blur-sm flex items-center justify-center z-50 p-4">
-  <div class="bg-gray-950 border border-gray-800 p-6 md:p-8 rounded-2xl max-w-md w-full relative shadow-2xl">
+<div id="fullModal" class="hidden fixed inset-0 bg-black/85 backdrop-blur-md flex items-center justify-center z-50 p-4">
+  <div class="bg-gray-950 border border-amber-500/40 p-6 md:p-8 rounded-2xl max-w-md w-full relative shadow-2xl">
     <button onclick="closeModal('fullModal')" class="absolute top-4 right-5 text-gray-400 hover:text-white text-2xl font-bold">&times;</button>
     
-    <div class="text-xs font-bold uppercase tracking-wider text-slate-400 mb-1">Package Details</div>
+    <div class="text-xs font-bold uppercase tracking-wider text-amber-400 mb-1">Package Details</div>
     <h2 class="text-2xl font-bold text-white mb-3">Full Service Broker</h2>
     
     <p class="mb-4 text-gray-300 text-xs leading-relaxed">
@@ -340,13 +400,13 @@
 
     <div class="bg-gray-900 border border-gray-800 p-4 rounded-xl mb-6 flex justify-between items-center">
       <span class="text-xs text-gray-400 uppercase font-semibold">Service Fee</span>
-      <span class="text-2xl font-extrabold text-white">$1,500.00</span>
+      <span class="text-2xl font-extrabold text-amber-400">$1,500.00</span>
     </div>
 
     <!-- PAYPAL RENDER CONTAINER -->
     <div id="paypal-full" class="min-h-[150px]"></div>
 
-    <div class="mt-4 pt-4 border-t border-gray-800/80 flex items-center justify-center gap-2 text-xs text-gray-400">
+    <div class="mt-4 pt-4 border-t border-gray-800 flex items-center justify-center gap-2 text-xs text-gray-400">
       <svg class="w-4 h-4 text-emerald-500" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M5 9V7a5 5 0 0110 0v2a2 2 0 012 2v5a2 2 0 01-2 2H5a2 2 0 01-2-2v-5a2 2 0 012-2zm8-2v2H7V7a3 3 0 016 0z" clip-rule="evenodd"/></svg>
       Encrypted 256-Bit SSL Checkout Guarantee
     </div>
@@ -354,11 +414,11 @@
 </div>
 
 <!-- PREMIUM MODAL -->
-<div id="premiumModal" class="hidden fixed inset-0 bg-black/80 backdrop-blur-sm flex items-center justify-center z-50 p-4">
-  <div class="bg-gray-950 border border-gray-800 p-6 md:p-8 rounded-2xl max-w-md w-full relative shadow-2xl">
+<div id="premiumModal" class="hidden fixed inset-0 bg-black/85 backdrop-blur-md flex items-center justify-center z-50 p-4">
+  <div class="bg-gray-950 border border-amber-500/40 p-6 md:p-8 rounded-2xl max-w-md w-full relative shadow-2xl">
     <button onclick="closeModal('premiumModal')" class="absolute top-4 right-5 text-gray-400 hover:text-white text-2xl font-bold">&times;</button>
     
-    <div class="text-xs font-bold uppercase tracking-wider text-slate-400 mb-1">Package Details</div>
+    <div class="text-xs font-bold uppercase tracking-wider text-amber-400 mb-1">Package Details</div>
     <h2 class="text-2xl font-bold text-white mb-3">Premium Concierge</h2>
     
     <p class="mb-4 text-gray-300 text-xs leading-relaxed">
@@ -367,13 +427,13 @@
 
     <div class="bg-gray-900 border border-gray-800 p-4 rounded-xl mb-6 flex justify-between items-center">
       <span class="text-xs text-gray-400 uppercase font-semibold">Service Fee</span>
-      <span class="text-2xl font-extrabold text-white">$2,000.00</span>
+      <span class="text-2xl font-extrabold text-amber-400">$2,000.00</span>
     </div>
 
     <!-- PAYPAL RENDER CONTAINER -->
     <div id="paypal-premium" class="min-h-[150px]"></div>
 
-    <div class="mt-4 pt-4 border-t border-gray-800/80 flex items-center justify-center gap-2 text-xs text-gray-400">
+    <div class="mt-4 pt-4 border-t border-gray-800 flex items-center justify-center gap-2 text-xs text-gray-400">
       <svg class="w-4 h-4 text-emerald-500" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M5 9V7a5 5 0 0110 0v2a2 2 0 012 2v5a2 2 0 01-2 2H5a2 2 0 01-2-2v-5a2 2 0 012-2zm8-2v2H7V7a3 3 0 016 0z" clip-rule="evenodd"/></svg>
       Encrypted 256-Bit SSL Checkout Guarantee
     </div>
@@ -381,7 +441,7 @@
 </div>
 
 <!-- DISCLAIMER SECTION -->
-<section class="bg-gray-950 border-t border-gray-800/80 text-gray-500 py-10 px-6 text-xs">
+<section class="bg-gray-950 border-t border-gray-800 text-gray-500 py-10 px-6 text-xs">
   <div class="max-w-7xl mx-auto space-y-2 leading-relaxed">
     <p class="font-bold text-gray-400">Disclaimer</p>
     <p>Grate Auto Deals provides automotive consulting, vehicle sourcing, and negotiation advisory services and is not a licensed dealership, lender, or financial institution.</p>
@@ -390,7 +450,7 @@
 </section>
 
 <!-- FOOTER -->
-<footer class="bg-gray-950 border-t border-gray-800/80 text-gray-500 text-center py-8 text-xs">
+<footer class="bg-gray-950 border-t border-gray-800 text-gray-500 text-center py-8 text-xs">
   <p>© 2026 Grate Auto Deals. All rights reserved.</p>
 </footer>
 
