@@ -1,278 +1,170 @@
 <!DOCTYPE html>
 <html lang="en" class="scroll-smooth">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Services | Grate Auto Deals</title>
-
-  <!-- ✅ Tailwind -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Concierge Auto Services | Grate Auto Deals</title>
+  <!-- Tailwind CSS CDN -->
   <script src="https://cdn.tailwindcss.com"></script>
   <style>
-    .glow-blue {
-      box-shadow: 0 0 25px rgba(37, 99, 235, 0.25);
+    .glow-cyan {
+      box-shadow: 0 0 25px rgba(6, 182, 212, 0.25);
+    }
+    .bg-psychology-gradient {
+      background: radial-gradient(circle at 50% 15%, rgba(59, 130, 246, 0.15) 0%, rgba(3, 7, 18, 1) 75%);
     }
   </style>
 </head>
+<body class="bg-gray-950 text-gray-100 font-sans antialiased selection:bg-blue-500 selection:text-white">
 
-<body class="bg-slate-950 text-white font-sans antialiased selection:bg-blue-600 selection:text-white">
-
-<!-- NAV -->
-<nav class="bg-zinc-900/90 backdrop-blur-md text-white fixed top-0 w-full z-50 border-b border-blue-900/30 shadow-md">
-  <div class="max-w-6xl mx-auto px-4 py-4 flex justify-between items-center">
-    <div class="font-black text-xl tracking-wider text-amber-400">GRATE<span class="text-blue-500">AUTO</span> DEALS</div>
-
-    <div class="flex items-center space-x-6">
-      <!-- DESKTOP LINKS -->
-      <div class="hidden md:flex space-x-6 font-semibold">
+  <!-- NAVIGATION -->
+  <header class="sticky top-0 z-40 bg-gray-950/90 backdrop-blur-md border-b border-gray-800">
+    <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+      <a href="index.html" class="flex items-center gap-2 group">
+        <div class="w-9 h-9 rounded-xl bg-gradient-to-tr from-blue-600 via-indigo-500 to-cyan-400 flex items-center justify-center font-black text-xl text-white shadow-lg shadow-blue-500/30 group-hover:scale-105 transition duration-300">
+          G
+        </div>
+        <span class="font-black text-xl tracking-tight text-transparent bg-clip-text bg-gradient-to-r from-white via-gray-200 to-blue-400">
+          Grate Auto Deals
+        </span>
+      </a>
+      
+      <!-- Desktop Nav & Links -->
+      <nav class="hidden md:flex items-center space-x-8 font-semibold text-sm text-gray-300">
         <a href="index.html" class="hover:text-blue-400 transition-colors">Home</a>
-        <a href="services.html" class="hover:text-blue-400 transition-colors text-blue-400">Services</a>
-        <a href="index.html#consultation-form" class="hover:text-blue-400 transition-colors">Contact Us</a>
-      </div>
+        <a href="services.html" class="text-blue-400 hover:text-blue-300 transition-colors">Services</a>
+        <a href="index.html#consultation-form" class="hover:text-blue-400 transition-colors">Contact</a>
+      </nav>
 
-      <!-- HAMBURGER -->
-      <button id="menu-btn" class="md:hidden text-2xl text-blue-400 focus:outline-none">☰</button>
+      <!-- Mobile Menu Button -->
+      <button id="mobile-menu-btn" class="md:hidden text-gray-300 text-2xl focus:outline-none hover:text-white">
+        &#9776;
+      </button>
     </div>
-  </div>
 
-  <!-- MOBILE MENU -->
-  <div id="mobile-menu" class="hidden md:hidden bg-zinc-900 border-b border-blue-900/30 flex flex-col text-center space-y-4 py-4 font-semibold">
-    <a href="index.html" class="block hover:text-blue-400">Home</a>
-    <a href="services.html" class="block hover:text-blue-400 text-blue-400">Services</a>
-    <a href="index.html#consultation-form" class="block hover:text-blue-400">Contact Us</a>
-  </div>
-</nav>
+    <!-- Mobile Nav Dropdown -->
+    <div id="mobile-menu" class="hidden md:hidden bg-gray-950/95 border-b border-gray-800 px-6 py-4 flex flex-col space-y-4 font-semibold text-gray-200 text-center">
+      <a href="index.html" class="hover:text-blue-400">Home</a>
+      <a href="services.html" class="text-blue-400">Services</a>
+      <a href="index.html#consultation-form" class="hover:text-blue-400">Contact</a>
+    </div>
+  </header>
 
-<div class="h-20"></div>
+  <!-- HERO SECTION WITH TRUST-BUILDING BLUE GRADIENT -->
+  <section class="relative py-24 px-6 text-center bg-psychology-gradient border-b border-gray-800">
+    <div class="max-w-4xl mx-auto space-y-6 relative z-10">
+      <span class="inline-block bg-blue-500/10 border border-blue-500/30 text-blue-400 text-xs font-bold tracking-widest px-4 py-1.5 rounded-full uppercase shadow-lg">
+        White-Glove Automotive Care
+      </span>
+      <h1 class="text-4xl md:text-6xl font-black tracking-tight text-white leading-tight">
+        Unmatched Excellence For Your Vehicle
+      </h1>
+      <p class="text-lg md:text-xl text-gray-300 font-medium max-w-2xl mx-auto">
+        Tailored detailing, ceramic protection, and concierge transport delivered with uncompromising precision.
+      </p>
+      <div class="pt-4">
+        <a href="#services" class="inline-flex items-center justify-center bg-gradient-to-r from-blue-600 via-blue-500 to-cyan-500 hover:from-blue-500 hover:to-cyan-400 text-white font-extrabold text-lg px-9 py-4 rounded-xl transition-all shadow-xl shadow-blue-500/25">
+          Explore Services &rarr;
+        </a>
+      </div>
+    </div>
+  </section>
 
-<!-- HEADER -->
-<section class="py-16 px-6 text-center bg-gradient-to-b from-zinc-900 to-slate-950 border-b border-zinc-800">
-  <span class="inline-block bg-blue-950/80 border border-blue-500/40 text-blue-400 text-xs font-black tracking-widest px-4 py-1.5 rounded-full uppercase mb-4 shadow-md">
-    White-Glove Automotive Brokerage
-  </span>
-  <h1 class="text-4xl md:text-5xl font-extrabold mb-4 tracking-tight">Services and Pricing</h1>
+  <!-- SERVICES SECTION (3 OPTIONS) -->
+  <section id="services" class="py-24 px-6 max-w-7xl mx-auto">
+    <div class="text-center space-y-4 mb-16">
+      <h2 class="text-3xl md:text-5xl font-black text-white">Service Options</h2>
+      <p class="text-lg text-gray-400 max-w-xl mx-auto font-medium">
+        Select the package tailored to your vehicle's specific needs.
+      </p>
+    </div>
 
-  <p class="text-zinc-300 max-w-2xl mx-auto mb-4 text-lg">
-    Professional automotive brokerage and concierge services designed to save you time, money, and frustration.
-  </p>
-
-  <p class="text-blue-400 font-bold text-lg max-w-xl mx-auto">
-    We find the right vehicle, negotiate the best deal, and handle the process so you do not have to.
-  </p>
-</section>
-
-<!-- SERVICES -->
-<section class="py-16 px-6 max-w-6xl mx-auto">
-  <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-
-    <!-- BASIC -->
-    <div class="bg-zinc-900 border-2 border-zinc-800 hover:border-blue-500 rounded-2xl overflow-hidden shadow-2xl transition-all duration-300 flex flex-col justify-between">
-      <div>
-        <img src="https://images.unsplash.com/photo-1503376780353-7e6692767b70?auto=format&fit=crop&w=800&q=80" alt="Vehicle Sourcing" class="w-full h-48 object-cover opacity-90" />
-        <div class="p-6">
-          <h2 class="text-2xl font-bold mb-3 text-white">Basic Deal Search</h2>
-          <ul class="space-y-3 mb-6 text-zinc-300">
-            <li class="flex items-center"><span class="text-emerald-400 font-black mr-2">&check;</span> Targeted vehicle search</li>
-            <li class="flex items-center"><span class="text-emerald-400 font-black mr-2">&check;</span> True market pricing analysis</li>
-            <li class="flex items-center"><span class="text-emerald-400 font-black mr-2">&check;</span> Clear deal recommendations</li>
-          </ul>
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+      
+      <!-- Option 1: White-Glove Transport -->
+      <div class="bg-gray-900 border border-gray-800 hover:border-blue-500/50 rounded-2xl overflow-hidden shadow-2xl transition-all duration-300 flex flex-col justify-between hover:shadow-blue-500/10">
+        <div>
+          <img src="https://images.unsplash.com/photo-1503376780353-7e6692767b70?auto=format&fit=crop&w=800&q=80" alt="White-Glove Transport" class="w-full h-52 object-cover" />
+          <div class="p-8 space-y-6">
+            <h3 class="text-2xl font-bold text-white">White-Glove Transport</h3>
+            <p class="text-gray-300 text-base">Enclosed, fully insured concierge vehicle transport and seamless delivery.</p>
+            <div class="text-3xl font-black text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-300">$299 <span class="text-sm text-gray-400 font-normal">/ service</span></div>
+            <ul class="space-y-3 text-base text-gray-200">
+              <li class="flex items-center"><span class="text-blue-400 font-black mr-3">&check;</span> Enclosed Transport</li>
+              <li class="flex items-center"><span class="text-blue-400 font-black mr-3">&check;</span> GPS Tracking</li>
+              <li class="flex items-center"><span class="text-blue-400 font-black mr-3">&check;</span> Insured Handoff</li>
+            </ul>
+          </div>
+        </div>
+        <div class="p-8 pt-0">
+          <a href="index.html?service=Premium%20Concierge#consultation-form" class="block text-center w-full bg-gray-800 hover:bg-blue-600 text-white font-extrabold py-3.5 px-6 rounded-xl transition-all text-base shadow-lg border border-gray-700 hover:border-blue-500">
+            Select Service
+          </a>
         </div>
       </div>
-      <div class="p-6 pt-0">
-        <button type="button"
-                onclick="openModal('basicModal')"
-                class="block w-full bg-blue-600 text-white font-bold py-3.5 rounded-xl hover:bg-blue-500 transition-all shadow-lg text-lg">
-          Learn More
-        </button>
-      </div>
-    </div>
 
-    <!-- FULL (MOST POPULAR) -->
-    <div class="bg-zinc-900 border-2 border-blue-600 rounded-2xl overflow-hidden shadow-2xl transition-all duration-300 flex flex-col justify-between relative transform md:-translate-y-2 glow-blue">
-      <div class="absolute top-0 right-0 bg-blue-600 text-white font-extrabold text-xs uppercase px-4 py-1.5 rounded-bl-lg">
-        Most Popular
-      </div>
-      <div>
-        <img src="https://images.unsplash.com/photo-1552519507-da3b142c6e3d?auto=format&fit=crop&w=800&q=80" alt="Dealership Negotiation" class="w-full h-48 object-cover opacity-90" />
-        <div class="p-6">
-          <h2 class="text-2xl font-bold mt-2 mb-3 text-white">Full Service Broker</h2>
-          <ul class="space-y-3 mb-6 text-zinc-300">
-            <li class="flex items-center"><span class="text-emerald-400 font-black mr-2">&check;</span> Full vehicle sourcing</li>
-            <li class="flex items-center"><span class="text-emerald-400 font-black mr-2">&check;</span> Dealer negotiation</li>
-            <li class="flex items-center"><span class="text-emerald-400 font-black mr-2">&check;</span> Trade-in guidance</li>
-            <li class="flex items-center"><span class="text-emerald-400 font-black mr-2">&check;</span> Contract protection</li>
-          </ul>
+      <!-- Option 2: Executive Detailing (Featured Card) -->
+      <div class="bg-gray-900 border-2 border-blue-500 rounded-2xl overflow-hidden shadow-2xl transition-all duration-300 flex flex-col justify-between relative transform md:-translate-y-2 glow-cyan">
+        <div class="absolute top-0 right-0 bg-gradient-to-r from-blue-600 to-cyan-500 text-white font-extrabold text-xs uppercase px-4 py-1.5 rounded-bl-xl shadow-md">
+          Most Popular
+        </div>
+        <div>
+          <img src="https://images.unsplash.com/photo-1607860108855-64acf2078ed9?auto=format&fit=crop&w=800&q=80" alt="Executive Detailing" class="w-full h-52 object-cover" />
+          <div class="p-8 space-y-6">
+            <h3 class="text-2xl font-bold text-white">Executive Detailing</h3>
+            <p class="text-gray-300 text-base">Comprehensive interior/exterior multi-stage restoration and deep clean.</p>
+            <div class="text-3xl font-black text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-300">$499 <span class="text-sm text-gray-400 font-normal">/ service</span></div>
+            <ul class="space-y-3 text-base text-gray-200">
+              <li class="flex items-center"><span class="text-blue-400 font-black mr-3">&check;</span> Multi-stage Hand Wash</li>
+              <li class="flex items-center"><span class="text-blue-400 font-black mr-3">&check;</span> Leather Conditioning</li>
+              <li class="flex items-center"><span class="text-blue-400 font-black mr-3">&check;</span> Engine Bay Detail</li>
+            </ul>
+          </div>
+        </div>
+        <div class="p-8 pt-0">
+          <a href="index.html?service=Mobile%20Detail#consultation-form" class="block text-center w-full bg-gradient-to-r from-blue-600 to-cyan-500 hover:from-blue-500 hover:to-cyan-400 text-white font-extrabold py-3.5 px-6 rounded-xl transition-all text-base shadow-lg shadow-blue-500/25">
+            Select Service
+          </a>
         </div>
       </div>
-      <div class="p-6 pt-0">
-        <button type="button"
-                onclick="openModal('fullModal')"
-                class="block w-full bg-blue-600 text-white font-extrabold py-4 rounded-xl hover:bg-blue-500 transition-all shadow-lg text-lg">
-          Learn More
-        </button>
-      </div>
-    </div>
 
-    <!-- PREMIUM -->
-    <div class="bg-zinc-900 border-2 border-zinc-800 hover:border-blue-500 rounded-2xl overflow-hidden shadow-2xl transition-all duration-300 flex flex-col justify-between">
-      <div>
-        <img src="https://images.unsplash.com/photo-1617814076367-b759c7d7e738?auto=format&fit=crop&w=800&q=80" alt="Premium Concierge" class="w-full h-48 object-cover opacity-90" />
-        <div class="p-6">
-          <h2 class="text-2xl font-bold mb-3 text-white">Premium Concierge</h2>
-          <ul class="space-y-3 mb-6 text-zinc-300">
-            <li class="flex items-center"><span class="text-emerald-400 font-black mr-2">&check;</span> Nationwide sourcing</li>
-            <li class="flex items-center"><span class="text-emerald-400 font-black mr-2">&check;</span> Luxury & rare vehicles</li>
-            <li class="flex items-center"><span class="text-emerald-400 font-black mr-2">&check;</span> Priority service</li>
-          </ul>
+      <!-- Option 3: Ceramic & Paint Protection -->
+      <div class="bg-gray-900 border border-gray-800 hover:border-blue-500/50 rounded-2xl overflow-hidden shadow-2xl transition-all duration-300 flex flex-col justify-between hover:shadow-blue-500/10">
+        <div>
+          <img src="https://images.unsplash.com/photo-1619642751034-765dfdf7c58e?auto=format&fit=crop&w=800&q=80" alt="Ceramic Protection" class="w-full h-52 object-cover" />
+          <div class="p-8 space-y-6">
+            <h3 class="text-2xl font-bold text-white">Ceramic Protection</h3>
+            <p class="text-gray-300 text-base">Professional grade multi-year ceramic coating and paint correction.</p>
+            <div class="text-3xl font-black text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-300">$899 <span class="text-sm text-gray-400 font-normal">/ service</span></div>
+            <ul class="space-y-3 text-base text-gray-200">
+              <li class="flex items-center"><span class="text-blue-400 font-black mr-3">&check;</span> 9H Ceramic Coating</li>
+              <li class="flex items-center"><span class="text-blue-400 font-black mr-3">&check;</span> Paint Correction</li>
+              <li class="flex items-center"><span class="text-blue-400 font-black mr-3">&check;</span> 5-Year Warranty</li>
+            </ul>
+          </div>
+        </div>
+        <div class="p-8 pt-0">
+          <a href="index.html?service=Window%20Tint#consultation-form" class="block text-center w-full bg-gray-800 hover:bg-blue-600 text-white font-extrabold py-3.5 px-6 rounded-xl transition-all text-base shadow-lg border border-gray-700 hover:border-blue-500">
+            Select Service
+          </a>
         </div>
       </div>
-      <div class="p-6 pt-0">
-        <button type="button"
-                onclick="openModal('premiumModal')"
-                class="block w-full bg-blue-600 text-white font-bold py-3.5 rounded-xl hover:bg-blue-500 transition-all shadow-lg text-lg">
-          Learn More
-        </button>
-      </div>
-    </div>
-
-  </div>
-</section>
-
-<!-- MODALS -->
-<div id="basicModal" class="hidden fixed inset-0 bg-black/80 backdrop-blur-sm flex items-center justify-center z-50 p-4">
-  <div class="bg-zinc-900 border-2 border-blue-600 p-8 rounded-2xl max-w-md w-full relative shadow-2xl">
-    <button onclick="closeModal('basicModal')" class="absolute top-4 right-4 text-2xl text-zinc-400 hover:text-white">&times;</button>
-    <h2 class="text-2xl font-bold mb-4 text-amber-400">Basic Deal Search</h2>
-    <p class="mb-4 text-zinc-300 leading-relaxed text-sm">
-      This service gives you complete clarity before you ever step into a dealership. 
-      We analyze real market data to show you exactly what a vehicle is truly worth and where the best deals are. 
-      You’ll avoid overpriced listings, hidden markups, and costly mistakes that most buyers make. 
-      It’s the smartest way to buy with confidence while saving both time and money.
-    </p>
-    <p class="text-2xl font-black text-white mb-6 tracking-wide">$1,000.00</p>
-    <div id="paypal-basic"></div>
-  </div>
-</div>
-
-<div id="fullModal" class="hidden fixed inset-0 bg-black/80 backdrop-blur-sm flex items-center justify-center z-50 p-4">
-  <div class="bg-zinc-900 border-2 border-blue-600 p-8 rounded-2xl max-w-md w-full relative shadow-2xl">
-    <button onclick="closeModal('fullModal')" class="absolute top-4 right-4 text-2xl text-zinc-400 hover:text-white">&times;</button>
-    <h2 class="text-2xl font-bold mb-4 text-amber-400">Full Service Broker</h2>
-    <p class="mb-4 text-zinc-300 leading-relaxed text-sm">
-      We take over the entire buying process so you don’t have to deal with pressure, stress, or dealership tactics. 
-      From sourcing the right vehicle to negotiating the final price, we handle every step on your behalf. 
-      Our focus is on protecting you from hidden fees, bad contracts, dealership pressure, nonstop calls, and aggressive tactics used to influence buyers.
-      We won't present an offer until it is a great one.
-    </p>
-    <p class="text-2xl font-black text-white mb-6 tracking-wide">$1,500.00</p>
-    <div id="paypal-full"></div>
-  </div>
-</div>
-
-<div id="premiumModal" class="hidden fixed inset-0 bg-black/80 backdrop-blur-sm flex items-center justify-center z-50 p-4">
-  <div class="bg-zinc-900 border-2 border-blue-600 p-8 rounded-2xl max-w-md w-full relative shadow-2xl">
-    <button onclick="closeModal('premiumModal')" class="absolute top-4 right-4 text-2xl text-zinc-400 hover:text-white">&times;</button>
-    <h2 class="text-2xl font-bold mb-4 text-amber-400">Premium Concierge</h2>
-    <p class="mb-4 text-zinc-300 leading-relaxed text-sm">
-      This is a full white‑glove experience designed for buyers seeking something rare, specific, or truly high-end.
-      We take complete control of the process from nationwide sourcing and securing the right vehicle to negotiating the final deal on your behalf.  
-      Every detail is handled for you, including out-of-state coordination, logistics, and protection from hidden fees, dealership pressure, and aggressive sales tactics.  
-      It’s the most seamless, stress-free way to secure a hard-to-find vehicle while ensuring you never settle or overpay.
-    </p>
-    <p class="text-2xl font-black text-white mb-6 tracking-wide">$2,000.00</p>
-    <div id="paypal-premium"></div>
-  </div>
-</div>
-
-<!-- ADDITIONAL SERVICES -->
-<section class="py-16 px-6 bg-zinc-900/50 border-t border-zinc-800">
-  <div class="max-w-6xl mx-auto text-center">
-    <h2 class="text-3xl font-extrabold mb-10 text-white">Additional Services</h2>
-
-    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-
-      <div class="bg-zinc-900 p-6 rounded-2xl border border-zinc-800 shadow-xl hover:border-blue-500 transition-all">
-        <h3 class="font-bold text-lg mb-2 text-white">Window Tint</h3>
-        <p class="text-sm text-zinc-400 mb-4">Privacy + heat protection</p>
-        <a href="index.html?service=Window%20Tint#consultation-form" class="block bg-zinc-800 hover:bg-blue-600 text-blue-400 hover:text-white font-semibold border border-blue-500/30 py-2.5 rounded-xl transition-all">
-          Request Quote
-        </a>
-      </div>
-
-      <div class="bg-zinc-900 p-6 rounded-2xl border border-zinc-800 shadow-xl hover:border-blue-500 transition-all">
-        <h3 class="font-bold text-lg mb-2 text-white">Mobile Detail</h3>
-        <p class="text-sm text-zinc-400 mb-4">We come to you</p>
-        <a href="index.html?service=Mobile%20Mechanic#consultation-form" class="block bg-zinc-800 hover:bg-blue-600 text-blue-400 hover:text-white font-semibold border border-blue-500/30 py-2.5 rounded-xl transition-all">
-          Request Quote
-        </a>
-      </div>
-
-      <div class="bg-zinc-900 p-6 rounded-2xl border border-zinc-800 shadow-xl hover:border-blue-500 transition-all">
-        <h3 class="font-bold text-lg mb-2 text-white">Powder Coating Wheels</h3>
-        <p class="text-sm text-zinc-400 mb-4">Durable custom finishes</p>
-        <a href="index.html?service=Powder%20Coating%20Wheels#consultation-form" class="block bg-zinc-800 hover:bg-blue-600 text-blue-400 hover:text-white font-semibold border border-blue-500/30 py-2.5 rounded-xl transition-all">
-          Request Quote
-        </a>
-      </div>
-
-      <div class="bg-zinc-900 p-6 rounded-2xl border border-zinc-800 shadow-xl hover:border-blue-500 transition-all">
-        <h3 class="font-bold text-lg mb-2 text-white">Vehicle Wraps</h3>
-        <p class="text-sm text-zinc-400 mb-4">Style + protection</p>
-        <a href="index.html?service=Vehicle%20Wraps#consultation-form" class="block bg-zinc-800 hover:bg-blue-600 text-blue-400 hover:text-white font-semibold border border-blue-500/30 py-2.5 rounded-xl transition-all">
-          Request Quote
-        </a>
-      </div>
 
     </div>
-  </div>
-</section>
+  </section>
 
-<!-- PAYPAL SDK -->
-<script src="https://www.paypal.com/sdk/js?client-id=AWESQ-Q9rVEWOHcFu75iP651SjAs8NuMTNTptIOuYtCePXq4rwE1BSPKzWgfbN_FM3niikyisn37lyWr&currency=USD"></script>
+  <!-- FOOTER -->
+  <footer class="bg-gray-950 border-t border-gray-800 text-gray-500 text-center py-10 text-sm">
+    <p>© 2026 Grate Auto Deals. All rights reserved.</p>
+  </footer>
 
-<!-- SCRIPT -->
-<script>
-function openModal(id){
-  document.getElementById(id).classList.remove("hidden");
-}
-
-function closeModal(id){
-  document.getElementById(id).classList.add("hidden");
-}
-
-document.addEventListener("DOMContentLoaded", () => {
-  const btn = document.getElementById("menu-btn");
-  const menu = document.getElementById("mobile-menu");
-
-  if (btn && menu) {
-    btn.onclick = () => menu.classList.toggle("hidden");
-    menu.querySelectorAll("a").forEach(link => {
-      link.onclick = () => menu.classList.add("hidden");
-    });
-  }
-
-  if (window.paypal) {
-    paypal.Buttons({createOrder:(d,a)=>a.order.create({purchase_units:[{amount:{value:"1000"}}]})}).render("#paypal-basic");
-    paypal.Buttons({createOrder:(d,a)=>a.order.create({purchase_units:[{amount:{value:"1500"}}]})}).render("#paypal-full");
-    paypal.Buttons({createOrder:(d,a)=>a.order.create({purchase_units:[{amount:{value:"2000"}}]})}).render("#paypal-premium");
-  }
-});
-</script>
-
-<!-- DISCLAIMER -->
-<section class="bg-zinc-950 text-zinc-400 py-10 px-6 text-sm border-t border-zinc-900">
-  <div class="max-w-6xl mx-auto">
-    <p class="mb-3 font-semibold text-zinc-300">Disclaimer</p>
-    <p class="leading-relaxed">
-      Grate Auto Deals provides automotive consulting, vehicle sourcing, and negotiation services and is not a licensed dealership, lender, or financial institution.
-    </p>
-    <p class="leading-relaxed mt-2">
-      All purchases, financing, warranties, and related transactions are completed directly between the client and third-party providers.
-    </p>
-    <p class="leading-relaxed mt-2">
-      We are not responsible for vehicle condition, pricing, availability, or final transaction terms. All decisions remain the responsibility of the client.
-    </p>
-  </div>
-</section>
-
+  <script>
+    // Mobile menu toggle
+    const menuBtn = document.getElementById("mobile-menu-btn");
+    const mobileMenu = document.getElementById("mobile-menu");
+    if (menuBtn && mobileMenu) {
+      menuBtn.onclick = () => mobileMenu.classList.toggle("hidden");
+    }
+  </script>
 </body>
 </html>
