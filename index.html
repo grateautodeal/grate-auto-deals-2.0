@@ -8,9 +8,8 @@
   <!-- ✅ Tailwind CSS -->
   <script src="https://cdn.tailwindcss.com"></script>
   
-  <!-- ✅ Custom Styling for Glows & Smooth Scrolling -->
+  <!-- ✅ Custom Styles for Mobile Scrollbar & Ambient Glows -->
   <style>
-    /* Hide scrollbar for brand row on mobile */
     .no-scrollbar::-webkit-scrollbar {
       display: none;
     }
@@ -19,7 +18,6 @@
       scrollbar-width: none;
     }
 
-    /* Ambient background mesh glow animation */
     @keyframes pulseGlow {
       0%, 100% { opacity: 0.3; transform: scale(1); }
       50% { opacity: 0.55; transform: scale(1.08); }
@@ -96,7 +94,7 @@
 
   <div class="max-w-7xl mx-auto relative z-10">
     
-    <!-- MOBILE LOGO ROW (VISIBLE ON MOBILE ONLY) -->
+    <!-- MOBILE LOGO ROW (ALL 18 BRANDS) -->
     <div class="md:hidden mb-12">
       <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-blue-500/10 border border-blue-500/20 text-blue-400 text-xs font-bold uppercase tracking-widest mb-4 mx-auto block w-max">
         Sourcing All Major Brands
@@ -104,12 +102,22 @@
       <div class="flex items-center space-x-7 overflow-x-auto pb-4 no-scrollbar justify-start px-2 opacity-80">
         <img src="https://cdn.simpleicons.org/ford/ffffff" class="w-8 h-8 flex-shrink-0" alt="Ford"/>
         <img src="https://cdn.simpleicons.org/toyota/ffffff" class="w-8 h-8 flex-shrink-0" alt="Toyota"/>
-        <img src="https://cdn.simpleicons.org/bmw/ffffff" class="w-8 h-8 flex-shrink-0" alt="BMW"/>
-        <img src="https://cdn.simpleicons.org/mercedes/ffffff" class="w-8 h-8 flex-shrink-0" alt="Mercedes"/>
-        <img src="https://cdn.simpleicons.org/porsche/ffffff" class="w-8 h-8 flex-shrink-0" alt="Porsche"/>
-        <img src="https://cdn.simpleicons.org/tesla/ffffff" class="w-8 h-8 flex-shrink-0" alt="Tesla"/>
-        <img src="https://cdn.simpleicons.org/audi/ffffff" class="w-8 h-8 flex-shrink-0" alt="Audi"/>
         <img src="https://cdn.simpleicons.org/honda/ffffff" class="w-8 h-8 flex-shrink-0" alt="Honda"/>
+        <img src="https://cdn.simpleicons.org/nissan/ffffff" class="w-8 h-8 flex-shrink-0" alt="Nissan"/>
+        <img src="https://cdn.simpleicons.org/subaru/ffffff" class="w-8 h-8 flex-shrink-0" alt="Subaru"/>
+        <img src="https://cdn.simpleicons.org/kia/ffffff" class="w-8 h-8 flex-shrink-0" alt="Kia"/>
+        <img src="https://cdn.simpleicons.org/hyundai/ffffff" class="w-8 h-8 flex-shrink-0" alt="Hyundai"/>
+        <img src="https://cdn.simpleicons.org/tesla/ffffff" class="w-8 h-8 flex-shrink-0" alt="Tesla"/>
+        <img src="https://cdn.simpleicons.org/bmw/ffffff" class="w-8 h-8 flex-shrink-0" alt="BMW"/>
+        <img src="https://cdn.simpleicons.org/audi/ffffff" class="w-8 h-8 flex-shrink-0" alt="Audi"/>
+        <img src="https://cdn.simpleicons.org/volkswagen/ffffff" class="w-8 h-8 flex-shrink-0" alt="Volkswagen"/>
+        <img src="https://cdn.simpleicons.org/porsche/ffffff" class="w-8 h-8 flex-shrink-0" alt="Porsche"/>
+        <img src="https://cdn.simpleicons.org/mercedes/ffffff" class="w-8 h-8 flex-shrink-0" alt="Mercedes"/>
+        <img src="https://cdn.simpleicons.org/acura/ffffff" class="w-8 h-8 flex-shrink-0" alt="Acura"/>
+        <img src="https://cdn.simpleicons.org/infiniti/ffffff" class="w-8 h-8 flex-shrink-0" alt="Infiniti"/>
+        <img src="https://cdn.simpleicons.org/ferrari/ffffff" class="w-8 h-8 flex-shrink-0" alt="Ferrari"/>
+        <img src="https://cdn.simpleicons.org/lamborghini/ffffff" class="w-8 h-8 flex-shrink-0" alt="Lamborghini"/>
+        <img src="https://cdn.simpleicons.org/jeep/ffffff" class="w-8 h-8 flex-shrink-0" alt="Jeep"/>
       </div>
     </div>
 
@@ -121,11 +129,11 @@
         <img src="https://cdn.simpleicons.org/toyota/ffffff" class="w-9 h-9 hover:scale-125 hover:drop-shadow-[0_0_12px_rgba(59,130,246,0.8)] transition duration-300" alt="Toyota"/>
         <img src="https://cdn.simpleicons.org/honda/ffffff" class="w-9 h-9 hover:scale-125 hover:drop-shadow-[0_0_12px_rgba(59,130,246,0.8)] transition duration-300" alt="Honda"/>
         <img src="https://cdn.simpleicons.org/nissan/ffffff" class="w-9 h-9 hover:scale-125 hover:drop-shadow-[0_0_12px_rgba(59,130,246,0.8)] transition duration-300" alt="Nissan"/>
-        <img src="https://cdn.simpleicons.org/chevrolet/ffffff" class="w-9 h-9 hover:scale-125 hover:drop-shadow-[0_0_12px_rgba(59,130,246,0.8)] transition duration-300" alt="Chevrolet"/>
         <img src="https://cdn.simpleicons.org/subaru/ffffff" class="w-9 h-9 hover:scale-125 hover:drop-shadow-[0_0_12px_rgba(59,130,246,0.8)] transition duration-300" alt="Subaru"/>
         <img src="https://cdn.simpleicons.org/kia/ffffff" class="w-9 h-9 hover:scale-125 hover:drop-shadow-[0_0_12px_rgba(59,130,246,0.8)] transition duration-300" alt="Kia"/>
         <img src="https://cdn.simpleicons.org/hyundai/ffffff" class="w-9 h-9 hover:scale-125 hover:drop-shadow-[0_0_12px_rgba(59,130,246,0.8)] transition duration-300" alt="Hyundai"/>
         <img src="https://cdn.simpleicons.org/tesla/ffffff" class="w-9 h-9 hover:scale-125 hover:drop-shadow-[0_0_12px_rgba(59,130,246,0.8)] transition duration-300" alt="Tesla"/>
+        <img src="https://cdn.simpleicons.org/mercedes/ffffff" class="w-9 h-9 hover:scale-125 hover:drop-shadow-[0_0_12px_rgba(59,130,246,0.8)] transition duration-300" alt="Mercedes"/>
       </div>
 
       <!-- CENTER CONTENT -->
@@ -235,7 +243,6 @@
       Tell us what vehicle you're looking for and we’ll secure the best deal possible.
     </p>
 
-    <!-- ✅ FORM WITH CORRECT ID AND SCROLL MARGIN -->
     <form id="consultation-form" class="space-y-6 scroll-mt-28">
 
       <input type="text" name="name" placeholder="Full Name" required
@@ -279,7 +286,7 @@
             <option>2020</option>
           </select>
 
-          <select name="make" class="w-full bg-gray-950/80 border border-gray-800 text-white p-4 rounded-xl focus:border-blue-500 focus:outline-none transition">
+          <select name="make" class="w-full bg-gray-950/80 border border-gray-800 text-white p-4 rounded-xl focus:border-blue-500 focus:ring-1 focus:ring-blue-500 focus:outline-none transition">
             <option value="">Select Make</option>
             <option>Toyota</option>
             <option>Honda</option>
@@ -314,7 +321,7 @@
 <!-- ✅ EMAILJS SCRIPT -->
 <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
 
-<!-- ✅ UNIFIED & CONSOLIDATED JS -->
+<!-- ✅ CONSOLIDATED JS -->
 <script>
   document.addEventListener("DOMContentLoaded", function () {
     // Mobile menu logic
@@ -334,7 +341,7 @@
       }
     }
 
-    // Pre-select service option based on URL parameters
+    // URL parameter service pre-selection
     const params = new URLSearchParams(window.location.search);
     const serviceParam = params.get("service");
     const serviceSelect = document.getElementById("service-select");
@@ -346,7 +353,7 @@
     // Initialize EmailJS
     emailjs.init("79GpKgIC8W7-vVqDA");
 
-    // Form submission logic
+    // Form submission
     const form = document.getElementById("consultation-form");
     if (form) {
       form.addEventListener("submit", function (e) {
