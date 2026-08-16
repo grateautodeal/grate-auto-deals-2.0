@@ -215,5 +215,57 @@
       </div>
     </div>
 
-    <!-- Card 4: Delivery Photo (IMG_5598.jpg) with Realistic Google Review Overlay -->
-    <div class="bg-gradient-to-b from-gray-900/90 to-gray-950 border border-
+    <!-- Card 4: Kadeshia Bernard (IMG_5598.jpg) with Professional Google Review Overlay -->
+    <div class="bg-gradient-to-b from-gray-900/90 to-gray-950 border border-gray-800/80 rounded-2xl overflow-hidden shadow-xl flex flex-col group hover:border-purple-500/40 transition duration-300">
+      <div class="p-4 bg-gray-950/50 overflow-hidden relative">
+        <img src="IMG_5598.jpg" alt="Kadeshia Bernard - Vehicle Delivery" class="review-image rounded-xl border border-gray-800/80 shadow-md">
+        
+        <!-- Google Review Floating Overlay Card -->
+        <div class="absolute bottom-6 left-6 right-6 bg-gray-950/90 backdrop-blur-xl border border-purple-500/30 p-5 rounded-xl shadow-2xl">
+          <div class="flex items-center justify-between mb-2">
+            <div class="flex items-center gap-1.5 text-amber-400 text-sm">
+              <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
+            </div>
+            <span class="text-[10px] font-bold uppercase tracking-widest px-2 py-0.5 rounded bg-purple-500/20 text-purple-300 border border-purple-500/30">Google Review</span>
+          </div>
+          <p class="text-white text-xs md:text-sm font-medium italic mb-2 leading-relaxed">
+            "Working with Grate Auto Deals was an absolute game-changer! The entire vehicle acquisition process was exceptionally seamless, transparent, and completely stress-free from start to finish. Highly recommended!"
+          </p>
+          <div class="flex items-center justify-between text-xs">
+            <span class="font-bold text-white">— Kadeshia Bernard</span>
+            <span class="text-gray-400 font-semibold">Verified Client</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<footer class="bg-gray-950 border-t border-gray-800/80 text-gray-500 text-center py-10 text-sm">
+  <p>© 2026 Grate Auto Deals. All rights reserved.</p>
+</footer>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const menuBtn = document.getElementById("menu-btn");
+    const mobileMenu = document.getElementById("mobile-menu");
+
+    if (menuBtn && mobileMenu) {
+      menuBtn.onclick = function () {
+        mobileMenu.classList.toggle("hidden");
+      };
+
+      const links = mobileMenu.getElementsByTagName("a");
+      for (let i = 0; i < links.length; i++) {
+        links[i].onclick = function () {
+          mobileMenu.classList.add("hidden");
+        };
+      }
+    }
+  });
+</script>
+
+</body>
+</html>
