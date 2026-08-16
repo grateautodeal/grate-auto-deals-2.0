@@ -8,7 +8,7 @@
   <!-- ✅ Tailwind CSS -->
   <script src="https://cdn.tailwindcss.com"></script>
   
-  <!-- ✅ Custom Styles -->
+  <!-- ✅ Custom Styles for Uniform Picture Scaling & Vibrant Glows -->
   <style>
     .no-scrollbar::-webkit-scrollbar {
       display: none;
@@ -26,9 +26,10 @@
       animation: pulseGlow 7s ease-in-out infinite;
     }
 
+    /* Force uniform height, width, and crisp scaling for ALL cards */
     .review-image {
       width: 100%;
-      height: 380px;
+      height: 440px;
       object-fit: cover;
       object-position: center;
     }
@@ -40,6 +41,8 @@
 <!-- NAV -->
 <nav class="bg-gray-950/85 backdrop-blur-xl text-white fixed top-0 w-full z-50 border-b border-gray-800/80 shadow-2xl shadow-cyan-950/20">
   <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+
+    <!-- LEFT LOGO -->
     <a href="index.html" class="flex items-center gap-2 group">
       <div class="w-9 h-9 rounded-xl bg-gradient-to-tr from-blue-600 via-indigo-500 to-cyan-400 flex items-center justify-center font-black text-xl text-white shadow-lg shadow-cyan-500/20 group-hover:scale-105 transition duration-300">
         G
@@ -49,7 +52,9 @@
       </span>
     </a>
 
+    <!-- RIGHT NAV -->
     <div class="flex items-center space-x-6">
+      <!-- DESKTOP LINKS -->
       <div class="hidden md:flex items-center space-x-8 text-sm font-semibold text-gray-300">
         <a href="index.html" class="hover:text-cyan-300 transition duration-200">Home</a>
         <a href="services.html" class="hover:text-cyan-300 transition duration-200">Services</a>
@@ -57,12 +62,15 @@
         <a href="index.html#consultation-form" class="hover:text-cyan-300 transition duration-200">Contact Us</a>
       </div>
 
+      <!-- HAMBURGER BUTTON -->
       <button id="menu-btn" class="md:hidden text-2xl text-gray-300 focus:outline-none hover:text-white transition" aria-label="Toggle Menu">
         ☰
       </button>
     </div>
+
   </div>
 
+  <!-- MOBILE MENU -->
   <div id="mobile-menu" class="hidden md:hidden bg-gray-950/95 border-b border-gray-800 backdrop-blur-2xl flex flex-col text-center space-y-4 py-6 font-semibold text-gray-200">
     <a href="index.html" class="hover:text-cyan-300 transition">Home</a>
     <a href="services.html" class="hover:text-cyan-300 transition">Services</a>
@@ -75,6 +83,8 @@
 
 <!-- HERO SECTION -->
 <section class="relative bg-gray-950 text-white py-20 md:py-28 px-6 overflow-hidden">
+  
+  <!-- VIBRANT AMBIENT BACKGROUND GLOWS -->
   <div class="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[650px] h-[380px] bg-gradient-to-r from-blue-600/25 via-indigo-600/20 to-cyan-400/25 blur-[150px] rounded-full pointer-events-none animate-pulse-glow"></div>
 
   <div class="max-w-7xl mx-auto relative z-10 text-center">
@@ -116,6 +126,7 @@
   </div>
 
   <div class="grid grid-cols-1 md:grid-cols-2 gap-10 items-center bg-gradient-to-b from-gray-900/90 to-gray-950 border border-gray-800/80 rounded-3xl p-8 md:p-12 shadow-2xl relative overflow-hidden">
+    
     <div class="space-y-6">
       <h3 class="text-2xl md:text-3xl font-black text-white">How the Referral Program Works:</h3>
       
@@ -142,6 +153,7 @@
       </div>
     </div>
 
+    <!-- Visual Card / Placeholder for Gift Basket & Gift Card -->
     <div class="relative rounded-2xl overflow-hidden border border-gray-800 bg-gray-950 p-6 flex flex-col items-center justify-center text-center group">
       <div class="absolute inset-0 bg-gradient-to-tr from-cyan-500/10 via-blue-600/10 to-indigo-600/10 pointer-events-none"></div>
       
@@ -158,6 +170,7 @@
         <span>✨ Double Reward: Referrer + Referred Client</span>
       </div>
     </div>
+
   </div>
 </section>
 
@@ -171,38 +184,39 @@
     <p class="text-gray-400 max-w-xl mx-auto text-sm md:text-base">Real experiences from clients who trusted Grate Auto Deals to find their vehicles.</p>
   </div>
 
+  <!-- UNIFORM SIZED GRID OF REVIEWS & DELIVERY PHOTOS (Exact layout matching your screenshot image overlays) -->
   <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8">
 
-    <!-- Card 1 -->
+    <!-- Card 1: Donna Caputo (image0_3.jpg) -->
     <div class="bg-gradient-to-b from-gray-900/90 to-gray-950 border border-gray-800/80 rounded-2xl overflow-hidden shadow-xl flex flex-col group hover:border-cyan-500/40 transition duration-300">
       <div class="p-4 bg-gray-950/50">
-        <img src="image0_2.jpg" alt="Donna Caputo - Mazda Miata Delivery" class="review-image rounded-xl border border-gray-800/80 shadow-md group-hover:scale-[1.02] transition duration-300" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1533473359331-0135ef1b58bf?auto=format&fit=crop&w=800&q=80';">
+        <img src="image0_3.jpg" alt="Donna Caputo - Mazda Miata Delivery" class="review-image rounded-xl border border-gray-800/80 shadow-md group-hover:scale-[1.02] transition duration-300">
       </div>
       <div class="p-6 border-t border-gray-800/80 bg-gray-950 flex-1 flex flex-col justify-between">
         <div>
           <div class="text-yellow-400 text-sm mb-1">★★★★★</div>
-          <p class="text-xs text-gray-400">"Fabulous communication.. no pressure.. wonderful experience! Aaron was our salesman.. thank you all for my little pristine 2023 Miata." - Donna Caputo</p>
+          <p class="text-xs text-gray-400">"Fabulous communication.. no pressure.. wonderful experience! Aaron was our salesman.. he was relaxed .. but very attentive to my wants and needs in a vehicle. James .. manager.. was confident and informative. Very easy with the process with finance. Appreciated the honesty. Thank you all for my little pristine 2023 Miata." - Donna Caputo</p>
         </div>
       </div>
     </div>
 
-    <!-- Card 2 -->
+    <!-- Card 2: CPO Mazda Delivery (IMG_1156_3.jpg) -->
     <div class="bg-gradient-to-b from-gray-900/90 to-gray-950 border border-gray-800/80 rounded-2xl overflow-hidden shadow-xl flex flex-col group hover:border-cyan-500/40 transition duration-300">
       <div class="p-4 bg-gray-950/50">
-        <img src="IMG_1156_2.jpg" alt="Client Review - CPO Mazda Delivery" class="review-image rounded-xl border border-gray-800/80 shadow-md group-hover:scale-[1.02] transition duration-300" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1503376780353-7e6692767b70?auto=format&fit=crop&w=800&q=80';">
+        <img src="IMG_1156_3.jpg" alt="Client Review - CPO Mazda Delivery" class="review-image rounded-xl border border-gray-800/80 shadow-md group-hover:scale-[1.02] transition duration-300">
       </div>
       <div class="p-6 border-t border-gray-800/80 bg-gray-950 flex-1 flex flex-col justify-between">
         <div>
           <div class="text-yellow-400 text-sm mb-1">★★★★★</div>
-          <p class="text-xs text-gray-400">"We drove from AL to buy a CPO Mazda and Aaron Grate was our salesman. He was awesome! Knowledgeable, friendly, respectful and honest."</p>
+          <p class="text-xs text-gray-400">"We drove from AL to buy a CPO Mazda and Aaron Grate was our salesman. He was awesome! Knowledgeable, friendly, respectful and honest; an asset to the dealership. He took excellent care of us, followed up after the sale and made sure all the paperwork for the warranty was handled properly. We had a great experience with Mr. Grate!"</p>
         </div>
       </div>
     </div>
 
-    <!-- Card 3 -->
+    <!-- Card 3: Cheou Leung (IMG_1153_5.jpg) -->
     <div class="bg-gradient-to-b from-gray-900/90 to-gray-950 border border-gray-800/80 rounded-2xl overflow-hidden shadow-xl flex flex-col group hover:border-cyan-500/40 transition duration-300">
       <div class="p-4 bg-gray-950/50">
-        <img src="IMG_1153_4.jpg" alt="Cheou Leung - VW Delivery" class="review-image rounded-xl border border-gray-800/80 shadow-md group-hover:scale-[1.02] transition duration-300" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1552519507-da3b142c6e3d?auto=format&fit=crop&w=800&q=80';">
+        <img src="IMG_1153_5.jpg" alt="Cheou Leung - VW Delivery" class="review-image rounded-xl border border-gray-800/80 shadow-md group-hover:scale-[1.02] transition duration-300">
       </div>
       <div class="p-6 border-t border-gray-800/80 bg-gray-950 flex-1 flex flex-col justify-between">
         <div>
@@ -212,10 +226,10 @@
       </div>
     </div>
 
-    <!-- Card 4 -->
+    <!-- Card 4: Delivery Photo (IMG_5598_5.jpg) -->
     <div class="bg-gradient-to-b from-gray-900/90 to-gray-950 border border-gray-800/80 rounded-2xl overflow-hidden shadow-xl flex flex-col group hover:border-cyan-500/40 transition duration-300">
       <div class="p-4 bg-gray-950/50">
-        <img src="IMG_5598_4.jpg" alt="Client Delivery Success" class="review-image rounded-xl border border-gray-800/80 shadow-md group-hover:scale-[1.02] transition duration-300" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1492144534655-ae79c964c9d7?auto=format&fit=crop&w=800&q=80';">
+        <img src="IMG_5598_5.jpg" alt="Client Delivery Success" class="review-image rounded-xl border border-gray-800/80 shadow-md group-hover:scale-[1.02] transition duration-300">
       </div>
       <div class="p-6 border-t border-gray-800/80 bg-gray-950 flex-1 flex flex-col justify-between">
         <div>
@@ -230,9 +244,12 @@
 
 <!-- REFERRAL SUBMISSION FORM SECTION -->
 <section id="referral-form-section" class="py-24 px-6 bg-gray-950 relative">
+  
+  <!-- FORM AMBIENT GLOW -->
   <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[550px] h-[550px] bg-gradient-to-r from-cyan-500/10 via-blue-600/15 to-indigo-600/10 blur-[150px] rounded-full pointer-events-none"></div>
 
   <div class="max-w-3xl mx-auto bg-gradient-to-b from-gray-900 to-gray-950 border border-gray-800 p-8 md:p-12 rounded-3xl shadow-2xl relative z-10">
+
     <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-cyan-500/10 border border-cyan-500/20 text-cyan-300 text-xs font-bold uppercase tracking-widest mb-4 mx-auto block w-max">
       Get Rewarded
     </div>
@@ -246,6 +263,8 @@
     </p>
 
     <form id="referral-form" class="space-y-6 scroll-mt-28">
+
+      <!-- Referrer Information -->
       <div class="p-5 rounded-2xl bg-gray-950/60 border border-gray-800/80 space-y-4">
         <h3 class="text-sm font-bold text-cyan-300 uppercase tracking-wider">Your Information (Referrer)</h3>
         
@@ -261,6 +280,7 @@
                class="w-full bg-gray-950 border border-gray-800 text-white p-4 rounded-xl focus:border-cyan-400 focus:ring-1 focus:ring-cyan-400 focus:outline-none transition">
       </div>
 
+      <!-- Referred Person's Information -->
       <div class="p-5 rounded-2xl bg-gray-950/60 border border-gray-800/80 space-y-4">
         <h3 class="text-sm font-bold text-indigo-300 uppercase tracking-wider">Friend / Referral Information</h3>
         
