@@ -8,7 +8,7 @@
   <!-- ✅ Tailwind CSS -->
   <script src="https://cdn.tailwindcss.com"></script>
   
-  <!-- ✅ Custom Styles for Equal Scaling & Vibrant Glows -->
+  <!-- ✅ Custom Styles for Uniform Picture Scaling & Vibrant Glows -->
   <style>
     .no-scrollbar::-webkit-scrollbar {
       display: none;
@@ -26,10 +26,10 @@
       animation: pulseGlow 7s ease-in-out infinite;
     }
 
-    /* Force uniform, crisp image scaling across all cards */
+    /* Force uniform height, width, and crisp scaling for ALL cards */
     .review-image {
       width: 100%;
-      height: 320px;
+      height: 380px;
       object-fit: cover;
       object-position: center;
     }
@@ -184,13 +184,13 @@
     <p class="text-gray-400 max-w-xl mx-auto text-sm md:text-base">Real experiences from clients who trusted Grate Auto Deals to find their vehicles.</p>
   </div>
 
-  <!-- EQUAL-SIZED GRID OF REVIEWS & DELIVERY PHOTOS -->
+  <!-- UNIFORM SIZED GRID OF REVIEWS & DELIVERY PHOTOS -->
   <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
 
-    <!-- Card 1: IMG_1155.jpg -->
+    <!-- Card 1: Screenshot Review (Mazda) -->
     <div class="bg-gradient-to-b from-gray-900/90 to-gray-950 border border-gray-800/80 rounded-2xl overflow-hidden shadow-xl flex flex-col group hover:border-cyan-500/40 transition duration-300">
       <div class="p-4 bg-gray-950/50">
-        <img src="IMG_1155.jpg" alt="Client Review" class="review-image rounded-xl border border-gray-800/80 shadow-md group-hover:scale-[1.02] transition duration-300">
+        <img src="Screenshot 2026-08-15 at 11.57.18 PM.jpg" alt="Client Review - Mazda Delivery" class="review-image rounded-xl border border-gray-800/80 shadow-md group-hover:scale-[1.02] transition duration-300">
       </div>
       <div class="p-6 border-t border-gray-800/80 bg-gray-950 flex-1 flex flex-col justify-between">
         <div>
@@ -200,7 +200,33 @@
       </div>
     </div>
 
-    <!-- Card 2: IMG_0691.jpg -->
+    <!-- Card 2: Review Composite (Cheou Leung / VW) -->
+    <div class="bg-gradient-to-b from-gray-900/90 to-gray-950 border border-gray-800/80 rounded-2xl overflow-hidden shadow-xl flex flex-col group hover:border-cyan-500/40 transition duration-300">
+      <div class="p-4 bg-gray-950/50">
+        <img src="IMG_1153_2.jpg" alt="Client Review - VW Delivery" class="review-image rounded-xl border border-gray-800/80 shadow-md group-hover:scale-[1.02] transition duration-300">
+      </div>
+      <div class="p-6 border-t border-gray-800/80 bg-gray-950 flex-1 flex flex-col justify-between">
+        <div>
+          <div class="text-yellow-400 text-sm mb-1">★★★★★</div>
+          <p class="text-xs text-gray-400">"Aaron was great! He is professional, knowledgeable and caring..." - Cheou Leung</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Card 3: Delivery Photo (IMG_5598_2.jpg) -->
+    <div class="bg-gradient-to-b from-gray-900/90 to-gray-950 border border-gray-800/80 rounded-2xl overflow-hidden shadow-xl flex flex-col group hover:border-cyan-500/40 transition duration-300">
+      <div class="p-4 bg-gray-950/50">
+        <img src="IMG_5598_2.jpg" alt="Client Delivery" class="review-image rounded-xl border border-gray-800/80 shadow-md group-hover:scale-[1.02] transition duration-300">
+      </div>
+      <div class="p-6 border-t border-gray-800/80 bg-gray-950 flex-1 flex flex-col justify-between">
+        <div>
+          <div class="text-yellow-400 text-sm mb-1">★★★★★</div>
+          <p class="text-xs text-gray-400">Proud new owner holding keys to their vehicle secured through our concierge service.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Card 4: Delivery Photo (IMG_0691.jpg) -->
     <div class="bg-gradient-to-b from-gray-900/90 to-gray-950 border border-gray-800/80 rounded-2xl overflow-hidden shadow-xl flex flex-col group hover:border-cyan-500/40 transition duration-300">
       <div class="p-4 bg-gray-950/50">
         <img src="IMG_0691.jpg" alt="Client Delivery" class="review-image rounded-xl border border-gray-800/80 shadow-md group-hover:scale-[1.02] transition duration-300">
@@ -213,33 +239,7 @@
       </div>
     </div>
 
-    <!-- Card 3: IMG_1153.jpg -->
-    <div class="bg-gradient-to-b from-gray-900/90 to-gray-950 border border-gray-800/80 rounded-2xl overflow-hidden shadow-xl flex flex-col group hover:border-cyan-500/40 transition duration-300">
-      <div class="p-4 bg-gray-950/50">
-        <img src="IMG_1153.jpg" alt="Client Delivery & Review" class="review-image rounded-xl border border-gray-800/80 shadow-md group-hover:scale-[1.02] transition duration-300">
-      </div>
-      <div class="p-6 border-t border-gray-800/80 bg-gray-950 flex-1 flex flex-col justify-between">
-        <div>
-          <div class="text-yellow-400 text-sm mb-1">★★★★★</div>
-          <p class="text-xs text-gray-400">"Aaron was great! He is professional, knowledgeable and caring..." - Cheou Leung</p>
-        </div>
-      </div>
-    </div>
-
-    <!-- Card 4: IMG_5598.jpg -->
-    <div class="bg-gradient-to-b from-gray-900/90 to-gray-950 border border-gray-800/80 rounded-2xl overflow-hidden shadow-xl flex flex-col group hover:border-cyan-500/40 transition duration-300">
-      <div class="p-4 bg-gray-950/50">
-        <img src="IMG_5598.jpg" alt="Client Delivery" class="review-image rounded-xl border border-gray-800/80 shadow-md group-hover:scale-[1.02] transition duration-300">
-      </div>
-      <div class="p-6 border-t border-gray-800/80 bg-gray-950 flex-1 flex flex-col justify-between">
-        <div>
-          <div class="text-yellow-400 text-sm mb-1">★★★★★</div>
-          <p class="text-xs text-gray-400">Proud new owner holding keys to their vehicle secured through our concierge service.</p>
-        </div>
-      </div>
-    </div>
-
-    <!-- Card 5: IMG_0689.jpg -->
+    <!-- Card 5: Delivery Photo (IMG_0689.jpg) -->
     <div class="bg-gradient-to-b from-gray-900/90 to-gray-950 border border-gray-800/80 rounded-2xl overflow-hidden shadow-xl flex flex-col md:col-span-2 lg:col-span-2 group hover:border-cyan-500/40 transition duration-300">
       <div class="p-4 bg-gray-950/50">
         <img src="IMG_0689.jpg" alt="Client Delivery" class="review-image rounded-xl border border-gray-800/80 shadow-md group-hover:scale-[1.02] transition duration-300">
