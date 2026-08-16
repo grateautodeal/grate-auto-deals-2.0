@@ -8,7 +8,7 @@
   <!-- ✅ Tailwind CSS -->
   <script src="https://cdn.tailwindcss.com"></script>
   
-  <!-- ✅ Custom Styles for Uniform Picture Scaling & Vibrant Glows -->
+  <!-- ✅ Custom Styles for Uniform Picture Scaling & Interactive Lightbox -->
   <style>
     .no-scrollbar::-webkit-scrollbar {
       display: none;
@@ -32,6 +32,11 @@
       height: 440px;
       object-fit: cover;
       object-position: center;
+      cursor: zoom-in;
+      transition: transform 0.3s ease;
+    }
+    .review-image:hover {
+      transform: scale(1.02);
     }
   </style>
 </head>
@@ -181,7 +186,7 @@
       Success Stories
     </div>
     <h2 class="text-3xl md:text-4xl font-black text-white mb-3 tracking-tight">Client Deliveries & Real Reviews</h2>
-    <p class="text-gray-400 max-w-xl mx-auto text-sm md:text-base">Real experiences from clients who trusted Grate Auto Deals to find their vehicles.</p>
+    <p class="text-gray-400 max-w-xl mx-auto text-sm md:text-base">Real experiences from clients who trusted Grate Auto Deals to find their vehicles. Click any image to view it larger.</p>
   </div>
 
   <!-- UNIFORM SIZED GRID OF REVIEWS & DELIVERY PHOTOS -->
@@ -189,8 +194,8 @@
 
     <!-- Card 1: Donna Caputo (image0.jpeg) -->
     <div class="bg-gradient-to-b from-gray-900/90 to-gray-950 border border-gray-800/80 rounded-2xl overflow-hidden shadow-xl flex flex-col group hover:border-cyan-500/40 transition duration-300">
-      <div class="p-4 bg-gray-950/50">
-        <img src="image0.jpeg" alt="Donna Caputo - Mazda Miata Delivery" class="review-image rounded-xl border border-gray-800/80 shadow-md group-hover:scale-[1.02] transition duration-300">
+      <div class="p-4 bg-gray-950/50 overflow-hidden">
+        <img src="image0.jpeg" alt="Donna Caputo - Mazda Miata Delivery" class="review-image rounded-xl border border-gray-800/80 shadow-md">
       </div>
       <div class="p-6 border-t border-gray-800/80 bg-gray-950 flex-1 flex flex-col justify-between">
         <div>
@@ -202,8 +207,8 @@
 
     <!-- Card 2: CPO Mazda Delivery (IMG_1156.jpg) -->
     <div class="bg-gradient-to-b from-gray-900/90 to-gray-950 border border-gray-800/80 rounded-2xl overflow-hidden shadow-xl flex flex-col group hover:border-cyan-500/40 transition duration-300">
-      <div class="p-4 bg-gray-950/50">
-        <img src="IMG_1156.jpg" alt="Client Review - CPO Mazda Delivery" class="review-image rounded-xl border border-gray-800/80 shadow-md group-hover:scale-[1.02] transition duration-300">
+      <div class="p-4 bg-gray-950/50 overflow-hidden">
+        <img src="IMG_1156.jpg" alt="Client Review - CPO Mazda Delivery" class="review-image rounded-xl border border-gray-800/80 shadow-md">
       </div>
       <div class="p-6 border-t border-gray-800/80 bg-gray-950 flex-1 flex flex-col justify-between">
         <div>
@@ -215,8 +220,8 @@
 
     <!-- Card 3: Cheou Leung (IMG_1153.jpg) -->
     <div class="bg-gradient-to-b from-gray-900/90 to-gray-950 border border-gray-800/80 rounded-2xl overflow-hidden shadow-xl flex flex-col group hover:border-cyan-500/40 transition duration-300">
-      <div class="p-4 bg-gray-950/50">
-        <img src="IMG_1153.jpg" alt="Cheou Leung - VW Delivery" class="review-image rounded-xl border border-gray-800/80 shadow-md group-hover:scale-[1.02] transition duration-300">
+      <div class="p-4 bg-gray-950/50 overflow-hidden">
+        <img src="IMG_1153.jpg" alt="Cheou Leung - VW Delivery" class="review-image rounded-xl border border-gray-800/80 shadow-md">
       </div>
       <div class="p-6 border-t border-gray-800/80 bg-gray-950 flex-1 flex flex-col justify-between">
         <div>
@@ -228,8 +233,8 @@
 
     <!-- Card 4: Delivery Photo (IMG_5598.jpg) -->
     <div class="bg-gradient-to-b from-gray-900/90 to-gray-950 border border-gray-800/80 rounded-2xl overflow-hidden shadow-xl flex flex-col group hover:border-cyan-500/40 transition duration-300">
-      <div class="p-4 bg-gray-950/50">
-        <img src="IMG_5598.jpg" alt="Client Delivery Success" class="review-image rounded-xl border border-gray-800/80 shadow-md group-hover:scale-[1.02] transition duration-300">
+      <div class="p-4 bg-gray-950/50 overflow-hidden">
+        <img src="IMG_5598.jpg" alt="Client Delivery Success" class="review-image rounded-xl border border-gray-800/80 shadow-md">
       </div>
       <div class="p-6 border-t border-gray-800/80 bg-gray-950 flex-1 flex flex-col justify-between">
         <div>
@@ -312,12 +317,19 @@
   <p>© 2026 Grate Auto Deals. All rights reserved.</p>
 </footer>
 
+<!-- ✅ LIGHTBOX MODAL CONTAINER -->
+<div id="lightbox-modal" class="fixed inset-0 z-50 bg-black/90 backdrop-blur-md hidden items-center justify-center p-4 cursor-zoom-out">
+  <button id="lightbox-close" class="absolute top-6 right-6 text-gray-400 hover:text-white text-4xl font-bold focus:outline-none">&times;</button>
+  <img id="lightbox-img" src="" alt="Enlarged view" class="max-w-full max-h-[90vh] object-contain rounded-2xl shadow-2xl border border-gray-800">
+</div>
+
 <!-- ✅ EMAILJS SCRIPT -->
 <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
 
-<!-- ✅ CONSOLIDATED JS -->
+<!-- ✅ CONSOLIDATED JS (Mobile Menu + EmailJS + Lightbox) -->
 <script>
   document.addEventListener("DOMContentLoaded", function () {
+    // Mobile Menu Toggle
     const menuBtn = document.getElementById("menu-btn");
     const mobileMenu = document.getElementById("mobile-menu");
 
@@ -334,6 +346,29 @@
       }
     }
 
+    // Lightbox Modal Logic
+    const modal = document.getElementById("lightbox-modal");
+    const modalImg = document.getElementById("lightbox-img");
+    const reviewImages = document.querySelectorAll(".review-image");
+
+    reviewImages.forEach(img => {
+      img.addEventListener("click", function () {
+        modalImg.src = this.src;
+        modal.classList.remove("hidden");
+        modal.classList.add("flex");
+        document.body.style.overflow = "hidden"; // Prevent background scrolling
+      });
+    });
+
+    function closeLightbox() {
+      modal.classList.add("hidden");
+      modal.classList.remove("flex");
+      document.body.style.overflow = "auto";
+    }
+
+    modal.addEventListener("click", closeLightbox);
+
+    // EmailJS Initialization & Form Handling
     emailjs.init("79GpKgIC8W7-vVqDA");
 
     const referralForm = document.getElementById("referral-form");
