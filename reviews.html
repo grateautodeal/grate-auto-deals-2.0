@@ -179,10 +179,10 @@
   <!-- GRID OF REVIEWS & DELIVERY PHOTOS -->
   <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
 
-    <!-- Card 1 -->
+    <!-- Card 1: Review Screenshot (IMG_1155.jpg) -->
     <div class="bg-gradient-to-b from-gray-900/90 to-gray-950 border border-gray-800/80 rounded-2xl overflow-hidden shadow-xl flex flex-col group hover:border-cyan-500/40 transition duration-300">
       <div class="p-6 bg-gray-950/50 flex-1 flex flex-col justify-center">
-        <img src="https://images.unsplash.com/photo-1552519507-da3b142c6e3d?auto=format&fit=crop&w=800&q=80" alt="Client Delivery" class="w-full h-80 rounded-xl border border-gray-800/80 object-cover shadow-md group-hover:scale-[1.02] transition duration-300">
+        <img src="IMG_1155.jpg" alt="Client Review" class="w-full h-80 rounded-xl border border-gray-800/80 object-contain bg-black shadow-md group-hover:scale-[1.02] transition duration-300">
       </div>
       <div class="p-6 border-t border-gray-800/80 bg-gray-950">
         <div class="text-yellow-400 text-sm mb-1">★★★★★</div>
@@ -190,10 +190,10 @@
       </div>
     </div>
 
-    <!-- Card 2 -->
+    <!-- Card 2: Delivery Photo 1 (IMG_0691.jpg) -->
     <div class="bg-gradient-to-b from-gray-900/90 to-gray-950 border border-gray-800/80 rounded-2xl overflow-hidden shadow-xl flex flex-col group hover:border-cyan-500/40 transition duration-300">
       <div class="p-6 bg-gray-950/50 flex-1 flex flex-col justify-center">
-        <img src="https://images.unsplash.com/photo-1503376780353-7e6692767b70?auto=format&fit=crop&w=800&q=80" alt="Client Delivery" class="w-full h-80 rounded-xl border border-gray-800/80 object-cover shadow-md group-hover:scale-[1.02] transition duration-300">
+        <img src="IMG_0691.jpg" alt="Client Delivery" class="w-full h-80 rounded-xl border border-gray-800/80 object-cover shadow-md group-hover:scale-[1.02] transition duration-300">
       </div>
       <div class="p-6 border-t border-gray-800/80 bg-gray-950">
         <div class="text-yellow-400 text-sm mb-1">★★★★★</div>
@@ -201,10 +201,10 @@
       </div>
     </div>
 
-    <!-- Card 3 -->
+    <!-- Card 3: Delivery Photo & Review (IMG_1153.jpg) -->
     <div class="bg-gradient-to-b from-gray-900/90 to-gray-950 border border-gray-800/80 rounded-2xl overflow-hidden shadow-xl flex flex-col group hover:border-cyan-500/40 transition duration-300">
       <div class="p-6 bg-gray-950/50 flex-1 flex flex-col justify-center">
-        <img src="https://images.unsplash.com/photo-1542282088-72c9c27ed0cd?auto=format&fit=crop&w=800&q=80" alt="Client Delivery" class="w-full h-80 rounded-xl border border-gray-800/80 object-cover shadow-md group-hover:scale-[1.02] transition duration-300">
+        <img src="IMG_1153.jpg" alt="Client Delivery & Review" class="w-full h-80 rounded-xl border border-gray-800/80 object-contain bg-black shadow-md group-hover:scale-[1.02] transition duration-300">
       </div>
       <div class="p-6 border-t border-gray-800/80 bg-gray-950">
         <div class="text-yellow-400 text-sm mb-1">★★★★★</div>
@@ -212,10 +212,10 @@
       </div>
     </div>
 
-    <!-- Card 4 -->
+    <!-- Card 4: Delivery Photo (IMG_5598.jpg) -->
     <div class="bg-gradient-to-b from-gray-900/90 to-gray-950 border border-gray-800/80 rounded-2xl overflow-hidden shadow-xl flex flex-col group hover:border-cyan-500/40 transition duration-300">
       <div class="p-6 bg-gray-950/50 flex-1 flex flex-col justify-center">
-        <img src="https://images.unsplash.com/photo-1563720223185-11003d516935?auto=format&fit=crop&w=800&q=80" alt="Client Delivery" class="w-full h-80 rounded-xl border border-gray-800/80 object-cover shadow-md group-hover:scale-[1.02] transition duration-300">
+        <img src="IMG_5598.jpg" alt="Client Delivery" class="w-full h-80 rounded-xl border border-gray-800/80 object-cover shadow-md group-hover:scale-[1.02] transition duration-300">
       </div>
       <div class="p-6 border-t border-gray-800/80 bg-gray-950">
         <div class="text-yellow-400 text-sm mb-1">★★★★★</div>
@@ -223,10 +223,10 @@
       </div>
     </div>
 
-    <!-- Card 5 -->
+    <!-- Card 5: Delivery Photo (IMG_0689.jpg) -->
     <div class="bg-gradient-to-b from-gray-900/90 to-gray-950 border border-gray-800/80 rounded-2xl overflow-hidden shadow-xl flex flex-col md:col-span-2 lg:col-span-2 group hover:border-cyan-500/40 transition duration-300">
       <div class="p-6 bg-gray-950/50 flex-1 flex flex-col justify-center">
-        <img src="https://images.unsplash.com/photo-1492144534655-ae79c964c9d7?auto=format&fit=crop&w=1200&q=80" alt="Client Delivery" class="w-full h-80 rounded-xl border border-gray-800/80 object-cover shadow-md group-hover:scale-[1.02] transition duration-300">
+        <img src="IMG_0689.jpg" alt="Client Delivery" class="w-full h-80 rounded-xl border border-gray-800/80 object-cover shadow-md group-hover:scale-[1.02] transition duration-300">
       </div>
       <div class="p-6 border-t border-gray-800/80 bg-gray-950">
         <div class="text-yellow-400 text-sm mb-1">★★★★★</div>
@@ -336,7 +336,7 @@
       referralForm.addEventListener("submit", function (e) {
         e.preventDefault();
 
-        emailjs.sendForm(
+        emailjs.sendFile( // or sendForm
           "service_gyx73ey",
           "template_8agwm1c",
           this
