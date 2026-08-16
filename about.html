@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>About Us | Grate Auto Deals</title>
+
+  <!-- ✅ Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  
+  <style>
+    @keyframes pulseGlow {
+      0%, 100% { opacity: 0.35; transform: scale(1); }
+      50% { opacity: 0.6; transform: scale(1.08); }
+    }
+    .animate-pulse-glow {
+      animation: pulseGlow 7s ease-in-out infinite;
+    }
+
+    /* Entrance Animation for the Profile Picture */
+    @keyframes fadeSlideIn {
+      0% {
+        opacity: 0;
+        transform: translateY(20px) scale(0.96);
+      }
+      100% {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+      }
+    }
+    .animate-fade-slide {
+      animation: fadeSlideIn 1.2s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+    }
+  </style>
+</head>
+
+<body class="scroll-smooth bg-gray-950 text-gray-100 antialiased selection:bg-cyan-400/30 selection:text-white">
+
+<!-- NAV -->
+<nav class="bg-gray-950/85 backdrop-blur-xl text-white fixed top-0 w-full z-50 border-b border-gray-800/80 shadow-2xl shadow-cyan-950/20">
+  <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+
+    <!-- LEFT LOGO -->
+    <a href="index.html" class="flex items-center gap-2 group">
+      <div class="w-9 h-9 rounded-xl bg-gradient-to-tr from-blue-600 via-indigo-500 to-cyan-400 flex items-center justify-center font-black text-xl text-white shadow-lg shadow-cyan-500/20 group-hover:scale-105 transition duration-300">
+        G
+      </div>
+      <span class="font-black text-xl tracking-tight text-transparent bg-clip-text bg-gradient-to-r from-white via-cyan-100 to-blue-400">
+        Grate Auto Deals
+      </span>
+    </a>
+
+    <!-- RIGHT NAV -->
+    <div class="flex items-center space-x-6">
+      <div class="hidden md:flex items-center space-x-8 text-sm font-semibold text-gray-300">
+        <a href="index.html" class="hover:text-cyan-300 transition duration-200">Home</a>
+        <a href="about.html" class="text-cyan-300 transition duration-200">About Us</a>
+        <a href="services.html" class="hover:text-cyan-300 transition duration-200">Services</a>
+        <a href="reviews.html" class="hover:text-cyan-300 transition duration-200">Deliveries & Rewards</a>
+        <a href="index.html#consultation-form" class="hover:text-cyan-300 transition duration-200">Contact Us</a>
+      </div>
+
+      <button id="menu-btn" class="md:hidden text-2xl text-gray-300 focus:outline-none hover:text-white transition" aria-label="Toggle Menu">
+        ☰
+      </button>
+    </div>
+
+  </div>
+
+  <!-- MOBILE MENU -->
+  <div id="mobile-menu" class="hidden md:hidden bg-gray-950/95 border-b border-gray-800 backdrop-blur-2xl flex flex-col text-center space-y-4 py-6 font-semibold text-gray-200">
+    <a href="index.html" class="hover:text-cyan-300 transition">Home</a>
+    <a href="about.html" class="text-cyan-300 transition">About Us</a>
+    <a href="services.html" class="hover:text-cyan-300 transition">Services</a>
+    <a href="reviews.html" class="hover:text-cyan-300 transition">Deliveries & Rewards</a>
+    <a href="index.html#consultation-form" class="hover:text-cyan-300 transition">Contact Us</a>
+  </div>
+</nav>
+
+<div class="h-16"></div>
+
+<!-- HERO / ABOUT SECTION -->
+<section class="relative bg-gray-950 text-white py-20 md:py-28 px-6 overflow-hidden">
+  
+  <!-- VIBRANT AMBIENT BACKGROUND GLOWS -->
+  <div class="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[650px] h-[380px] bg-gradient-to-r from-blue-600/25 via-indigo-600/20 to-cyan-400/25 blur-[150px] rounded-full pointer-events-none animate-pulse-glow"></div>
+
+  <div class="max-w-7xl mx-auto relative z-10">
+    <div class="text-center mb-16">
+      <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-cyan-500/10 border border-cyan-500/25 text-cyan-300 text-xs font-bold uppercase tracking-widest mb-6 shadow-lg shadow-cyan-500/10">
+        <span class="w-2 h-2 rounded-full bg-cyan-400 animate-ping"></span> Transparent, Consumer-First Advocacy
+      </div>
+
+      <h1 class="text-4xl md:text-6xl font-black mb-6 tracking-tight text-white leading-tight">
+        Behind the Vision: <span class="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-indigo-300 to-blue-500">Grate Auto Deals</span>
+      </h1>
+      <p class="text-gray-300 text-base md:text-lg max-w-2xl mx-auto font-medium">
+        Built on years of high-volume finance expertise, a passion for consumer advocacy, and a mission to completely eliminate dealership friction.
+      </p>
+    </div>
+
+    <!-- MAIN BIO CONTAINER -->
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center bg-gradient-to-b from-gray-900/90 to-gray-950 border border-gray-800/80 rounded-3xl p-8 md:p-12 shadow-2xl relative">
+      
+      <!-- FOUNDER PHOTO COLUMN WITH ENTRANCE ANIMATION -->
+      <div class="lg:col-span-5 flex flex-col items-center">
+        <div class="relative w-full max-w-md rounded-2xl overflow-hidden border border-gray-800/80 shadow-2xl group animate-fade-slide">
+          <div class="absolute inset-0 bg-gradient-to-t from-gray-950/80 via-transparent to-transparent z-10 pointer-events-none"></div>
+          <img src="IMG_2725.jpg" alt="Aaron Grate - Founder of Grate Auto Deals" class="w-full h-[460px] object-cover object-center group-hover:scale-102 transition duration-300">
+          
+          <div class="absolute bottom-4 left-4 right-4 z-20 text-center bg-gray-950/80 backdrop-blur-md border border-gray-800 rounded-xl p-3 shadow-lg">
+            <h3 class="text-base font-black text-white">Aaron Grate</h3>
+            <p class="text-xs text-cyan-300 font-semibold">Founder & Senior Automotive Broker</p>
+          </div>
+        </div>
+
+        <div class="mt-6 grid grid-cols-3 gap-4 w-full max-w-md text-center">
+          <div class="bg-gray-950/60 border border-gray-850 rounded-xl p-3">
+            <span class="block text-xl font-black text-white">8+</span>
+            <span class="text-[11px] text-gray-400 uppercase tracking-wider">Years Experience</span>
+          </div>
+          <div class="bg-gray-950/60 border border-gray-850 rounded-xl p-3">
+            <span class="block text-xl font-black text-cyan-300">100%</span>
+            <span class="text-[11px] text-gray-400 uppercase tracking-wider">Advocacy</span>
+          </div>
+          <div class="bg-gray-950/60 border border-gray-850 rounded-xl p-3">
+            <span class="block text-xl font-black text-white">0</span>
+            <span class="text-[11px] text-gray-400 uppercase tracking-wider">Bad Contracts</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- STORY CONTENT COLUMN -->
+      <div class="lg:col-span-7 space-y-6 text-gray-300 text-base leading-relaxed">
+        
+        <h2 class="text-2xl md:text-3xl font-black text-white tracking-tight">
+          Why I Started Grate Auto Deals
+        </h2>
+
+        <p>
+          Having spent nearly a decade immersed in the automotive industry—ranging from high-volume sales at <strong class="text-white">Honda Culver City</strong>[cite: 1] to leading finance operations as a Senior Finance Manager for groups like <strong class="text-white">AutoNation Volkswagen Mall of GA</strong>[cite: 1] and <strong class="text-white">Asbury Automotive Group</strong>[cite: 1]—I’ve seen every side of the car-buying business from the inside out. I hold a Bachelor of Arts in Accounting and Information Systems from <strong class="text-white">Grambling State University</strong>[cite: 1], giving me a rigorous, analytical foundation in financial structure, credit assessment[cite: 1], and regulatory compliance[cite: 1].
+        </p>
+
+        <p>
+          Yet, even with all that background knowledge, whenever I stepped into the consumer shoes, I felt the same frustrations everyone else does: the endless waiting, the exhausting sales tactics, inventory shortages, and the constant anxiety of winding up in a bad contract. I watched good people lose hours of their weekends, get bogged down by bad business practices, or struggle with a lack of transparency simply because dealerships are built to maximize their own margins, not yours.
+        </p>
+
+        <p>
+          <strong class="text-cyan-300">That is why I launched Grate Auto Deals.</strong>
+        </p>
+
+        <p>
+          I wanted to change the narrative. As a consumer myself, I know how valuable your time and peace of mind are. I've personally experienced the sting of losing customers in my past corporate roles simply because dealerships were bogged down by red tape, slow processes, or lack of inventory. I realized that my insider knowledge—structuring deals, analyzing complex credit profiles[cite: 1], and negotiating directly with a vast network of lenders[cite: 1]—belonged on <em>your</em> side of the table.
+        </p>
+
+        <!-- CUSTOMER PERSPECTIVE HIGHLIGHT BOX -->
+        <div class="p-5 rounded-2xl bg-cyan-950/20 border border-cyan-500/30 my-6 space-y-3">
+          <h3 class="text-sm font-bold text-cyan-300 uppercase tracking-wider flex items-center gap-2">
+            <span>💡</span> The Customer's Perspective: What It Feels Like
+          </h3>
+          <p class="text-sm text-gray-300 italic">
+            "Imagine waking up on a Saturday morning dreading the thought of spending 6 hours at a dealership, arguing over hidden fees, dealing with high-pressure finance pitches, or worrying if your credit score is going to be used against you. Now, imagine skipping all of that entirely—relaxing at home while an industry insider negotiates the best terms, protects you from predatory fine print, and delivers your car straight to your driveway. That is the peace of mind I want every client to experience."
+          </p>
+        </div>
+
+        <p>
+          Whether you have pristine credit, are working to rebuild bad credit, have no credit at all, or are ready to pay cash, my goal is simple: <strong class="text-white">to bring you the absolute best deal possible without you having to lift a finger.</strong> You don't have to spend your Saturday sitting under fluorescent dealership lights or fighting off high-pressure sales reps. I handle the negotiating, the contract auditing, the lender navigation, and the legwork from start to finish. 
+        </p>
+
+        <p class="font-medium text-white border-l-2 border-cyan-400 pl-4 py-1 italic">
+          "My promise is transparency, safety, and a genuinely honest conversation. I'm here to make the process effortless so you can drive home knowing you got an incredible deal you can trust."
+        </p>
+
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="bg-gray-950 border-t border-gray-800/80 text-gray-500 text-center py-10 text-sm">
+  <p>© 2026 Grate Auto Deals. All rights reserved.</p>
+</footer>
+
+<!-- ✅ MOBILE MENU SCRIPT -->
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const menuBtn = document.getElementById("menu-btn");
+    const mobileMenu = document.getElementById("mobile-menu");
+
+    if (menuBtn && mobileMenu) {
+      menuBtn.onclick = function () {
+        mobileMenu.classList.toggle("hidden");
+      };
+
+      const links = mobileMenu.getElementsByTagName("a");
+      for (let i = 0; i < links.length; i++) {
+        links[i].onclick = function () {
+          mobileMenu.classList.add("hidden");
+        };
+      }
+    }
+  });
+</script>
+
+</body>
+</html>
