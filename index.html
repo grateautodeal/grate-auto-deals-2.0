@@ -250,11 +250,11 @@
       <input type="email" name="email" placeholder="Email Address" required
              class="w-full bg-gray-950/80 border border-gray-800 text-white p-4 rounded-xl focus:border-purple-400 focus:ring-1 focus:ring-purple-400 focus:outline-none transition">
 
-      <input type="tel" name="phone" placeholder="Phone Number (optional)"
+      <input type="tel" id="phone" name="phone" placeholder="Phone Number (optional)" maxlength="14"
              class="w-full bg-gray-950/80 border border-gray-800 text-white p-4 rounded-xl focus:border-purple-400 focus:ring-1 focus:ring-purple-400 focus:outline-none transition">
 
       <select id="service-select" name="service"
-              class="w-full bg-gray-950/80 border border-gray-800 text-white p-4 rounded-xl focus:border-purple-400 focus:ring-1 focus:ring-purple-400 focus:outline-none transition">
+             class="w-full bg-gray-950/80 border border-gray-800 text-white p-4 rounded-xl focus:border-purple-400 focus:ring-1 focus:ring-purple-400 focus:outline-none transition">
         <option value="">Select Service</option>
         <option>General Inquiry</option>
         <option>Basic Deal Search</option>
@@ -345,6 +345,15 @@
 
     if (serviceSelect && serviceParam) {
       serviceSelect.value = serviceParam;
+    }
+
+    // Auto-formatting phone number (US Format: (XXX) XXX-XXXX)
+    const phoneInput = document.getElementById("phone");
+    if (phoneInput) {
+      phoneInput.addEventListener("input", function (e) {
+        let x = e.target.value.replace(/\D/g, "").match(/(\d{0,3})(\d{0,3})(\d{0,4})/);
+        e.target.value = !x[2] ? x[1] : "(" + x[1] + ") " + x[2] + (x[3] ? "-" + x[3] : "");
+      });
     }
 
     emailjs.init("79GpKgIC8W7-vVqDA");
