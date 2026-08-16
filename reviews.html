@@ -8,6 +8,17 @@
   <!-- ✅ Tailwind CSS -->
   <script src="https://cdn.tailwindcss.com"></script>
   
+  <!-- ✅ EmailJS SDK -->
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+  <script type="text/javascript">
+    (function(){
+      // Initialize EmailJS with your Public Key
+      emailjs.init({
+        publicKey: "79GpKgIC8W7-vVqDA",
+      });
+    })();
+  </script>
+  
   <!-- ✅ Custom Styles for Uniform Picture Scaling & Interactive Lightbox -->
   <style>
     .no-scrollbar::-webkit-scrollbar {
@@ -181,6 +192,99 @@
   </div>
 </section>
 
+<!-- REFERRAL FORM SECTION (SIMPLIFIED & STREAMLINED) -->
+<section id="referral-form-section" class="py-24 px-6 max-w-3xl mx-auto relative">
+  <div class="bg-gradient-to-b from-gray-900/90 to-gray-950 border border-gray-800/80 rounded-3xl p-8 md:p-12 shadow-2xl relative">
+    <div class="text-center mb-10">
+      <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-purple-500/10 border border-purple-500/20 text-purple-300 text-xs font-bold uppercase tracking-widest mb-3">
+        Quick Submission
+      </div>
+      <h2 class="text-2xl md:text-3xl font-black text-white tracking-tight">Referral Submission Form</h2>
+      <p class="text-gray-400 text-sm mt-2">Just a few quick details and you're all set to claim your reward!</p>
+    </div>
+
+    <form id="referral-form" class="space-y-6">
+      
+      <!-- STEP 1: YOUR INFO -->
+      <div class="space-y-4 bg-gray-950/60 border border-gray-800/80 p-6 rounded-2xl">
+        <h3 class="text-sm font-extrabold text-purple-300 uppercase tracking-wider flex items-center gap-2">
+          <span class="w-5 h-5 rounded-full bg-purple-500/20 flex items-center justify-center text-xs">1</span> Your Information (Referrer)
+        </h3>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+          <div>
+            <label class="block text-xs font-semibold text-gray-300 mb-1.5" for="referrer_name">Full Name <span class="text-purple-400">*</span></label>
+            <input type="text" id="referrer_name" name="referrer_name" required
+                   class="w-full bg-gray-900 border border-gray-800 rounded-xl px-4 py-3 text-white placeholder-gray-500 focus:outline-none focus:border-purple-500 transition text-sm"
+                   placeholder="John Doe">
+          </div>
+
+          <div>
+            <label class="block text-xs font-semibold text-gray-300 mb-1.5" for="referrer_phone">Phone Number <span class="text-purple-400">*</span></label>
+            <input type="tel" id="referrer_phone" name="referrer_phone" required
+                   class="w-full bg-gray-900 border border-gray-800 rounded-xl px-4 py-3 text-white placeholder-gray-500 focus:outline-none focus:border-purple-500 transition text-sm"
+                   placeholder="(555) 000-0000">
+          </div>
+        </div>
+
+        <div>
+          <label class="block text-xs font-semibold text-gray-300 mb-1.5" for="referrer_email">Email Address <span class="text-purple-400">*</span></label>
+          <input type="email" id="referrer_email" name="referrer_email" required
+                 class="w-full bg-gray-900 border border-gray-800 rounded-xl px-4 py-3 text-white placeholder-gray-500 focus:outline-none focus:border-purple-500 transition text-sm"
+                 placeholder="john@example.com">
+        </div>
+      </div>
+
+      <!-- STEP 2: FRIEND'S INFO -->
+      <div class="space-y-4 bg-gray-950/60 border border-gray-800/80 p-6 rounded-2xl">
+        <h3 class="text-sm font-extrabold text-purple-300 uppercase tracking-wider flex items-center gap-2">
+          <span class="w-5 h-5 rounded-full bg-purple-500/20 flex items-center justify-center text-xs">2</span> Friend's Information (Referred)
+        </h3>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+          <div>
+            <label class="block text-xs font-semibold text-gray-300 mb-1.5" for="friend_name">Friend's Full Name <span class="text-purple-400">*</span></label>
+            <input type="text" id="friend_name" name="friend_name" required
+                   class="w-full bg-gray-900 border border-gray-800 rounded-xl px-4 py-3 text-white placeholder-gray-500 focus:outline-none focus:border-purple-500 transition text-sm"
+                   placeholder="Jane Smith">
+          </div>
+
+          <div>
+            <label class="block text-xs font-semibold text-gray-300 mb-1.5" for="friend_phone">Friend's Phone Number <span class="text-purple-400">*</span></label>
+            <input type="tel" id="friend_phone" name="friend_phone" required
+                   class="w-full bg-gray-900 border border-gray-800 rounded-xl px-4 py-3 text-white placeholder-gray-500 focus:outline-none focus:border-purple-500 transition text-sm"
+                   placeholder="(555) 000-0000">
+          </div>
+        </div>
+
+        <div>
+          <label class="block text-xs font-semibold text-gray-300 mb-1.5" for="friend_email">Friend's Email Address <span class="text-purple-400">*</span></label>
+          <input type="email" id="friend_email" name="friend_email" required
+                 class="w-full bg-gray-900 border border-gray-800 rounded-xl px-4 py-3 text-white placeholder-gray-500 focus:outline-none focus:border-purple-500 transition text-sm"
+                 placeholder="jane@example.com">
+        </div>
+
+        <div>
+          <label class="block text-xs font-semibold text-gray-300 mb-1.5" for="message">What vehicle are they looking for? (Optional)</label>
+          <input type="text" id="message" name="message"
+                 class="w-full bg-gray-900 border border-gray-800 rounded-xl px-4 py-3 text-white placeholder-gray-500 focus:outline-none focus:border-purple-500 transition text-sm"
+                 placeholder="e.g., CPO SUV, Sedan, or specific model">
+        </div>
+      </div>
+
+      <!-- Form Status / Response Message -->
+      <div id="form-status" class="hidden text-center text-sm font-semibold py-3 px-4 rounded-xl"></div>
+
+      <div class="text-center pt-2">
+        <button type="submit" id="submit-btn"
+                class="w-full inline-flex items-center justify-center bg-gradient-to-r from-purple-500 via-indigo-600 to-blue-600 hover:from-purple-400 hover:to-blue-500 text-white px-10 py-4 rounded-xl font-extrabold text-base shadow-xl shadow-purple-500/20 hover:shadow-purple-500/30 transition duration-200">
+          Submit Referral
+        </button>
+      </div>
+    </form>
+  </div>
+</section>
+
 <!-- CUSTOMER REVIEWS & DELIVERIES SHOWCASE -->
 <section id="customer-reviews" class="py-24 px-6 max-w-7xl mx-auto relative">
   <div class="text-center mb-16">
@@ -263,6 +367,41 @@
           mobileMenu.classList.add("hidden");
         };
       }
+    }
+
+    // EmailJS Form Integration
+    const referralForm = document.getElementById("referral-form");
+    const formStatus = document.getElementById("form-status");
+    const submitBtn = document.getElementById("submit-btn");
+
+    if (referralForm) {
+      referralForm.addEventListener("submit", function(event) {
+        event.preventDefault();
+
+        submitBtn.disabled = true;
+        submitBtn.textContent = "Sending Referral...";
+        formStatus.classList.add("hidden");
+
+        const SERVICE_ID = "service_gyx73ey";
+        const TEMPLATE_ID = "template_15618jp";
+
+        emailjs.sendForm(SERVICE_ID, TEMPLATE_ID, this)
+          .then(function() {
+            formStatus.textContent = "Success! Your referral has been submitted. We will be in touch shortly.";
+            formStatus.className = "text-center text-sm font-semibold py-3 px-4 rounded-xl bg-purple-500/20 text-purple-300 border border-purple-500/30";
+            formStatus.classList.remove("hidden");
+            referralForm.reset();
+            submitBtn.disabled = false;
+            submitBtn.textContent = "Submit Referral";
+          }, function(error) {
+            formStatus.textContent = "Oops! Something went wrong. Please try again or contact us directly.";
+            formStatus.className = "text-center text-sm font-semibold py-3 px-4 rounded-xl bg-red-500/20 text-red-300 border border-red-500/30";
+            formStatus.classList.remove("hidden");
+            submitBtn.disabled = false;
+            submitBtn.textContent = "Submit Referral";
+            console.error("FAILED...", error);
+          });
+      });
     }
   });
 </script>
