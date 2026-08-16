@@ -5,22 +5,41 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Services | Grate Auto Deals</title>
 
-  <!-- ✅ Tailwind -->
+  <!-- ✅ Tailwind CSS -->
   <script src="https://cdn.tailwindcss.com"></script>
+  
+  <!-- ✅ Custom Styles for Mobile Scrollbar & Ambient Glows -->
+  <style>
+    .no-scrollbar::-webkit-scrollbar {
+      display: none;
+    }
+    .no-scrollbar {
+      -ms-overflow-style: none;
+      scrollbar-width: none;
+    }
+
+    @keyframes pulseGlow {
+      0%, 100% { opacity: 0.2; transform: scale(1); }
+      50% { opacity: 0.4; transform: scale(1.05); }
+    }
+    .animate-pulse-glow {
+      animation: pulseGlow 8s ease-in-out infinite;
+    }
+  </style>
 </head>
 
-<body class="bg-gray-950 text-gray-100 antialiased selection:bg-purple-500 selection:text-white">
+<body class="bg-gray-950 text-gray-100 antialiased selection:bg-purple-400/30 selection:text-white">
 
 <!-- NAV -->
-<nav class="bg-gray-950/85 backdrop-blur-xl text-white fixed top-0 w-full z-50 border-b border-gray-800/80 shadow-2xl shadow-cyan-950/20">
+<nav class="bg-gray-950/80 backdrop-blur-xl text-white fixed top-0 w-full z-50 border-b border-gray-800/80 shadow-2xl shadow-black/50">
   <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
 
     <!-- LEFT LOGO -->
     <a href="index.html" class="flex items-center gap-2 group">
-      <div class="w-9 h-9 rounded-xl bg-gradient-to-tr from-blue-600 via-indigo-500 to-cyan-400 flex items-center justify-center font-black text-xl text-white shadow-lg shadow-cyan-500/20 group-hover:scale-105 transition duration-300">
+      <div class="w-9 h-9 rounded-xl bg-gradient-to-tr from-blue-600 via-purple-500/80 to-cyan-400 flex items-center justify-center font-black text-xl text-white shadow-lg shadow-purple-500/15 group-hover:scale-105 transition duration-300">
         G
       </div>
-      <span class="font-black text-xl tracking-tight text-transparent bg-clip-text bg-gradient-to-r from-white via-cyan-100 to-blue-400">
+      <span class="font-black text-xl tracking-tight text-transparent bg-clip-text bg-gradient-to-r from-white via-purple-200/80 to-blue-400">
         Grate Auto Deals
       </span>
     </a>
@@ -29,10 +48,11 @@
     <div class="flex items-center space-x-6">
       <!-- DESKTOP LINKS -->
       <div class="hidden md:flex items-center space-x-8 text-sm font-semibold text-gray-300">
-        <a href="index.html" class="hover:text-cyan-300 transition duration-200">Home</a>
-        <a href="services.html" class="text-cyan-300 font-bold transition duration-200">Services</a>
-        <a href="reviews.html" class="hover:text-cyan-300 transition duration-200">Deliveries & Rewards</a>
-        <a href="index.html#consultation-form" class="hover:text-cyan-300 transition duration-200">Contact Us</a>
+        <a href="index.html" class="hover:text-purple-300 transition duration-200">Home</a>
+        <a href="services.html" class="text-purple-300 transition duration-200">Services</a>
+        <a href="reviews.html" class="hover:text-purple-300 transition duration-200">Deliveries & Rewards</a>
+        <a href="about.html" class="hover:text-purple-300 transition duration-200">About Us</a>
+        <a href="index.html#consultation-form" class="hover:text-purple-300 transition duration-200">Contact Us</a>
       </div>
 
       <!-- HAMBURGER BUTTON -->
@@ -45,51 +65,54 @@
 
   <!-- MOBILE MENU -->
   <div id="mobile-menu" class="hidden md:hidden bg-gray-950/95 border-b border-gray-800 backdrop-blur-2xl flex flex-col text-center space-y-4 py-6 font-semibold text-gray-200">
-    <a href="index.html" class="hover:text-cyan-300 transition">Home</a>
-    <a href="services.html" class="text-cyan-300 font-bold transition">Services</a>
-    <a href="reviews.html" class="hover:text-cyan-300 transition">Deliveries & Rewards</a>
-    <a href="index.html#consultation-form" class="hover:text-cyan-300 transition">Contact Us</a>
+    <a href="index.html" class="hover:text-purple-300 transition">Home</a>
+    <a href="services.html" class="text-purple-300 transition">Services</a>
+    <a href="reviews.html" class="hover:text-purple-300 transition">Deliveries & Rewards</a>
+    <a href="about.html" class="hover:text-purple-300 transition">About Us</a>
+    <a href="index.html#consultation-form" class="hover:text-purple-300 transition">Contact Us</a>
   </div>
 </nav>
 
 <div class="h-16"></div>
 
 <!-- HEADER -->
-<section class="py-16 px-6 text-center bg-gray-950 relative overflow-hidden">
-  <!-- Soft Purple & Blue Ambient Background Glow -->
-  <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[300px] bg-purple-600/15 blur-[140px] rounded-full pointer-events-none"></div>
-  <div class="absolute top-1/3 right-1/4 w-[300px] h-[200px] bg-blue-600/10 blur-[100px] rounded-full pointer-events-none"></div>
+<section class="py-20 md:py-28 px-6 text-center bg-gray-950 relative overflow-hidden">
+  
+  <!-- AMBIENT BACKGROUND GLOWS (Soft Purple & Blue Blend) -->
+  <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[350px] bg-gradient-to-r from-blue-600/15 via-purple-600/15 to-cyan-500/10 blur-[140px] rounded-full pointer-events-none animate-pulse-glow"></div>
+  <div class="absolute top-1/3 right-10 w-[300px] h-[300px] bg-purple-500/10 blur-[110px] rounded-full pointer-events-none"></div>
 
   <div class="relative z-10 max-w-3xl mx-auto">
-    <span class="inline-block bg-purple-500/10 border border-purple-500/30 text-purple-400 text-xs font-bold tracking-widest px-4 py-1.5 rounded-full uppercase shadow-lg mb-4">
-      Exclusive Brokerage & Care
+    <span class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-purple-500/10 border border-purple-500/20 text-purple-300 text-xs font-bold uppercase tracking-widest mb-6">
+      <span class="w-2 h-2 rounded-full bg-purple-400 animate-ping"></span> Exclusive Brokerage & Care
     </span>
-    <h1 class="text-4xl md:text-5xl font-extrabold mb-4 text-white tracking-tight">Services and Pricing</h1>
+    
+    <h1 class="text-4xl md:text-6xl font-black mb-6 text-white tracking-tight">Services and Pricing</h1>
 
-    <p class="text-gray-300 max-w-2xl mx-auto mb-4 text-base md:text-lg">
+    <p class="text-gray-300 max-w-2xl mx-auto mb-6 text-base md:text-lg font-medium leading-relaxed">
       Professional automotive brokerage and concierge services designed to save you time, money, and frustration.
     </p>
 
-    <p class="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 via-indigo-300 to-blue-400 font-bold text-lg">
+    <p class="text-transparent bg-clip-text bg-gradient-to-r from-purple-300 via-indigo-300 to-cyan-300 font-bold text-base md:text-lg">
       We find the right vehicle, negotiate the best deal, and handle the process so you do not have to.
     </p>
   </div>
 </section>
 
 <!-- SERVICES -->
-<section class="py-16 px-6 bg-gray-950">
-  <div class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-6">
+<section class="py-16 px-6 bg-gray-950 max-w-7xl mx-auto">
+  <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
 
     <!-- BASIC -->
-    <div class="bg-gray-900/90 border border-gray-800 hover:border-purple-500/50 rounded-2xl shadow-xl overflow-hidden flex flex-col justify-between transition duration-300">
+    <div class="bg-gradient-to-b from-gray-900/90 to-gray-950 border border-gray-800/80 hover:border-purple-500/40 rounded-2xl shadow-xl overflow-hidden flex flex-col justify-between transition duration-300 group">
       <div>
-        <div class="h-44 overflow-hidden relative">
-          <img src="https://images.unsplash.com/photo-1552519507-da3b142c6e3d?auto=format&fit=crop&w=800&q=80" alt="Basic Search Car" class="w-full h-full object-cover hover:scale-105 transition duration-500" />
-          <div class="absolute inset-0 bg-gradient-to-t from-gray-900 via-transparent to-transparent"></div>
+        <div class="h-48 overflow-hidden relative">
+          <img src="https://images.unsplash.com/photo-1552519507-da3b142c6e3d?auto=format&fit=crop&w=800&q=80" alt="Basic Search Car" class="w-full h-full object-cover group-hover:scale-105 transition duration-500" />
+          <div class="absolute inset-0 bg-gradient-to-t from-gray-950 via-transparent to-transparent"></div>
         </div>
-        <div class="p-6">
-          <h2 class="text-xl font-bold mb-3 text-white">Basic Deal Search</h2>
-          <ul class="list-disc pl-5 mb-6 text-gray-300 space-y-1.5 text-sm">
+        <div class="p-7">
+          <h2 class="text-2xl font-bold mb-3 text-white">Basic Deal Search</h2>
+          <ul class="list-disc pl-5 mb-6 text-gray-400 space-y-2 text-sm">
             <li>Targeted vehicle search</li>
             <li>True market pricing analysis</li>
             <li>Clear deal recommendations</li>
@@ -97,27 +120,27 @@
         </div>
       </div>
 
-      <div class="p-6 pt-0">
+      <div class="p-7 pt-0">
         <button type="button"
                 onclick="openModal('basicModal')"
-                class="block w-full bg-gray-800 hover:bg-purple-600 text-white py-3 rounded-xl border border-gray-700 hover:border-purple-500 font-bold transition">
+                class="block w-full bg-gray-900 hover:bg-purple-600 text-white py-3.5 rounded-xl border border-gray-800 hover:border-purple-500 font-bold transition">
           Learn More
         </button>
       </div>
     </div>
 
-    <!-- FULL -->
-    <div class="bg-gray-900/90 border-2 border-purple-500 rounded-2xl shadow-2xl overflow-hidden relative flex flex-col justify-between transform md:-translate-y-2">
-      <span class="absolute top-3 right-3 z-20 bg-gradient-to-r from-purple-600 to-indigo-600 text-white font-extrabold text-xs uppercase px-3.5 py-1 rounded-full shadow-lg">Most Popular</span>
+    <!-- FULL (MOST POPULAR) -->
+    <div class="bg-gradient-to-b from-gray-900/90 to-gray-950 border-2 border-purple-500/80 rounded-2xl shadow-2xl shadow-purple-500/10 overflow-hidden relative flex flex-col justify-between transform md:-translate-y-2 group">
+      <span class="absolute top-3 right-3 z-20 bg-gradient-to-r from-blue-600 via-purple-600 to-cyan-500 text-white font-extrabold text-xs uppercase px-3.5 py-1.5 rounded-full shadow-lg">Most Popular</span>
 
       <div>
-        <div class="h-44 overflow-hidden relative">
-          <img src="https://images.unsplash.com/photo-1503376780353-7e6692767b70?auto=format&fit=crop&w=800&q=80" alt="Full Service Broker Car" class="w-full h-full object-cover hover:scale-105 transition duration-500" />
-          <div class="absolute inset-0 bg-gradient-to-t from-gray-900 via-transparent to-transparent"></div>
+        <div class="h-48 overflow-hidden relative">
+          <img src="https://images.unsplash.com/photo-1503376780353-7e6692767b70?auto=format&fit=crop&w=800&q=80" alt="Full Service Broker Car" class="w-full h-full object-cover group-hover:scale-105 transition duration-500" />
+          <div class="absolute inset-0 bg-gradient-to-t from-gray-950 via-transparent to-transparent"></div>
         </div>
-        <div class="p-6">
-          <h2 class="text-xl font-bold mb-3 text-white">Full Service Broker</h2>
-          <ul class="list-disc pl-5 mb-6 text-gray-300 space-y-1.5 text-sm">
+        <div class="p-7">
+          <h2 class="text-2xl font-bold mb-3 text-white">Full Service Broker</h2>
+          <ul class="list-disc pl-5 mb-6 text-gray-400 space-y-2 text-sm">
             <li>Full vehicle sourcing</li>
             <li>Dealer negotiation</li>
             <li>Trade-in guidance</li>
@@ -126,25 +149,25 @@
         </div>
       </div>
 
-      <div class="p-6 pt-0">
+      <div class="p-7 pt-0">
         <button type="button"
                 onclick="openModal('fullModal')"
-                class="block w-full bg-gradient-to-r from-purple-600 via-indigo-600 to-blue-600 hover:from-purple-500 hover:to-blue-500 text-white py-4 rounded-xl font-extrabold shadow-lg shadow-purple-500/25 transition">
+                class="block w-full bg-gradient-to-r from-blue-600 via-purple-600/90 to-cyan-500 hover:from-blue-500 hover:to-cyan-400 text-white py-4 rounded-xl font-extrabold shadow-lg shadow-purple-500/20 transition">
           Learn More
         </button>
       </div>
     </div>
 
     <!-- PREMIUM -->
-    <div class="bg-gray-900/90 border border-gray-800 hover:border-purple-500/50 rounded-2xl shadow-xl overflow-hidden flex flex-col justify-between transition duration-300">
+    <div class="bg-gradient-to-b from-gray-900/90 to-gray-950 border border-gray-800/80 hover:border-purple-500/40 rounded-2xl shadow-xl overflow-hidden flex flex-col justify-between transition duration-300 group">
       <div>
-        <div class="h-44 overflow-hidden relative">
-          <img src="https://images.unsplash.com/photo-1617814076367-b759c7d7e738?auto=format&fit=crop&w=800&q=80" alt="Premium Concierge Car" class="w-full h-full object-cover hover:scale-105 transition duration-500" />
-          <div class="absolute inset-0 bg-gradient-to-t from-gray-900 via-transparent to-transparent"></div>
+        <div class="h-48 overflow-hidden relative">
+          <img src="https://images.unsplash.com/photo-1617814076367-b759c7d7e738?auto=format&fit=crop&w=800&q=80" alt="Premium Concierge Car" class="w-full h-full object-cover group-hover:scale-105 transition duration-500" />
+          <div class="absolute inset-0 bg-gradient-to-t from-gray-950 via-transparent to-transparent"></div>
         </div>
-        <div class="p-6">
-          <h2 class="text-xl font-bold mb-3 text-white">Premium Concierge</h2>
-          <ul class="list-disc pl-5 mb-6 text-gray-300 space-y-1.5 text-sm">
+        <div class="p-7">
+          <h2 class="text-2xl font-bold mb-3 text-white">Premium Concierge</h2>
+          <ul class="list-disc pl-5 mb-6 text-gray-400 space-y-2 text-sm">
             <li>Nationwide sourcing</li>
             <li>Luxury & rare vehicles</li>
             <li>Priority service</li>
@@ -152,10 +175,10 @@
         </div>
       </div>
 
-      <div class="p-6 pt-0">
+      <div class="p-7 pt-0">
         <button type="button"
                 onclick="openModal('premiumModal')"
-                class="block w-full bg-gray-800 hover:bg-purple-600 text-white py-4 rounded-xl border border-gray-700 hover:border-purple-500 font-bold transition">
+                class="block w-full bg-gray-900 hover:bg-purple-600 text-white py-3.5 rounded-xl border border-gray-800 hover:border-purple-500 font-bold transition">
           Learn More
         </button>
       </div>
@@ -165,94 +188,94 @@
 </section>
 
 <!-- MODALS -->
-<div id="basicModal" class="hidden fixed inset-0 bg-black/70 backdrop-blur-sm flex items-center justify-center z-50 p-4">
-  <div class="bg-gray-900 border border-gray-800 p-8 rounded-2xl max-w-md w-full relative shadow-2xl">
-    <button onclick="closeModal('basicModal')" class="absolute top-3 right-4 text-2xl text-gray-400 hover:text-white">&times;</button>
-    <h2 class="text-xl font-bold mb-4 text-white">Basic Deal Search</h2>
-    <p class="mb-4 text-gray-300 text-sm leading-relaxed">
+<div id="basicModal" class="hidden fixed inset-0 bg-black/80 backdrop-blur-md flex items-center justify-center z-50 p-4">
+  <div class="bg-gradient-to-b from-gray-900 to-gray-950 border border-gray-800 p-8 rounded-3xl max-w-md w-full relative shadow-2xl">
+    <button onclick="closeModal('basicModal')" class="absolute top-4 right-5 text-2xl text-gray-400 hover:text-white transition">&times;</button>
+    <h2 class="text-2xl font-bold mb-4 text-white">Basic Deal Search</h2>
+    <p class="mb-6 text-gray-300 text-sm leading-relaxed">
       This service gives you complete clarity before you ever step into a dealership. 
       We analyze real market data to show you exactly what a vehicle is truly worth and where the best deals are. 
       You’ll avoid overpriced listings, hidden markups, and costly mistakes that most buyers make. 
       It’s the smartest way to buy with confidence while saving both time and money.
     </p>
-    <p class="text-2xl font-black text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-indigo-300 mb-6">$1,000.00</p>
+    <p class="text-2xl font-black text-transparent bg-clip-text bg-gradient-to-r from-purple-300 to-cyan-300 mb-6">$1,000.00</p>
     <div id="paypal-basic"></div>
   </div>
 </div>
 
-<div id="fullModal" class="hidden fixed inset-0 bg-black/70 backdrop-blur-sm flex items-center justify-center z-50 p-4">
-  <div class="bg-gray-900 border border-gray-800 p-8 rounded-2xl max-w-md w-full relative shadow-2xl">
-    <button onclick="closeModal('fullModal')" class="absolute top-3 right-4 text-2xl text-gray-400 hover:text-white">&times;</button>
-    <h2 class="text-xl font-bold mb-4 text-white">Full Service Broker</h2>
-    <p class="mb-4 text-gray-300 text-sm leading-relaxed">
+<div id="fullModal" class="hidden fixed inset-0 bg-black/80 backdrop-blur-md flex items-center justify-center z-50 p-4">
+  <div class="bg-gradient-to-b from-gray-900 to-gray-950 border border-gray-800 p-8 rounded-3xl max-w-md w-full relative shadow-2xl">
+    <button onclick="closeModal('fullModal')" class="absolute top-4 right-5 text-2xl text-gray-400 hover:text-white transition">&times;</button>
+    <h2 class="text-2xl font-bold mb-4 text-white">Full Service Broker</h2>
+    <p class="mb-6 text-gray-300 text-sm leading-relaxed">
       We take over the entire buying process so you don’t have to deal with pressure, stress, or dealership tactics. 
       From sourcing the right vehicle to negotiating the final price, we handle every step on your behalf. 
       Our focus is on protecting you from hidden fees, bad contracts, dealership pressure, nonstop calls, and aggressive tactics used to influence buyers.
       We won't present an offer until it is a great one.
     </p>
-    <p class="text-2xl font-black text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-indigo-300 mb-6">$1,500.00</p>
+    <p class="text-2xl font-black text-transparent bg-clip-text bg-gradient-to-r from-purple-300 to-cyan-300 mb-6">$1,500.00</p>
     <div id="paypal-full"></div>
   </div>
 </div>
 
-<div id="premiumModal" class="hidden fixed inset-0 bg-black/70 backdrop-blur-sm flex items-center justify-center z-50 p-4">
-  <div class="bg-gray-900 border border-gray-800 p-8 rounded-2xl max-w-md w-full relative shadow-2xl">
-    <button onclick="closeModal('premiumModal')" class="absolute top-3 right-4 text-2xl text-gray-400 hover:text-white">&times;</button>
-    <h2 class="text-xl font-bold mb-4 text-white">Premium Concierge</h2>
-    <p class="mb-4 text-gray-300 text-sm leading-relaxed">
+<div id="premiumModal" class="hidden fixed inset-0 bg-black/80 backdrop-blur-md flex items-center justify-center z-50 p-4">
+  <div class="bg-gradient-to-b from-gray-900 to-gray-950 border border-gray-800 p-8 rounded-3xl max-w-md w-full relative shadow-2xl">
+    <button onclick="closeModal('premiumModal')" class="absolute top-4 right-5 text-2xl text-gray-400 hover:text-white transition">&times;</button>
+    <h2 class="text-2xl font-bold mb-4 text-white">Premium Concierge</h2>
+    <p class="mb-6 text-gray-300 text-sm leading-relaxed">
       This is a full white‑glove experience designed for buyers seeking something rare, specific, or truly high-end.
       We take complete control of the process from nationwide sourcing and securing the right vehicle to negotiating the final deal on your behalf.  
       Every detail is handled for you, including out-of-state coordination, logistics, and protection from hidden fees, dealership pressure, and aggressive sales tactics.  
       It’s the most seamless, stress-free way to secure a hard-to-find vehicle while ensuring you never settle or overpay.
     </p>
-    <p class="text-2xl font-black text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-indigo-300 mb-6">$2,000.00</p>
+    <p class="text-2xl font-black text-transparent bg-clip-text bg-gradient-to-r from-purple-300 to-cyan-300 mb-6">$2,000.00</p>
     <div id="paypal-premium"></div>
   </div>
 </div>
 
-<!-- ✅ ADDITIONAL SERVICES -->
-<section class="py-16 px-6 bg-gray-950 border-t border-gray-800/80">
-  <div class="max-w-6xl mx-auto text-center">
-    <h2 class="text-3xl font-black mb-10 text-white">Additional Services</h2>
+<!-- ADDITIONAL SERVICES -->
+<section class="py-20 px-6 bg-gray-950 border-t border-gray-800/80">
+  <div class="max-w-7xl mx-auto text-center">
+    <h2 class="text-3xl md:text-4xl font-black mb-12 text-white">Additional Services</h2>
 
     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
 
-      <div class="bg-gray-900/80 border border-gray-800 p-6 rounded-2xl shadow-lg flex flex-col justify-between hover:border-purple-500/50 transition">
+      <div class="bg-gradient-to-b from-gray-900/90 to-gray-950 border border-gray-800/80 p-7 rounded-2xl shadow-xl flex flex-col justify-between hover:border-purple-500/40 transition">
         <div>
           <h3 class="font-bold text-white mb-2 text-lg">Window Tint</h3>
-          <p class="text-sm text-gray-400 mb-4">Privacy + heat protection</p>
+          <p class="text-sm text-gray-400 mb-6">Privacy + heat protection</p>
         </div>
-        <a href="index.html?service=Window%20Tint#consultation-form" class="block bg-gray-800 border border-gray-700 py-2.5 rounded-xl hover:bg-purple-600 hover:border-purple-500 text-white font-semibold text-sm transition">
+        <a href="index.html?service=Window%20Tint#consultation-form" class="block bg-gray-900 border border-gray-800 py-3 rounded-xl hover:bg-purple-600 hover:border-purple-500 text-white font-semibold text-sm transition">
           Request Quote
         </a>
       </div>
 
-      <div class="bg-gray-900/80 border border-gray-800 p-6 rounded-2xl shadow-lg flex flex-col justify-between hover:border-purple-500/50 transition">
+      <div class="bg-gradient-to-b from-gray-900/90 to-gray-950 border border-gray-800/80 p-7 rounded-2xl shadow-xl flex flex-col justify-between hover:border-purple-500/40 transition">
         <div>
           <h3 class="font-bold text-white mb-2 text-lg">Mobile Detail</h3>
-          <p class="text-sm text-gray-400 mb-4">We come to you</p>
+          <p class="text-sm text-gray-400 mb-6">We come to you</p>
         </div>
-        <a href="index.html?service=Mobile%20Mechanic#consultation-form" class="block bg-gray-800 border border-gray-700 py-2.5 rounded-xl hover:bg-purple-600 hover:border-purple-500 text-white font-semibold text-sm transition">
+        <a href="index.html?service=Mobile%20Mechanic#consultation-form" class="block bg-gray-900 border border-gray-800 py-3 rounded-xl hover:bg-purple-600 hover:border-purple-500 text-white font-semibold text-sm transition">
           Request Quote
         </a>
       </div>
 
-      <div class="bg-gray-900/80 border border-gray-800 p-6 rounded-2xl shadow-lg flex flex-col justify-between hover:border-purple-500/50 transition">
+      <div class="bg-gradient-to-b from-gray-900/90 to-gray-950 border border-gray-800/80 p-7 rounded-2xl shadow-xl flex flex-col justify-between hover:border-purple-500/40 transition">
         <div>
           <h3 class="font-bold text-white mb-2 text-lg">Powder Coating Wheels</h3>
-          <p class="text-sm text-gray-400 mb-4">Durable custom finishes</p>
+          <p class="text-sm text-gray-400 mb-6">Durable custom finishes</p>
         </div>
-        <a href="index.html?service=Powder%20Coating%20Wheels#consultation-form" class="block bg-gray-800 border border-gray-700 py-2.5 rounded-xl hover:bg-purple-600 hover:border-purple-500 text-white font-semibold text-sm transition">
+        <a href="index.html?service=Powder%20Coating%20Wheels#consultation-form" class="block bg-gray-900 border border-gray-800 py-3 rounded-xl hover:bg-purple-600 hover:border-purple-500 text-white font-semibold text-sm transition">
           Request Quote
         </a>
       </div>
 
-      <div class="bg-gray-900/80 border border-gray-800 p-6 rounded-2xl shadow-lg flex flex-col justify-between hover:border-purple-500/50 transition">
+      <div class="bg-gradient-to-b from-gray-900/90 to-gray-950 border border-gray-800/80 p-7 rounded-2xl shadow-xl flex flex-col justify-between hover:border-purple-500/40 transition">
         <div>
           <h3 class="font-bold text-white mb-2 text-lg">Vehicle Wraps</h3>
-          <p class="text-sm text-gray-400 mb-4">Style + protection</p>
+          <p class="text-sm text-gray-400 mb-6">Style + protection</p>
         </div>
-        <a href="index.html?service=Vehicle%20Wraps#consultation-form" class="block bg-gray-800 border border-gray-700 py-2.5 rounded-xl hover:bg-purple-600 hover:border-purple-500 text-white font-semibold text-sm transition">
+        <a href="index.html?service=Vehicle%20Wraps#consultation-form" class="block bg-gray-900 border border-gray-800 py-3 rounded-xl hover:bg-purple-600 hover:border-purple-500 text-white font-semibold text-sm transition">
           Request Quote
         </a>
       </div>
@@ -261,42 +284,42 @@
   </div>
 </section>
 
-<!-- ✅ PAYPAL -->
+<!-- PAYPAL -->
 <script src="https://www.paypal.com/sdk/js?client-id=AWESQ-Q9rVEWOHcFu75iP651SjAs8NuMTNTptIOuYtCePXq4rwE1BSPKzWgfbN_FM3niikyisn37lyWr&currency=USD"></script>
 
-<!-- ✅ SCRIPT -->
+<!-- SCRIPT -->
 <script>
-function openModal(id){
-  document.getElementById(id).classList.remove("hidden");
-}
-
-function closeModal(id){
-  document.getElementById(id).classList.add("hidden");
-}
-
-document.addEventListener("DOMContentLoaded", () => {
-  const btn = document.getElementById("menu-btn");
-  const menu = document.getElementById("mobile-menu");
-
-  if (btn && menu) {
-    btn.onclick = () => menu.classList.toggle("hidden");
-    menu.querySelectorAll("a").forEach(link => {
-      link.onclick = () => menu.classList.add("hidden");
-    });
+  function openModal(id){
+    document.getElementById(id).classList.remove("hidden");
   }
 
-  if (window.paypal) {
-    paypal.Buttons({createOrder:(d,a)=>a.order.create({purchase_units:[{amount:{value:"1000"}}]})}).render("#paypal-basic");
-    paypal.Buttons({createOrder:(d,a)=>a.order.create({purchase_units:[{amount:{value:"1500"}}]})}).render("#paypal-full");
-    paypal.Buttons({createOrder:(d,a)=>a.order.create({purchase_units:[{amount:{value:"2000"}}]})}).render("#paypal-premium");
+  function closeModal(id){
+    document.getElementById(id).classList.add("hidden");
   }
-});
+
+  document.addEventListener("DOMContentLoaded", () => {
+    const btn = document.getElementById("menu-btn");
+    const menu = document.getElementById("mobile-menu");
+
+    if (btn && menu) {
+      btn.onclick = () => menu.classList.toggle("hidden");
+      menu.querySelectorAll("a").forEach(link => {
+        link.onclick = () => menu.classList.add("hidden");
+      });
+    }
+
+    if (window.paypal) {
+      paypal.Buttons({createOrder:(d,a)=>a.order.create({purchase_units:[{amount:{value:"1000"}}]})}).render("#paypal-basic");
+      paypal.Buttons({createOrder:(d,a)=>a.order.create({purchase_units:[{amount:{value:"1500"}}]})}).render("#paypal-full");
+      paypal.Buttons({createOrder:(d,a)=>a.order.create({purchase_units:[{amount:{value:"2000"}}]})}).render("#paypal-premium");
+    }
+  });
 </script>
 
-<!-- ✅ DISCLAIMER -->
-<section class="bg-gray-950 border-t border-gray-800/80 text-gray-400 py-10 px-6 text-sm">
-  <div class="max-w-6xl mx-auto">
-    <p class="mb-3 font-semibold text-gray-300">Disclaimer</p>
+<!-- DISCLAIMER -->
+<section class="bg-gray-950 border-t border-gray-800/80 text-gray-500 py-12 px-6 text-sm">
+  <div class="max-w-7xl mx-auto">
+    <p class="mb-3 font-semibold text-gray-400">Disclaimer</p>
     <p class="leading-relaxed">
       Grate Auto Deals provides automotive consulting, vehicle sourcing, and negotiation services and is not a licensed dealership, lender, or financial institution.
     </p>
@@ -308,6 +331,11 @@ document.addEventListener("DOMContentLoaded", () => {
     </p>
   </div>
 </section>
+
+<!-- FOOTER -->
+<footer class="bg-gray-950 border-t border-gray-800/80 text-gray-500 text-center py-10 text-sm">
+  <p>© 2026 Grate Auto Deals. All rights reserved.</p>
+</footer>
 
 </body>
 </html>
