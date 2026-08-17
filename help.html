@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="scroll-smooth">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Help | Grate Auto Deals</title>
+  <title>Help & Frequently Asked Questions | Grate Auto Deals</title>
 
   <!-- ✅ Tailwind CSS -->
   <script src="https://cdn.tailwindcss.com"></script>
@@ -28,7 +28,7 @@
   </style>
 </head>
 
-<body class="scroll-smooth bg-gray-950 text-gray-100 antialiased selection:bg-purple-400/30 selection:text-white">
+<body class="bg-gray-950 text-gray-100 antialiased selection:bg-purple-400/30 selection:text-white">
 
 <!-- NAV -->
 <nav class="bg-gray-950/85 backdrop-blur-xl text-white fixed top-0 w-full z-50 border-b border-gray-800/80 shadow-2xl shadow-black/50">
@@ -93,7 +93,7 @@
     </h1>
 
     <p class="text-gray-300 text-base md:text-lg mb-8 leading-relaxed max-w-2xl mx-auto font-medium">
-      Welcome to our FAQ page! We know that working with an auto broker for the first time brings up important questions. Below, you will find clear, straightforward answers about how we partner with you to find your next vehicle.
+      Welcome to our help center! We know that working with an auto broker for the first time brings up important questions. Below, you will find clear, straightforward answers about how we partner with you to find your next vehicle.
     </p>
   </div>
 </section>
@@ -199,26 +199,22 @@
 
 </section>
 
+<!-- FOOTER -->
 <footer class="bg-gray-950 border-t border-gray-800/80 text-gray-500 text-center py-10 text-sm">
   <p>© 2026 Grate Auto Deals. All rights reserved.</p>
 </footer>
 
+<!-- SCRIPT -->
 <script>
-  document.addEventListener("DOMContentLoaded", function () {
-    const menuBtn = document.getElementById("menu-btn");
-    const mobileMenu = document.getElementById("mobile-menu");
+  document.addEventListener("DOMContentLoaded", () => {
+    const btn = document.getElementById("menu-btn");
+    const menu = document.getElementById("mobile-menu");
 
-    if (menuBtn && mobileMenu) {
-      menuBtn.onclick = function () {
-        mobileMenu.classList.toggle("hidden");
-      };
-
-      const links = mobileMenu.getElementsByTagName("a");
-      for (let i = 0; i < links.length; i++) {
-        links[i].onclick = function () {
-          mobileMenu.classList.add("hidden");
-        };
-      }
+    if (btn && menu) {
+      btn.onclick = () => menu.classList.toggle("hidden");
+      menu.querySelectorAll("a").forEach(link => {
+        link.onclick = () => menu.classList.add("hidden");
+      });
     }
   });
 </script>
