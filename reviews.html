@@ -391,16 +391,17 @@
     const mobileMenu = document.getElementById("mobile-menu");
 
     if (menuBtn && mobileMenu) {
-      menuBtn.onclick = function () {
+      menuBtn.addEventListener("click", function () {
         mobileMenu.classList.toggle("hidden");
-      };
+      });
 
-      const links = mobileMenu.getElementsByTagName("a");
-      for (let i = 0; i < links.length; i++) {
-        links[i].onclick = function () {
+      // ✅ Fix: Ensure all mobile menu links cleanly close the menu on click
+      const links = mobileMenu.querySelectorAll("a");
+      links.forEach(link => {
+        link.addEventListener("click", function () {
           mobileMenu.classList.add("hidden");
-        };
-      }
+        });
+      });
     }
 
     // 1. Interactive Lightbox for Delivery Photos
