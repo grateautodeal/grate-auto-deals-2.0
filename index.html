@@ -8,7 +8,7 @@
   <!-- ✅ Tailwind CSS -->
   <script src="https://cdn.tailwindcss.com"></script>
   
-  <!-- ✅ Custom Styles for Mobile Scrollbar & Ambient Glows -->
+  <!-- ✅ Custom Styles for Mobile Scrollbar, Ambient Glows, & Load-In Effects -->
   <style>
     .no-scrollbar::-webkit-scrollbar {
       display: none;
@@ -25,10 +25,29 @@
     .animate-pulse-glow {
       animation: pulseGlow 8s ease-in-out infinite;
     }
+
+    /* Professional Load-In Animation States */
+    .animate-on-load {
+      opacity: 0;
+      transform: translateY(24px);
+      transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1), 
+                  transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+      will-change: opacity, transform;
+    }
+
+    body.is-loaded .animate-on-load {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .delay-1 { transition-delay: 0.1s; }
+    .delay-2 { transition-delay: 0.2s; }
+    .delay-3 { transition-delay: 0.35s; }
+    .delay-4 { transition-delay: 0.5s; }
   </style>
 </head>
 
-<body class="scroll-smooth bg-gray-950 text-gray-100 antialiased selection:bg-purple-400/30 selection:text-white">
+<body class="scroll-smooth bg-gray-950 text-gray-100 antialiased selection:bg-purple-400/30 selection:text-white is-loading">
 
 <!-- NAV -->
 <nav class="bg-gray-950/80 backdrop-blur-xl text-white fixed top-0 w-full z-50 border-b border-gray-800/80 shadow-2xl shadow-black/50">
@@ -52,6 +71,7 @@
         <a href="services.html" class="hover:text-purple-300 transition duration-200">Services</a>
         <a href="reviews.html" class="hover:text-purple-300 transition duration-200">Deliveries & Rewards</a>
         <a href="about.html" class="hover:text-purple-300 transition duration-200">About Us</a>
+        <a href="help.html" class="hover:text-purple-300 transition duration-200">Help</a>
         <a href="#consultation-form" class="hover:text-purple-300 transition duration-200">Contact Us</a>
       </div>
 
@@ -69,6 +89,7 @@
     <a href="services.html" class="hover:text-purple-300 transition">Services</a>
     <a href="reviews.html" class="hover:text-purple-300 transition">Deliveries & Rewards</a>
     <a href="about.html" class="hover:text-purple-300 transition">About Us</a>
+    <a href="help.html" class="hover:text-purple-300 transition">Help</a>
     <a href="#consultation-form" class="hover:text-purple-300 transition">Contact Us</a>
   </div>
 </nav>
@@ -76,7 +97,7 @@
 <div class="h-16"></div>
 
 <!-- ANNOUNCEMENT BAR -->
-<section class="relative py-3.5 px-6 text-center bg-gray-900/60 border-b border-gray-800/80 backdrop-blur-md overflow-hidden">
+<section class="relative py-3.5 px-6 text-center bg-gray-900/60 border-b border-gray-800/80 backdrop-blur-md overflow-hidden animate-on-load delay-1">
   <div class="absolute inset-0 bg-gradient-to-r from-blue-600/10 via-purple-500/10 to-cyan-500/10 pointer-events-none"></div>
   <p class="relative z-10 text-gray-300 max-w-3xl mx-auto text-sm md:text-base font-medium">
     We negotiate, source, and secure the best deal so you don't waste time, money, or energy at dealerships. 
@@ -94,7 +115,7 @@
   <div class="max-w-7xl mx-auto relative z-10">
     
     <!-- MOBILE LOGO ROW -->
-    <div class="md:hidden mb-12">
+    <div class="md:hidden mb-12 animate-on-load delay-2">
       <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-purple-500/10 border border-purple-500/20 text-purple-300 text-xs font-bold uppercase tracking-widest mb-4 mx-auto block w-max">
         Sourcing All Major Brands
       </div>
@@ -123,7 +144,7 @@
     <div class="grid grid-cols-1 md:grid-cols-3 items-center gap-10">
 
       <!-- LEFT LOGOS (DESKTOP) -->
-      <div class="hidden md:grid grid-cols-3 gap-8 justify-items-center opacity-80 hover:opacity-100 transition duration-500 p-6 bg-gray-950 rounded-3xl border border-gray-800/80 shadow-xl backdrop-blur-sm">
+      <div class="hidden md:grid grid-cols-3 gap-8 justify-items-center opacity-80 hover:opacity-100 transition duration-500 p-6 bg-gray-950 rounded-3xl border border-gray-800/80 shadow-xl backdrop-blur-sm animate-on-load delay-2">
         <img src="https://cdn.simpleicons.org/ford/ffffff" class="w-9 h-9 hover:scale-125 hover:drop-shadow-[0_0_12px_rgba(168,85,247,0.6)] transition duration-300" alt="Ford"/>
         <img src="https://cdn.simpleicons.org/toyota/ffffff" class="w-9 h-9 hover:scale-125 hover:drop-shadow-[0_0_12px_rgba(168,85,247,0.6)] transition duration-300" alt="Toyota"/>
         <img src="https://cdn.simpleicons.org/honda/ffffff" class="w-9 h-9 hover:scale-125 hover:drop-shadow-[0_0_12px_rgba(168,85,247,0.6)] transition duration-300" alt="Honda"/>
@@ -136,7 +157,7 @@
       </div>
 
       <!-- CENTER CONTENT -->
-      <div class="text-center px-2">
+      <div class="text-center px-2 animate-on-load delay-3">
         <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-purple-500/10 border border-purple-500/20 text-purple-300 text-xs font-bold uppercase tracking-widest mb-6">
           <span class="w-2 h-2 rounded-full bg-purple-400 animate-ping"></span> Premium Auto Advisory
         </div>
@@ -156,7 +177,7 @@
       </div>
 
       <!-- RIGHT LOGOS (DESKTOP) -->
-      <div class="hidden md:grid grid-cols-3 gap-8 justify-items-center opacity-80 hover:opacity-100 transition duration-500 p-6 bg-gray-950 rounded-3xl border border-gray-800/80 shadow-xl backdrop-blur-sm">
+      <div class="hidden md:grid grid-cols-3 gap-8 justify-items-center opacity-80 hover:opacity-100 transition duration-500 p-6 bg-gray-950 rounded-3xl border border-gray-800/80 shadow-xl backdrop-blur-sm animate-on-load delay-4">
         <img src="https://cdn.simpleicons.org/bmw/ffffff" class="w-9 h-9 hover:scale-125 hover:drop-shadow-[0_0_12px_rgba(168,85,247,0.6)] transition duration-300" alt="BMW"/>
         <img src="https://cdn.simpleicons.org/audi/ffffff" class="w-9 h-9 hover:scale-125 hover:drop-shadow-[0_0_12px_rgba(168,85,247,0.6)] transition duration-300" alt="Audi"/>
         <img src="https://cdn.simpleicons.org/volkswagen/ffffff" class="w-9 h-9 hover:scale-125 hover:drop-shadow-[0_0_12px_rgba(168,85,247,0.6)] transition duration-300" alt="Volkswagen"/>
@@ -323,6 +344,12 @@
 <!-- ✅ CONSOLIDATED JS -->
 <script>
   document.addEventListener("DOMContentLoaded", function () {
+    // Trigger professional load-in state
+    requestAnimationFrame(() => {
+      document.body.classList.remove('is-loading');
+      document.body.classList.add('is-loaded');
+    });
+
     const menuBtn = document.getElementById("menu-btn");
     const mobileMenu = document.getElementById("mobile-menu");
 
